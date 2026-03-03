@@ -67,3 +67,5 @@ service-account*.json
 downloads/
 .tmp.*/
 temp*/
+
+*service-account*.json
