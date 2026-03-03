@@ -1,0 +1,36 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://hes2-ssd-ohs.oracleindustry.com/oam/server/obrareq.cgi?encquery%3DjxW6C%2FpIcMWpCrXCi%2FeW7l2zWhxYkTz0KapVaCozeNKapYtKom0ZAaz49CotXtHZPZEdBNDS%2FBGR0LJbUa0Q88e%2BqbOLbNLn2vd%2FbSFayPOO8iK28r%2B0lUFpjj6rg0rbE0W2cyPHTUYbrUVCB8JDfvI2yobFOcPKuSMzW4xeyOTJS%2F9hh3yTFPW0nOaS8Z%2BjK4xKQSGQoZFqMUnRhy29Nfkmy4yKmfkvePXumuS3JlCYf7c5M%2FAOP9TKq1G42IHTEhLPYoVXmLQP%2FxXM5YC3dr8v6Ml6ne48nYoNJ5%2B5CngLaTVmdN4u%2FMVSuw45EbUGZK%2FlIw2n5b8zAygZntAp3NSRBfCB08GtvsLXXMzPRE0iPF%2FuQVN8rvPCjk87m6zC%20agentid%3DOAM_RoyalPalm%20ver%3D1%20crmethod%3D2%26cksum%3D04a781bad3fa4dc180222db980eb4b5b08312106&ECID-Context=1.006BvqMo6hI03zOUuilnWH0001ne0000le%3BkXjE');
+  await page.getByRole('textbox', { name: 'User Name' }).click();
+  await page.getByRole('textbox', { name: 'User Name' }).fill('johant');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('Dexter123456#');
+  await page.getByRole('button', { name: 'Sign In' }).click();
+  await page.getByRole('link', { name: 'Click to go to OPERA Cloud' }).click();
+  const page1Promise = page.waitForEvent('popup');
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/adf.task-flow?adf.tfId=opera-cloud-index&adf.tfDoc=/WEB-INF/taskflows/opera-cloud-index.xml');
+  const page1 = await page1Promise;
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/opera-cloud-index/OperaCloud');
+  await page.getByRole('link', { name: 'Bookings' }).click();
+  await page.getByText('Manage Reservation').click();
+  await page.getByRole('textbox', { name: 'Arrival From' }).click();
+  await page.getByRole('textbox', { name: 'Arrival From' }).fill('01.01.2025');
+  await page.getByRole('textbox', { name: 'Arrival To' }).click();
+  await page.getByRole('textbox', { name: 'Arrival To' }).fill('31.07.2025');
+  await page.getByRole('textbox', { name: 'Room', exact: true }).click();
+  await page.getByRole('textbox', { name: 'Room', exact: true }).fill('0302');
+  await page.getByRole('button', { name: 'Search', exact: true }).click();
+  await page.getByRole('link', { name: 'View Options' }).click();
+  await page.getByText('Export').click();
+  await page.getByText('CSV').click();
+  await page.getByRole('textbox', { name: 'File Name' }).click();
+  await page.getByRole('textbox', { name: 'File Name' }).fill('0302');
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export' }).click();
+  const download = await downloadPromise;
+  await page.getByRole('link', { name: 'Modify Search Criteria' }).click();
+  await page.getByRole('textbox', { name: 'Room', exact: true }).click();
+  await page.getByRole('textbox', { name: 'Room', exact: true }).fill('0303');
+  await page.getByRole('button', { name: 'Search', exact: true }).click();
+});

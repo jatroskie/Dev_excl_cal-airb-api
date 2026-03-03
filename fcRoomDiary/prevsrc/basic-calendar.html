@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Hotel Calendar</title>
+  
+  <!-- Load FullCalendar core AND premium packages separately to ensure plugins work -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+  
+  <!-- Important: Load core, then premium packages separately -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/resource-common@5.11.3/main.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/resource-timeline@5.11.3/main.global.min.js"></script>
+  
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    #calendar {
+      margin-top: 20px;
+    }
+    
+    #log {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      max-height: 200px;
+      overflow-y: auto;
+      font-family: monospace;
+    }
+    
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    
+    button {
+      margin: 5px;
+      padding: 8px 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Basic Hotel Calendar</h1>
+  
+  <div>
+    <p>Step 1: Let's check if basic FullCalendar works first (no resources or data)</p>
+    <button id="btn-basic">Show Basic Calendar</button>
+  </div>
+  
+  <div>
+    <p>Step 2: Test FullCalendar with simple resource timeline (hardcoded data)</p>
+    <button id="btn-resource">Show Resource Timeline</button>
+  </div>
+  
+  <div>
+    <p>Step 3: Load data from CSV file</p>
+    <input type="file" id="csv-file" accept=".csv">
+    <button id="btn-load-csv">Load CSV</button>
+  </div>
+  
+  <div id="calendar"></div>
+  
+  <div id="log"></div>
+  
+  <script>
+    // Logging function
+    function log(message, isError = false) {
+      const logDiv = document.getElementById('log');
+      const entry = document.createElement('div');
+      entry.textContent = message;
+      
+      if (isError) {
+        entry.classList.add('error');
+      }
+      
+      logDiv.appendChild(entry);
+      logDiv.scrollTop = logDiv.scrollHeight;
+      console.log(message);
+    }
+    
+    // Check FullCalendar availability
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        log("Checking FullCalendar availability...");
+        
+        if (typeof FullCalendar === 'undefined') {
+          log("ERROR: FullCalendar is not loaded!", true);
+        } else {
+          log("FullCalendar version: " + FullCalendar.version);
+          
+          // Check if plugins are loaded
+          let pluginsLoaded = FullCalendar.hasOwnProperty('globalPlugins') ? 
+                             FullCalendar.globalPlugins.length : 0;
+                             
+          log(`FullCalendar plugins: ${pluginsLoaded} loaded`);
+        }
+      } catch (error) {
+        log("ERROR checking FullCalendar: " + error.message, true);
+      }
+    });
+    
+    // Step 1: Show basic calendar
+    document.getElementById('btn-basic').addEventListener('click', function() {
+      try {
+        log("Attempting to create basic calendar...");
+        
+        // Clear any existing calendar
+        const calendarEl = document.getElementById('calendar');
+        calendarEl.innerHTML = '';
+        
+        // Create basic calendar
+        let basicCalendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,listWeek'
+          }
+        });
+        
+        basicCalendar.render();
+        log("Basic calendar created successfully!");
+      } catch (error) {
+        log("ERROR creating basic calendar: " + error.message, true);
+      }
+    });
+    
+    // Step 2: Show resource timeline
+    document.getElementById('btn-resource').addEventListener('click', function() {
+      try {
+        log("Attempting to create resource timeline...");
+        
+        // Clear any existing calendar
+        const calendarEl = document.getElementById('calendar');
+        calendarEl.innerHTML = '';
+        
+        // Hard-coded resources and events for testing
+        const resources = [
+          { id: '1', title: 'Room 101' },
+          { id: '2', title: 'Room 102' },
+          { id: '3', title: 'Room 103' }
+        ];
+        
+        const events = [
+          { id: '1', resourceId: '1', title: 'Guest 1', start: '2025-03-01', end: '2025-03-05' },
+          { id: '2', resourceId: '2', title: 'Guest 2', start: '2025-03-03', end: '2025-03-07' }
+        ];
+        
+        // Try to register resource-related plugins manually
+        if (typeof FullCalendarResourceCommon !== 'undefined') {
+          log("Resource Common plugin found, registering manually");
+          FullCalendar.globalPlugins.push(FullCalendarResourceCommon.default);
+        }
+        
+        if (typeof FullCalendarResourceTimeline !== 'undefined') {
+          log("Resource Timeline plugin found, registering manually");
+          FullCalendar.globalPlugins.push(FullCalendarResourceTimeline.default);
+        }
+        
+        // Try with plugin specification
+        var timelineCalendar = new FullCalendar.Calendar(calendarEl, {
+          schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+          initialView: 'resourceTimelineMonth',
+          initialDate: '2025-03-01',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
+          },
+          editable: true,
+          resources: resources,
+          events: events
+        });
+        
+        timelineCalendar.render();
+        log("Resource timeline created successfully!");
+      } catch (error) {
+        log("ERROR creating resource timeline: " + error.message, true);
+      }
+    });
+    
+    // Step 3: Load CSV data
+    document.getElementById('btn-load-csv').addEventListener('click', function() {
+      try {
+        const fileInput = document.getElementById('csv-file');
+        
+        if (!fileInput.files || fileInput.files.length === 0) {
+          log("Please select a CSV file first.", true);
+          return;
+        }
+        
+        log("Reading CSV file...");
+        const file = fileInput.files[0];
+        
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          log("Parsing CSV data...");
+          
+          Papa.parse(e.target.result, {
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+              log(`CSV parsed: ${results.data.length} rows`);
+              
+              // Extract resources from CSV
+              const rooms = new Set();
+              
+              results.data.forEach(row => {
+                if (row.Room) {
+                  rooms.add(row.Room.toString());
+                }
+              });
+              
+              log(`Found ${rooms.size} unique rooms`);
+              
+              // Convert to resources array
+              const resources = Array.from(rooms).map(room => ({
+                id: room,
+                title: `Room ${room}`
+              }));
+              
+              // Create events array
+              const events = [];
+              
+              results.data.forEach((row, index) => {
+                if (row.Room && row.Arrival && row.Departure) {
+                  try {
+                    const arrival = parseDate(row.Arrival);
+                    const departure = parseDate(row.Departure);
+                    
+                    events.push({
+                      id: `event_${index}`,
+                      resourceId: row.Room.toString(),
+                      title: row.Name || 'Reservation',
+                      start: arrival,
+                      end: departure
+                    });
+                  } catch (error) {
+                    log(`Error with row ${index}: ${error.message}`, true);
+                  }
+                }
+              });
+              
+              log(`Created ${events.length} events`);
+              
+              // Try to display the calendar
+              try {
+                log("Trying to create calendar with CSV data...");
+                
+                // Clear any existing calendar
+                const calendarEl = document.getElementById('calendar');
+                calendarEl.innerHTML = '';
+                
+                // Use simpler approach first - dayGrid with events
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                  initialView: 'dayGridMonth',
+                  headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek'
+                  },
+                  events: events
+                });
+                
+                calendar.render();
+                log("Basic calendar with events rendered successfully!");
+                
+                // Now try the resource timeline approach
+                log("Now trying resource timeline view...");
+                
+                setTimeout(function() {
+                  try {
+                    calendarEl.innerHTML = '';
+                    
+                    // Create new calendar with resources
+                    var resourceCalendar = new FullCalendar.Calendar(calendarEl, {
+                      schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+                      initialView: 'resourceTimelineMonth',
+                      headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'resourceTimelineMonth,dayGridMonth'
+                      },
+                      resources: resources,
+                      events: events
+                    });
+                    
+                    resourceCalendar.render();
+                    log("Resource timeline calendar rendered successfully!");
+                  } catch (error) {
+                    log("ERROR creating resource timeline with CSV data: " + error.message, true);
+                    log("Falling back to basic calendar view");
+                    
+                    // Fallback to basic calendar
+                    calendar.render();
+                  }
+                }, 1000); // Small delay to ensure UI updates
+                
+              } catch (error) {
+                log("ERROR creating calendar with CSV data: " + error.message, true);
+              }
+            },
+            error: function(error) {
+              log("ERROR parsing CSV: " + error.message, true);
+            }
+          });
+        };
+        
+        reader.onerror = function() {
+          log("ERROR reading file", true);
+        };
+        
+        reader.readAsText(file);
+        
+      } catch (error) {
+        log("ERROR loading CSV: " + error.message, true);
+      }
+    });
+    
+    // Helper function to parse date from DD.MM.YYYY format
+    function parseDate(dateStr) {
+      const parts = dateStr.split('.');
+      if (parts.length !== 3) {
+        throw new Error(`Invalid date format: ${dateStr}`);
+      }
+      return `${parts[2]}-${parts[1]}-${parts[0]}`;
+    }
+  </script>
+</body>
+</html>

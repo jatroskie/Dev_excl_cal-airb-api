@@ -1,0 +1,67 @@
+import re
+from playwright.sync_api import Playwright, sync_playwright, expect
+
+
+def run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+    page = context.new_page()
+    page.goto("https://hes2-ssd-ohs.oracleindustry.com/oam/server/obrareq.cgi?encquery%3DViOYd3olIBfdo19cZ9e6yvm61q5k2nc4WOztDf82dGiHYU8CuDBE3A0Rn820UXdUfx%2B68BUpKS4MJt%2BiHTclRwGeYR8tWX6ykeueuP3KqVgDnsDa03JiwgcLnpnwIdaJVFtQfFX9uL%2Bo4hai2WK%2Bxw1bSUjh6q%2BPKnElBBrKBQ4xn6PjkHd%2F66ldCWNr5SJyGvEyExIxuOvwH9M3867y%2B6LFl5A985xOniF66AP0bb%2B1cyZjST6pJmyzGLYpsZGAKuqyzgnm5McT2O3OAgguOmfgGHD%2BmHaQtGQoY%2BmicHUkXJyYBmC2M8jbnvPzoTtbFZbgZwKJ5dQC%2FS7Otw0mFPlzVJ9rSjd9p9nge73sF9Zbf2zO73Tau7RqY3pluwcv%20agentid%3DOAM_RoyalPalm%20ver%3D1%20crmethod%3D2%26cksum%3Dde66841464778cbd68059f49921895dcdff07627&ECID-Context=1.006CDm95bQ003zOUuilnWH0004Up0002NR%3BkXjE")
+    page.get_by_role("textbox", name="User Name").click()
+    page.get_by_role("textbox", name="User Name").fill("johant")
+    page.get_by_role("textbox", name="User Name").press("Tab")
+    page.get_by_role("textbox", name="Password").fill("Dexter123456#")
+    page.get_by_role("button", name="Sign In").click()
+    page.get_by_role("link", name="Click to go to OPERA Cloud").click()
+    with page.expect_popup() as page1_info:
+        page.goto("https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/adf.task-flow?adf.tfId=opera-cloud-index&adf.tfDoc=/WEB-INF/taskflows/opera-cloud-index.xml")
+    page1 = page1_info.value
+    page1.close()
+    page.goto("https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/opera-cloud-index/OperaCloud")
+    page.get_by_role("link", name="Bookings").click()
+    page.get_by_text("Look To Book Sales Screen").click()
+    page.get_by_role("textbox", name="Travel Agent").click()
+    page.get_by_role("textbox", name="Travel Agent").fill("airbnb")
+    page.locator("div").filter(has_text=re.compile(r"^Travel AgentSource$")).get_by_role("link").first.click()
+    page.locator("iframe[title=\"Content\"]").content_frame.get_by_role("button", name="Select").click()
+    page.get_by_role("textbox", name="Arrival").click()
+    page.get_by_role("textbox", name="Arrival").fill("21.5.2025")
+    page.get_by_role("textbox", name="Departure").click()
+    page.get_by_role("textbox", name="Departure").click()
+    page.get_by_role("textbox", name="Departure").fill("23.05.2025")
+    page.get_by_role("link").filter(has_text="+").nth(1).click()
+    page.get_by_role("textbox", name="Adults").click()
+    page.get_by_role("textbox", name="Adults").fill("2")
+    page.get_by_role("textbox", name="Room", exact=True).click()
+    page.get_by_role("textbox", name="Room", exact=True).fill("0405")
+    page.get_by_role("button", name="Search", exact=True).click()
+    page.get_by_role("link", name="Select Room").click()
+    page.get_by_role("button", name="Search", exact=True).click()
+    page.locator("[id=\"pt1\\:oc_pg_pt\\:r1\\:1\\:ltbm\\:oc_scrn_tmpl_y9qqzw\\:r4\\:0\\:dl1\\:p1\\:occ_pnl\\:ltbavlrs\\:0\\:gts1\\:i1\\:0\\:gts2\\:i2\\:1\\:cb1\\:i3\\:0\\:cbi1\\:pgl8\"]").click()
+    page.get_by_role("button", name="Select", exact=True).click()
+    page.get_by_role("link", name="New Profile").click()
+    page.get_by_role("textbox", name="Name", exact=True).click()
+    page.get_by_role("textbox", name="Name", exact=True).fill("Smith")
+    page.get_by_role("textbox", name="First Name").click()
+    page.get_by_role("textbox", name="First Name").fill("John")
+    page.get_by_role("row", name="MOBILE Communication Type").get_by_label("Communication Value").click()
+    page.get_by_role("gridcell", name="Communication Value Communication Value").get_by_label("Communication Value").fill("123456789")
+    page.get_by_role("button", name="Save and Select Profile").click()
+    page.get_by_role("textbox", name="Discount Amount").click()
+    page.get_by_role("textbox", name="Discount Amount").fill("700")
+    page.get_by_role("textbox", name="Discount Code").click()
+    page.get_by_role("textbox", name="Discount Code").fill("oth")
+    page.get_by_label("Method").select_option("FCA")
+    page.get_by_role("button", name="Book Now").click()
+    page.get_by_text("411263372").click()
+    page.get_by_role("link", name="0405").click()
+    page.get_by_role("button", name="Mark as Do Not Move Room").click()
+    page.get_by_role("button", name="Exit Booking").click()
+
+    # ---------------------
+    context.close()
+    browser.close()
+
+
+with sync_playwright() as playwright:
+    run(playwright)

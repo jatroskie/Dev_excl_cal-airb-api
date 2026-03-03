@@ -1,0 +1,309 @@
+/* ================================== */
+/* === START OF FILE BookingModal.css === */
+/* ================================== */
+
+/* --- Base Styles --- */
+
+/* Modal overlay (background) */
+.modal-overlay-themed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content-themed {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Close button */
+.modal-close-button-themed {
+  position: absolute;
+  /* Increased tap area and visibility */
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 28px; /* Larger font size */
+  padding: 5px; /* Added padding for easier tapping */
+  cursor: pointer;
+  color: #333; /* Slightly darker base color */
+  transition: color 0.2s;
+}
+
+.modal-close-button-themed:hover {
+  color: #000;
+}
+
+/* Form styling */
+.modal-content-themed h2 {
+  margin-top: 0;
+  color: #2A3F5F;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.modal-hr-themed {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+/* Input fields */
+.modal-input-themed {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #A3BFFA;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.modal-input-themed:focus {
+  outline: none;
+  border-color: #2A3F5F;
+  box-shadow: 0 0 0 2px rgba(42, 63, 95, 0.1);
+}
+
+.modal-input-themed:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Date inputs group */
+.date-group-themed {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.date-group-themed input {
+  margin-bottom: 0; /* Reset default input margin if needed */
+}
+
+.date-group-themed span {
+  grid-column: span 2; /* Span across both columns */
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Button styling */
+.modal-button-themed {
+  width: 100%; /* Full width by default */
+  background-color: #2A3F5F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.modal-button-themed:hover:not(:disabled) {
+  background-color: #1A2A44;
+}
+
+.modal-button-themed:disabled {
+  background-color: #A3BFFA;
+  cursor: not-allowed;
+}
+
+/* Button Group (for Submit/Cancel) */
+.modal-button-group-themed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically by default */
+  gap: 10px;
+}
+
+/* Secondary Button Style (e.g., for Cancel) */
+.modal-button-secondary-themed {
+  background-color: #f0f0f0; /* Lighter background */
+  color: #333; /* Darker text */
+  border: 1px solid #ccc;
+}
+
+.modal-button-secondary-themed:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+/* Result message */
+.modal-result-themed {
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.modal-result-success-themed {
+  background-color: #E6F7EF;
+  color: #059669;
+  border: 1px solid #059669;
+}
+
+.modal-result-error-themed {
+  background-color: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #DC2626;
+}
+
+/* Processing Status & Spinner */
+.processing-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #EFF6FF;
+  border-radius: 4px;
+  border: 1px solid #A3BFFA;
+}
+
+.processing-status div:last-child {
+  margin-top: 10px;
+  text-align: center;
+  color: #2A3F5F;
+  font-weight: 500;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #2A3F5F;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Visually Hidden Class for Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Added for robustness */
+  border: 0;
+}
+
+
+/* ================================= */
+/* === MOBILE ADJUSTMENTS BELOW === */
+/* ================================= */
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+
+  .modal-content-themed {
+    padding: 16px; /* Slightly reduce padding */
+    width: 95%; /* Allow slightly more width */
+    max-height: 95vh; /* Allow slightly more height if absolutely needed */
+  }
+
+  .modal-content-themed h2 {
+    font-size: 1.3rem; /* Slightly smaller heading */
+    margin-bottom: 12px;
+  }
+
+  .modal-input-themed {
+    padding: 12px 10px; /* Ensure good tap height */
+    font-size: 16px; /* Minimum recommended for mobile inputs */
+    margin-bottom: 12px;
+  }
+
+  /* Date group stacking */
+  .date-group-themed {
+    grid-template-columns: 1fr; /* Stack elements vertically */
+    gap: 5px; /* Reduce gap */
+    margin-bottom: 12px;
+  }
+
+  .date-group-themed label {
+    margin-bottom: 2px; /* Space between label and its input */
+    font-weight: 500;
+  }
+
+  .date-group-themed input {
+    margin-bottom: 8px; /* Space below each date input */
+  }
+
+  .date-group-themed span {
+    grid-column: 1; /* Reset grid column span */
+    text-align: left; /* Align left when stacked */
+    margin-top: 0;
+  }
+
+  /* Button adjustments for mobile */
+  .modal-button-themed {
+    padding: 14px; /* Larger tap target */
+    font-size: 16px; /* Ensure readable font size */
+  }
+
+  /* --- Button Group Layout on Mobile --- */
+  /* Styles for .modal-button-group-themed already define stacking */
+
+  /* Optional: Side-by-side buttons on wider mobile screens */
+  /* This nested media query applies ONLY if screen is > 400 AND < 600 */
+  @media (min-width: 400px) {
+     .modal-button-group-themed {
+         flex-direction: row; /* Side-by-side */
+     }
+     /* Ensure buttons inside the group share width when side-by-side */
+     .modal-button-group-themed .modal-button-themed {
+         flex: 1; /* Make them share width */
+         width: auto; /* Override specific width if previously set */
+     }
+  }
+
+} /* End of @media (max-width: 600px) */
+
+.cost-summary-container {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+.cost-summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.total-row {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 1.1em;
+}

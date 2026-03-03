@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Room Reservation Calendar</title>
+  
+  <!-- FullCalendar Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+  
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    #calendar-container {
+      margin-top: 20px;
+    }
+    
+    .header-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .date-display {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .room-label {
+      position: sticky;
+      left: 0;
+      background-color: #f3f3f3;
+      padding: 5px;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+      z-index: 10;
+    }
+    
+    /* Customize calendar appearance */
+    .fc-timeline-slot {
+      border-right: 1px solid #ddd !important;
+    }
+    
+    .fc-resource-timeline .fc-resource-group {
+      background-color: #f3f3f3;
+    }
+    
+    /* Reservation colors based on status */
+    .reservation-inhouse {
+      background-color: #e5173f !important;
+      border-color: #c01234 !important;
+      color: white !important;
+    }
+    
+    .reservation-guaranteed {
+      background-color: #e5173f !important;
+      border-color: #c01234 !important;
+      color: white !important;
+    }
+    
+    .reservation-nonguarantee {
+      background-color: #00b0f0 !important;
+      border-color: #0099cc !important;
+      color: white !important;
+    }
+    
+    .reservation-tentative {
+      background-color: #ffcc00 !important;
+      border-color: #e6b800 !important;
+    }
+    
+    .reservation-stayover {
+      background-color: #92d050 !important;
+      border-color: #7cb342 !important;
+    }
+    
+    /* Room type indicators */
+    .room-stu-balc {
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    .room-stu-urb {
+      color: #333;
+      background-color: #f1f1f1;
+    }
+    
+    .fc-timeline-slot-cushion {
+      font-weight: bold;
+    }
+    
+    /* Make the timeline header sticky */
+    .fc-timeline-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    /* Loading indicator */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      font-size: 20px;
+    }
+    
+    /* Filter controls */
+    .filter-bar {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+    
+    .filter-control select,
+    .filter-control input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .filter-control label {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    /* Tooltip styles */
+    .reservation-tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      max-width: 300px;
+      display: none;
+    }
+    
+    /* File upload panel */
+    .upload-panel {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .upload-panel h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    
+    .upload-panel p {
+      margin-bottom: 15px;
+    }
+    
+    .upload-panel input[type="file"] {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hotel Room Reservation Calendar</h1>
+  
+  <div class="upload-panel">
+    <h2>Upload Reservation Files</h2>
+    <p>Select your room reservation CSV files to load the calendar.</p>
+    <input type="file" id="csv-files" multiple accept=".csv">
+    <p><small>Tip: The filename format "XXXX_reservations.csv" will automatically associate the data with the room number XXXX.</small></p>
+  </div>
+  
+  <div class="header-toolbar">
+    <div class="date-display">
+      <span id="current-date"></span>
+    </div>
+    <div class="controls">
+      <select id="view-selector">
+        <option value="7">7 Days</option>
+        <option value="14">14 Days</option>
+        <option value="30" selected>30 Days</option>
+        <option value="60">60 Days</option>
+      </select>
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+      <button id="today-button">Today</button>
+    </div>
+  </div>
+  
+  <div class="filter-bar">
+    <div class="filter-control">
+      <label for="room-filter">Room:</label>
+      <select id="room-filter">
+        <option value="all">All Rooms</option>
+      </select>
+    </div>
+    <div class="filter-control">
+      <label for="type-filter">Room Type:</label>
+      <select id="type-filter">
+        <option value="all">All Types</option>
+      </select>
+    </div>
+    <div class="filter-control">
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Guest name...">
+    </div>
+    <button id="filter-button">Apply Filters</button>
+    <button id="reset-button">Reset</button>
+  </div>
+  
+  <div id="calendar-container">
+    <div id="calendar"></div>
+  </div>
+  
+  <div id="loading">Loading reservation data...</div>
+  <div id="reservation-tooltip" class="reservation-tooltip"></div>
+  
+  <!-- Load the processing script -->
+  <script src="fixed-process-csv.js"></script>
+</body>
+</html>

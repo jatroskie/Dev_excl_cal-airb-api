@@ -1,0 +1,5303 @@
+{
+  "resources": [
+    {
+      "id": "TBA-0302",
+      "title": "0302-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0302",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview302",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248396969254246587.ics?s=f215a94176d9ae47f5df44f1a81d5ce0"
+      }
+    },
+    {
+      "id": "TBA-0303",
+      "title": "0303-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0303",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview303",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+      }
+    },
+    {
+      "id": "TBA-0304",
+      "title": "0304-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "TBA-0305",
+      "title": "0305-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0305",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0307",
+      "title": "0307-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0307",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview307",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+      }
+    },
+    {
+      "id": "TBA-0308",
+      "title": "0308-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0311",
+      "title": "0311-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0312",
+      "title": "0312-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0312",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview312",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231279072193286203.ics?s=287ac4863e3e1f46f57e48a365c128d5"
+      }
+    },
+    {
+      "id": "TBA-0313",
+      "title": "0313-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0313",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0315",
+      "title": "0315-1-BR",
+      "extendedProps": {
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "TBA-0318",
+      "title": "0318-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0318",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0320",
+      "title": "0320-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0320",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0321",
+      "title": "0321-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0321",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview321",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221657676388110334.ics?s=b91f16ef14ad7a9bafea0e41d9c78939"
+      }
+    },
+    {
+      "id": "TBA-0401",
+      "title": "0401-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "TBA-0402",
+      "title": "0402-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "TBA-0403",
+      "title": "0403-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0404",
+      "title": "0404-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0404",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview404",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "TBA-0405",
+      "title": "0405-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0406",
+      "title": "0406-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0408",
+      "title": "0408-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408"
+      }
+    },
+    {
+      "id": "TBA-0409",
+      "title": "0409-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0409",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0411",
+      "title": "0411-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "TBA-0413",
+      "title": "0413-1-BR",
+      "extendedProps": {
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "TBA-0415",
+      "title": "0415-1-BR",
+      "extendedProps": {
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415"
+      }
+    },
+    {
+      "id": "TBA-0416",
+      "title": "0416-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0417",
+      "title": "0417-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0417",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0418",
+      "title": "0418-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0418",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0419",
+      "title": "0419-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0419",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0420",
+      "title": "0420-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0420",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview420",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221716931721025193.ics?s=8e77b0f039b0131646b2e8bba07b7613"
+      }
+    },
+    {
+      "id": "TBA-0501",
+      "title": "0501-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "TBA-0502",
+      "title": "0502-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0503",
+      "title": "0503-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0504",
+      "title": "0504-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0504",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview504",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+      }
+    },
+    {
+      "id": "TBA-0506",
+      "title": "0506-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0506",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview506",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+      }
+    },
+    {
+      "id": "TBA-0508",
+      "title": "0508-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0509",
+      "title": "0509-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0511",
+      "title": "0511-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0513",
+      "title": "0513-2-BR",
+      "extendedProps": {
+        "roomNumber": "0513",
+        "roomType": "2-BR",
+        "property": "TBA",
+        "url": null,
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1273908503357043458.ics?s=1a06935ca97d1e8b2b0dd27c957c1c17"
+      }
+    },
+    {
+      "id": "TBA-0514",
+      "title": "0514-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0514",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview514",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221693800160287643.ics?s=2972a50a8e4277c45de99ad553033944"
+      }
+    },
+    {
+      "id": "TBA-0515",
+      "title": "0515-2-BR",
+      "extendedProps": {
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "TBA-0516",
+      "title": "0516-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0517",
+      "title": "0517-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0517",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0518",
+      "title": "0518-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0519",
+      "title": "0519-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0519",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null
+      }
+    },
+    {
+      "id": "TBA-0520",
+      "title": "0520-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0520",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview520",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211338228155057949.ics?s=5da0b66c3496167c283f944dbbe872e0"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "410216948_TBA-0302 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0302",
+      "title": "Michele",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0302_reservations.csv",
+        "confirmationNumber": "410216948",
+        "roomNumber": "0302",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview302",
+        "lastUpdated": "2025-07-10T13:15:48.851Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248396969254246587.ics?s=f215a94176d9ae47f5df44f1a81d5ce0"
+      }
+    },
+    {
+      "id": "414216416_TBA-0303 _2025-07-11_2025-07-13",
+      "resourceId": "TBA-0303",
+      "title": "Moses, Amy Jo",
+      "start": "2025-07-11",
+      "end": "2025-07-13",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0303_reservations.csv",
+        "confirmationNumber": "414216416",
+        "roomNumber": "0303",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes750.76 ZAR",
+        "source": "Your Rentals",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview303",
+        "lastUpdated": "2025-07-10T13:15:48.853Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+      }
+    },
+    {
+      "id": "414137779_TBA-0303 _2025-07-28_2025-07-29",
+      "resourceId": "TBA-0303",
+      "title": "Maligavhada, Rotshidziwa",
+      "start": "2025-07-28",
+      "end": "2025-07-29",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0303_reservations.csv",
+        "confirmationNumber": "414137779",
+        "roomNumber": "0303",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "743.65 ZAR",
+        "source": "Your Rentals",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview303",
+        "lastUpdated": "2025-07-10T13:15:48.853Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+      }
+    },
+    {
+      "id": "410219431_TBA-0303 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0303",
+      "title": "NO NAME",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0303_reservations.csv",
+        "confirmationNumber": "410219431",
+        "roomNumber": "0303",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview303",
+        "lastUpdated": "2025-07-10T13:15:48.853Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+      }
+    },
+    {
+      "id": "414117979_TBA-0304 _2025-07-17_2025-08-16",
+      "resourceId": "TBA-0304",
+      "title": "Ovuedherie, Emmanuel",
+      "start": "2025-07-17",
+      "end": "2025-08-16",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "414117979",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "500.00 ZAR",
+        "source": "Long Term",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "412703110_TBA-0304 _2025-09-20_2025-09-22",
+      "resourceId": "TBA-0304",
+      "title": "Kowalewski, Mary Anne",
+      "start": "2025-09-20",
+      "end": "2025-09-22",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "412703110",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,979.99 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "412578426_TBA-0304 _2025-09-23_2025-09-27",
+      "resourceId": "TBA-0304",
+      "title": "Patel, Dillan",
+      "start": "2025-09-23",
+      "end": "2025-09-27",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "412578426",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,309.00 ZAR",
+        "source": "",
+        "travelAgent": "HotelBeds",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "411446882_TBA-0304 _2025-10-02_2025-10-03",
+      "resourceId": "TBA-0304",
+      "title": "Masango, Valerie",
+      "start": "2025-10-02",
+      "end": "2025-10-03",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "411446882",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "2,160.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "413160453_TBA-0304 _2025-10-19_2025-10-28",
+      "resourceId": "TBA-0304",
+      "title": "et Wendy Azzopardi, Daniel",
+      "start": "2025-10-19",
+      "end": "2025-10-28",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "413160453",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "9",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,782.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "410011585_TBA-0304 _2025-11-01_2025-11-06",
+      "resourceId": "TBA-0304",
+      "title": "Corp, Peter, Mr",
+      "start": "2025-11-01",
+      "end": "2025-11-06",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "410011585",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "412010097_TBA-0304 _2026-02-04_2026-02-10",
+      "resourceId": "TBA-0304",
+      "title": "Mirza, Sajjad",
+      "start": "2026-02-04",
+      "end": "2026-02-10",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0304_reservations.csv",
+        "confirmationNumber": "412010097",
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,779.17 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.855Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "414370111_TBA-0305 _2025-07-04_2025-07-05",
+      "resourceId": "TBA-0305",
+      "title": "Akinbote, Daniel, Mr",
+      "start": "2025-07-04",
+      "end": "2025-07-05",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0305_reservations.csv",
+        "confirmationNumber": "414370111",
+        "roomNumber": "0305",
+        "roomType": "STU-URB",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,147.50 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.856Z"
+      }
+    },
+    {
+      "id": "410255464_TBA-0305 _2026-01-15_2026-01-18",
+      "resourceId": "TBA-0305",
+      "title": "Livesey, William (1)",
+      "start": "2026-01-15",
+      "end": "2026-01-18",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0305_reservations.csv",
+        "confirmationNumber": "410255464",
+        "roomNumber": "0305",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.856Z"
+      }
+    },
+    {
+      "id": "414344323_TBA-0307 _2025-07-19_2025-07-20",
+      "resourceId": "TBA-0307",
+      "title": "Daries, Dante",
+      "start": "2025-07-19",
+      "end": "2025-07-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0307_reservations.csv",
+        "confirmationNumber": "414344323",
+        "roomNumber": "0307",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,215.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview307",
+        "lastUpdated": "2025-07-10T13:15:48.859Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+      }
+    },
+    {
+      "id": "414176344_TBA-0307 _2025-07-30_2025-08-02",
+      "resourceId": "TBA-0307",
+      "title": "Dilizo, Onke",
+      "start": "2025-07-30",
+      "end": "2025-08-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0307_reservations.csv",
+        "confirmationNumber": "414176344",
+        "roomNumber": "0307",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,215.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview307",
+        "lastUpdated": "2025-07-10T13:15:48.859Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+      }
+    },
+    {
+      "id": "412682105_TBA-0307 _2025-09-03_2025-09-08",
+      "resourceId": "TBA-0307",
+      "title": "Stephenson, Raymond (1)",
+      "start": "2025-09-03",
+      "end": "2025-09-08",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0307_reservations.csv",
+        "confirmationNumber": "412682105",
+        "roomNumber": "0307",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,568.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview307",
+        "lastUpdated": "2025-07-10T13:15:48.859Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+      }
+    },
+    {
+      "id": "414356005_TBA-0308 _2025-07-08_2025-07-09",
+      "resourceId": "TBA-0308",
+      "title": "Kerr, Anel",
+      "start": "2025-07-08",
+      "end": "2025-07-09",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0308_reservations.csv",
+        "confirmationNumber": "414356005",
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,280.00 ZAR",
+        "source": "",
+        "travelAgent": "LekkeSlaap",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.862Z"
+      }
+    },
+    {
+      "id": "413764287_TBA-0308 _2025-08-29_2025-08-31",
+      "resourceId": "TBA-0308",
+      "title": "Opitz-Harting, Michaela",
+      "start": "2025-08-29",
+      "end": "2025-08-31",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0308_reservations.csv",
+        "confirmationNumber": "413764287",
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,620.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.862Z"
+      }
+    },
+    {
+      "id": "412392853_TBA-0308 _2026-02-13_2026-02-16",
+      "resourceId": "TBA-0308",
+      "title": "Peacock, Carol (1)",
+      "start": "2026-02-13",
+      "end": "2026-02-16",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0308_reservations.csv",
+        "confirmationNumber": "412392853",
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.862Z"
+      }
+    },
+    {
+      "id": "412249057_TBA-0308 _2026-02-19_2026-02-25",
+      "resourceId": "TBA-0308",
+      "title": "Bogoriabuczkowski, Ian",
+      "start": "2026-02-19",
+      "end": "2026-02-25",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0308_reservations.csv",
+        "confirmationNumber": "412249057",
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,779.17 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.862Z"
+      }
+    },
+    {
+      "id": "413519265_TBA-0311 _2025-09-26_2025-09-28",
+      "resourceId": "TBA-0311",
+      "title": "Vose, Dawn (1)",
+      "start": "2025-09-26",
+      "end": "2025-09-28",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0311_reservations.csv",
+        "confirmationNumber": "413519265",
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.864Z"
+      }
+    },
+    {
+      "id": "414423061_TBA-0311 _2025-11-14_2025-11-17",
+      "resourceId": "TBA-0311",
+      "title": "Welch, Keith",
+      "start": "2025-11-14",
+      "end": "2025-11-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0311_reservations.csv",
+        "confirmationNumber": "414423061",
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,426.04 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.864Z"
+      }
+    },
+    {
+      "id": "412082076_TBA-0311 _2025-11-27_2025-12-01",
+      "resourceId": "TBA-0311",
+      "title": "Hassett, Claire",
+      "start": "2025-11-27",
+      "end": "2025-12-01",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0311_reservations.csv",
+        "confirmationNumber": "412082076",
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,470.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.864Z"
+      }
+    },
+    {
+      "id": "412043702_TBA-0311 _2026-01-27_2026-02-01",
+      "resourceId": "TBA-0311",
+      "title": "Robson, Helen",
+      "start": "2026-01-27",
+      "end": "2026-02-01",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0311_reservations.csv",
+        "confirmationNumber": "412043702",
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,708.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.864Z"
+      }
+    },
+    {
+      "id": "413398307_TBA-0312 _2025-09-16_2025-09-20",
+      "resourceId": "TBA-0312",
+      "title": "Brown, David",
+      "start": "2025-09-16",
+      "end": "2025-09-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0312_reservations.csv",
+        "confirmationNumber": "413398307",
+        "roomNumber": "0312",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview312",
+        "lastUpdated": "2025-07-10T13:15:48.865Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231279072193286203.ics?s=287ac4863e3e1f46f57e48a365c128d5"
+      }
+    },
+    {
+      "id": "411466305_TBA-0312 _2026-02-13_2026-02-16",
+      "resourceId": "TBA-0312",
+      "title": "Odea, Teresa (1)",
+      "start": "2026-02-13",
+      "end": "2026-02-16",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0312_reservations.csv",
+        "confirmationNumber": "411466305",
+        "roomNumber": "0312",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview312",
+        "lastUpdated": "2025-07-10T13:15:48.865Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231279072193286203.ics?s=287ac4863e3e1f46f57e48a365c128d5"
+      }
+    },
+    {
+      "id": "414395540_TBA-0313 _2025-07-18_2025-07-26",
+      "resourceId": "TBA-0313",
+      "title": "Setshogwe, Relebogile",
+      "start": "2025-07-18",
+      "end": "2025-07-26",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0313_reservations.csv",
+        "confirmationNumber": "414395540",
+        "roomNumber": "0313",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "8",
+        "adults": "1",
+        "children": "0",
+        "rate": "972.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.867Z"
+      }
+    },
+    {
+      "id": "413684025_TBA-0313 _2025-10-18_2025-10-21",
+      "resourceId": "TBA-0313",
+      "title": "Vusimuzi, Portia And",
+      "start": "2025-10-18",
+      "end": "2025-10-21",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0313_reservations.csv",
+        "confirmationNumber": "413684025",
+        "roomNumber": "0313",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,584.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.867Z"
+      }
+    },
+    {
+      "id": "412887391_TBA-0313 _2026-02-07_2026-02-14",
+      "resourceId": "TBA-0313",
+      "title": "Costello, Patrick",
+      "start": "2026-02-07",
+      "end": "2026-02-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0313_reservations.csv",
+        "confirmationNumber": "412887391",
+        "roomNumber": "0313",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,646.43 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.867Z"
+      }
+    },
+    {
+      "id": "414325017_TBA-0315 _2025-07-03_2025-07-04",
+      "resourceId": "TBA-0315",
+      "title": "George, Yolisa",
+      "start": "2025-07-03",
+      "end": "2025-07-04",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0315_reservations.csv",
+        "confirmationNumber": "414325017",
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,455.20 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "lastUpdated": "2025-07-10T13:15:48.868Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "414277125_TBA-0315 _2025-08-28_2025-08-29",
+      "resourceId": "TBA-0315",
+      "title": "Mothibi, Thabeng, Mr",
+      "start": "2025-08-28",
+      "end": "2025-08-29",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0315_reservations.csv",
+        "confirmationNumber": "414277125",
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "Home Owner",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "lastUpdated": "2025-07-10T13:15:48.868Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "412058197_TBA-0315 _2025-10-26_2025-11-02",
+      "resourceId": "TBA-0315",
+      "title": "Grealis, Gillian (1)",
+      "start": "2025-10-26",
+      "end": "2025-11-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0315_reservations.csv",
+        "confirmationNumber": "412058197",
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,205.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "lastUpdated": "2025-07-10T13:15:48.868Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "411334642_TBA-0315 _2025-11-08_2025-11-11",
+      "resourceId": "TBA-0315",
+      "title": "Owen, Debra",
+      "start": "2025-11-08",
+      "end": "2025-11-11",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0315_reservations.csv",
+        "confirmationNumber": "411334642",
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,058.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "lastUpdated": "2025-07-10T13:15:48.868Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "414048679_TBA-0315 _2025-11-15_2025-11-20",
+      "resourceId": "TBA-0315",
+      "title": "Garahy, Marie (1)",
+      "start": "2025-11-15",
+      "end": "2025-11-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0315_reservations.csv",
+        "confirmationNumber": "414048679",
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,205.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "lastUpdated": "2025-07-10T13:15:48.868Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "413666256_TBA-0318 _2025-09-23_2025-09-27",
+      "resourceId": "TBA-0318",
+      "title": "Morgan, Angela (1)",
+      "start": "2025-09-23",
+      "end": "2025-09-27",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0318_reservations.csv",
+        "confirmationNumber": "413666256",
+        "roomNumber": "0318",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,960.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.870Z"
+      }
+    },
+    {
+      "id": "413680607_TBA-0320 _2025-09-29_2025-09-30",
+      "resourceId": "TBA-0320",
+      "title": "Morgan, Angela (1)",
+      "start": "2025-09-29",
+      "end": "2025-09-30",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0320_reservations.csv",
+        "confirmationNumber": "413680607",
+        "roomNumber": "0320",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,960.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.872Z"
+      }
+    },
+    {
+      "id": "412545673_TBA-0321 _2025-08-05_2025-09-04",
+      "resourceId": "TBA-0321",
+      "title": "Ledimo, Mampho Kebonaye Maria, MRS",
+      "start": "2025-08-05",
+      "end": "2025-09-04",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0321_reservations.csv",
+        "confirmationNumber": "412545673",
+        "roomNumber": "0321",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "400.00 ZAR",
+        "source": "Long Term",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview321",
+        "lastUpdated": "2025-07-10T13:15:48.873Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221657676388110334.ics?s=b91f16ef14ad7a9bafea0e41d9c78939"
+      }
+    },
+    {
+      "id": "412584746_TBA-0321 _2025-09-04_2025-09-30",
+      "resourceId": "TBA-0321",
+      "title": "Ledimo, Mampho Kebonaye Maria, MRS",
+      "start": "2025-09-04",
+      "end": "2025-09-30",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0321_reservations.csv",
+        "confirmationNumber": "412584746",
+        "roomNumber": "0321",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "26",
+        "adults": "1",
+        "children": "0",
+        "rate": "400.00 ZAR",
+        "source": "Long Term",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview321",
+        "lastUpdated": "2025-07-10T13:15:48.873Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221657676388110334.ics?s=b91f16ef14ad7a9bafea0e41d9c78939"
+      }
+    },
+    {
+      "id": "414316449_TBA-0401 _2025-07-03_2025-07-04",
+      "resourceId": "TBA-0401",
+      "title": "Wentzel, Michail, Mr",
+      "start": "2025-07-03",
+      "end": "2025-07-04",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "414316449",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "960.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "414522577_TBA-0401 _2025-07-10_2025-07-16",
+      "resourceId": "TBA-0401",
+      "title": "Omoboye, Babatunde",
+      "start": "2025-07-10",
+      "end": "2025-07-16",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "414522577",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Checked In",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,113.75 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "414278622_TBA-0401 _2025-08-09_2025-08-17",
+      "resourceId": "TBA-0401",
+      "title": "Atkins, Alison",
+      "start": "2025-08-09",
+      "end": "2025-08-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "414278622",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "8",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,940.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "411527590_TBA-0401 _2025-09-28_2025-10-02",
+      "resourceId": "TBA-0401",
+      "title": "Odoherty, neil",
+      "start": "2025-09-28",
+      "end": "2025-10-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "411527590",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,858.50 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "410037452_TBA-0401 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0401",
+      "title": "Glyn",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "410037452",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "409675365_TBA-0401 _2025-12-22_2026-01-04",
+      "resourceId": "TBA-0401",
+      "title": "Bettencourt, Charlie",
+      "start": "2025-12-22",
+      "end": "2026-01-04",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0401_reservations.csv",
+        "confirmationNumber": "409675365",
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "13",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "Home Owner",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "lastUpdated": "2025-07-10T13:15:48.875Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "414366013_TBA-0402 _2025-07-04_2025-07-06",
+      "resourceId": "TBA-0402",
+      "title": "Andrews, Dean, Mr",
+      "start": "2025-07-04",
+      "end": "2025-07-06",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "414366013",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "Checked Out",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "414510727_TBA-0402 _2025-07-09_2025-07-14",
+      "resourceId": "TBA-0402",
+      "title": "Wentzel, Michail, Mr",
+      "start": "2025-07-09",
+      "end": "2025-07-14",
+      "classNames": [
+        "reservation-inhouse"
+      ],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "414510727",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "In House",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "Rate Changes907.50 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "414278621_TBA-0402 _2025-08-09_2025-08-17",
+      "resourceId": "TBA-0402",
+      "title": "Nesta, Manuel",
+      "start": "2025-08-09",
+      "end": "2025-08-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "414278621",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "8",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,940.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "410037369_TBA-0402 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0402",
+      "title": "Albie",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "410037369",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "412204216_TBA-0402 _2025-12-22_2026-01-04",
+      "resourceId": "TBA-0402",
+      "title": "Andrews, Dean, Mr",
+      "start": "2025-12-22",
+      "end": "2026-01-04",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "412204216",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "13",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "Home Owner",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "412056479_TBA-0402 _2026-01-28_2026-03-05",
+      "resourceId": "TBA-0402",
+      "title": "Brett, Dominic",
+      "start": "2026-01-28",
+      "end": "2026-03-05",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0402_reservations.csv",
+        "confirmationNumber": "412056479",
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "36",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,174.76 ZAR",
+        "source": "",
+        "travelAgent": "AirBnB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "lastUpdated": "2025-07-10T13:15:48.876Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "412545633_TBA-0403 _2025-07-06_2025-08-05",
+      "resourceId": "TBA-0403",
+      "title": "Ledimo, Mampho Kebonaye Maria, MRS",
+      "start": "2025-07-06",
+      "end": "2025-08-05",
+      "classNames": [
+        "reservation-inhouse"
+      ],
+      "extendedProps": {
+        "fileName": "0403_reservations.csv",
+        "confirmationNumber": "412545633",
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "status": "In House",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "400.00 ZAR",
+        "source": "Long Term",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.877Z"
+      }
+    },
+    {
+      "id": "411078081_TBA-0403 _2026-01-26_2026-01-29",
+      "resourceId": "TBA-0403",
+      "title": "Clarke, Adrian",
+      "start": "2026-01-26",
+      "end": "2026-01-29",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0403_reservations.csv",
+        "confirmationNumber": "411078081",
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.877Z"
+      }
+    },
+    {
+      "id": "411078002_TBA-0403 _2026-02-24_2026-02-26",
+      "resourceId": "TBA-0403",
+      "title": "Clarke, Adrian",
+      "start": "2026-02-24",
+      "end": "2026-02-26",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0403_reservations.csv",
+        "confirmationNumber": "411078002",
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.877Z"
+      }
+    },
+    {
+      "id": "413308686_TBA-0403 _2026-03-05_2026-03-09",
+      "resourceId": "TBA-0403",
+      "title": "Williams, Ian",
+      "start": "2026-03-05",
+      "end": "2026-03-09",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0403_reservations.csv",
+        "confirmationNumber": "413308686",
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,778.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.877Z"
+      }
+    },
+    {
+      "id": "413389285_TBA-0404 _2025-10-10_2025-10-20",
+      "resourceId": "TBA-0404",
+      "title": "Breetzke, Simon",
+      "start": "2025-10-10",
+      "end": "2025-10-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0404_reservations.csv",
+        "confirmationNumber": "413389285",
+        "roomNumber": "0404",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "10",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,584.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview404",
+        "lastUpdated": "2025-07-10T13:15:48.878Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "412367574_TBA-0404 _2025-12-27_2026-01-03",
+      "resourceId": "TBA-0404",
+      "title": "Ntloko, Lesedi",
+      "start": "2025-12-27",
+      "end": "2026-01-03",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0404_reservations.csv",
+        "confirmationNumber": "412367574",
+        "roomNumber": "0404",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,802.60 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview404",
+        "lastUpdated": "2025-07-10T13:15:48.878Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "410655289_TBA-0404 _2026-03-05_2026-03-08",
+      "resourceId": "TBA-0404",
+      "title": "Oliver, Richard (1)",
+      "start": "2026-03-05",
+      "end": "2026-03-08",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0404_reservations.csv",
+        "confirmationNumber": "410655289",
+        "roomNumber": "0404",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,778.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview404",
+        "lastUpdated": "2025-07-10T13:15:48.878Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "414375646_TBA-0405 _2025-07-04_2025-07-06",
+      "resourceId": "TBA-0405",
+      "title": "Omoboye, Babatunde",
+      "start": "2025-07-04",
+      "end": "2025-07-06",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0405_reservations.csv",
+        "confirmationNumber": "414375646",
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "status": "Checked Out",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,161.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.878Z"
+      }
+    },
+    {
+      "id": "413705941_TBA-0405 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0405",
+      "title": "Collins, Ross",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0405_reservations.csv",
+        "confirmationNumber": "413705941",
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.878Z"
+      }
+    },
+    {
+      "id": "413365406_TBA-0405 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0405",
+      "title": "Dodd, Richard",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0405_reservations.csv",
+        "confirmationNumber": "413365406",
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,470.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.878Z"
+      }
+    },
+    {
+      "id": "413308664_TBA-0405 _2026-03-05_2026-03-09",
+      "resourceId": "TBA-0405",
+      "title": "Keith Kinsey, Nigel",
+      "start": "2026-03-05",
+      "end": "2026-03-09",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0405_reservations.csv",
+        "confirmationNumber": "413308664",
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,778.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.878Z"
+      }
+    },
+    {
+      "id": "410826477_TBA-0406 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0406",
+      "title": "Thomson, Marshal",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0406_reservations.csv",
+        "confirmationNumber": "410826477",
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.879Z"
+      }
+    },
+    {
+      "id": "409846816_TBA-0406 _2025-10-11_2025-10-15",
+      "resourceId": "TBA-0406",
+      "title": "Donachie, Stewart",
+      "start": "2025-10-11",
+      "end": "2025-10-15",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0406_reservations.csv",
+        "confirmationNumber": "409846816",
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.879Z"
+      }
+    },
+    {
+      "id": "413727194_TBA-0406 _2026-01-28_2026-02-04",
+      "resourceId": "TBA-0406",
+      "title": "Kelly, Veronica (1)",
+      "start": "2026-01-28",
+      "end": "2026-02-04",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0406_reservations.csv",
+        "confirmationNumber": "413727194",
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,830.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.879Z"
+      }
+    },
+    {
+      "id": "413308599_TBA-0406 _2026-03-05_2026-03-09",
+      "resourceId": "TBA-0406",
+      "title": "Bennet, Scott",
+      "start": "2026-03-05",
+      "end": "2026-03-09",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0406_reservations.csv",
+        "confirmationNumber": "413308599",
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,778.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.879Z"
+      }
+    },
+    {
+      "id": "412720521_TBA-0408 _2025-07-11_2025-07-14",
+      "resourceId": "TBA-0408",
+      "title": "Bones, Caroline",
+      "start": "2025-07-11",
+      "end": "2025-07-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0408_reservations.csv",
+        "confirmationNumber": "412720521",
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,120.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "410826829_TBA-0408 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0408",
+      "title": "Butcher, Ryan",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0408_reservations.csv",
+        "confirmationNumber": "410826829",
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "410470673_TBA-0408 _2025-09-23_2025-09-25",
+      "resourceId": "TBA-0408",
+      "title": "Kempton, Amy (1)",
+      "start": "2025-09-23",
+      "end": "2025-09-25",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0408_reservations.csv",
+        "confirmationNumber": "410470673",
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "413493126_TBA-0408 _2025-12-27_2026-01-03",
+      "resourceId": "TBA-0408",
+      "title": "Dintwe, Bakang",
+      "start": "2025-12-27",
+      "end": "2026-01-03",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0408_reservations.csv",
+        "confirmationNumber": "413493126",
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,802.60 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "412146228_TBA-0408 _2026-02-19_2026-02-25",
+      "resourceId": "TBA-0408",
+      "title": "Rhodes, Susan",
+      "start": "2026-02-19",
+      "end": "2026-02-25",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0408_reservations.csv",
+        "confirmationNumber": "412146228",
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,779.17 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "410826823_TBA-0409 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0409",
+      "title": "Callum, Rob",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0409_reservations.csv",
+        "confirmationNumber": "410826823",
+        "roomNumber": "0409",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.880Z"
+      }
+    },
+    {
+      "id": "410219159_TBA-0409 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0409",
+      "title": "Rajesh",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0409_reservations.csv",
+        "confirmationNumber": "410219159",
+        "roomNumber": "0409",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.881Z"
+      }
+    },
+    {
+      "id": "413492868_TBA-0409 _2025-12-27_2026-01-03",
+      "resourceId": "TBA-0409",
+      "title": "Dintwe, Bakang",
+      "start": "2025-12-27",
+      "end": "2026-01-03",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0409_reservations.csv",
+        "confirmationNumber": "413492868",
+        "roomNumber": "0409",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,802.60 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.881Z"
+      }
+    },
+    {
+      "id": "414361750_TBA-0411 _2025-07-25_2025-07-26",
+      "resourceId": "TBA-0411",
+      "title": "Akinboote, Daniel",
+      "start": "2025-07-25",
+      "end": "2025-07-26",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0411_reservations.csv",
+        "confirmationNumber": "414361750",
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "791.72 ZAR",
+        "source": "",
+        "travelAgent": "AirBnB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "lastUpdated": "2025-07-10T13:15:48.881Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "410826817_TBA-0411 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0411",
+      "title": "Mukheibir, Glen",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0411_reservations.csv",
+        "confirmationNumber": "410826817",
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "lastUpdated": "2025-07-10T13:15:48.881Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "412620439_TBA-0411 _2025-10-08_2025-10-13",
+      "resourceId": "TBA-0411",
+      "title": "Orourke, Megan (1)",
+      "start": "2025-10-08",
+      "end": "2025-10-13",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0411_reservations.csv",
+        "confirmationNumber": "412620439",
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,568.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "lastUpdated": "2025-07-10T13:15:48.881Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "410219185_TBA-0411 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0411",
+      "title": "VANESSA",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0411_reservations.csv",
+        "confirmationNumber": "410219185",
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "lastUpdated": "2025-07-10T13:15:48.881Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "412308633_TBA-0411 _2026-02-19_2026-02-25",
+      "resourceId": "TBA-0411",
+      "title": "Gartside, Marcus",
+      "start": "2026-02-19",
+      "end": "2026-02-25",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0411_reservations.csv",
+        "confirmationNumber": "412308633",
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,779.17 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "lastUpdated": "2025-07-10T13:15:48.881Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "414511173_TBA-0413 _2025-07-09_2025-07-10",
+      "resourceId": "TBA-0413",
+      "title": "Matthee, Magamat Adanaan",
+      "start": "2025-07-09",
+      "end": "2025-07-10",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "414511173",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,320.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "414385013_TBA-0413 _2025-09-06_2025-09-07",
+      "resourceId": "TBA-0413",
+      "title": "Naude, Christiaan",
+      "start": "2025-09-06",
+      "end": "2025-09-07",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "414385013",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "714.47 ZAR",
+        "source": "",
+        "travelAgent": "AirBnB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "410584580_TBA-0413 _2025-10-29_2025-11-02",
+      "resourceId": "TBA-0413",
+      "title": "Butler, Stephen (1)",
+      "start": "2025-10-29",
+      "end": "2025-11-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "410584580",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,543.50 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "412133196_TBA-0413 _2025-11-09_2025-11-20",
+      "resourceId": "TBA-0413",
+      "title": "Sykes, Catherine",
+      "start": "2025-11-09",
+      "end": "2025-11-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "412133196",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "11",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,646.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "410456680_TBA-0413 _2025-11-20_2025-11-24",
+      "resourceId": "TBA-0413",
+      "title": "Hewitt, Stephen (1)",
+      "start": "2025-11-20",
+      "end": "2025-11-24",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "410456680",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,543.50 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "411164334_TBA-0413 _2025-12-02_2025-12-07",
+      "resourceId": "TBA-0413",
+      "title": "Lynch, Michael",
+      "start": "2025-12-02",
+      "end": "2025-12-07",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "411164334",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,205.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "411162657_TBA-0413 _2025-12-03_2025-12-07",
+      "resourceId": "TBA-0413",
+      "title": "Lynch, Michael",
+      "start": "2025-12-03",
+      "end": "2025-12-07",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "411162657",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Cancelled",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,126.25 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "413404643_TBA-0413 _2025-12-08_2025-12-15",
+      "resourceId": "TBA-0413",
+      "title": "Odgen, David",
+      "start": "2025-12-08",
+      "end": "2025-12-15",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "413404643",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,205.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "414002962_TBA-0413 _2026-05-09_2026-05-12",
+      "resourceId": "TBA-0413",
+      "title": "Taylor, Marc (1)",
+      "start": "2026-05-09",
+      "end": "2026-05-12",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0413_reservations.csv",
+        "confirmationNumber": "414002962",
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "lastUpdated": "2025-07-10T13:15:48.883Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "414542696_TBA-0415 _2025-07-11_2025-07-14",
+      "resourceId": "TBA-0415",
+      "title": "Makushu, Ronaldo",
+      "start": "2025-07-11",
+      "end": "2025-07-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "414542696",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,350.00 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "412469734_TBA-0415 _2025-07-21_2025-07-25",
+      "resourceId": "TBA-0415",
+      "title": "Mason, Wendy",
+      "start": "2025-07-21",
+      "end": "2025-07-25",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "412469734",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,155.60 ZAR",
+        "source": "",
+        "travelAgent": "Hassle-Free Africa",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "410784219_TBA-0415 _2025-08-14_2025-08-17",
+      "resourceId": "TBA-0415",
+      "title": "Carney, Shirley (1)",
+      "start": "2025-08-14",
+      "end": "2025-08-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "410784219",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,498.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "413110102_TBA-0415 _2025-09-08_2025-09-14",
+      "resourceId": "TBA-0415",
+      "title": "Barnes, Gillian",
+      "start": "2025-09-08",
+      "end": "2025-09-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "413110102",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,205.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "410010367_TBA-0415 _2025-11-01_2025-11-06",
+      "resourceId": "TBA-0415",
+      "title": "Copp, Peter (1)",
+      "start": "2025-11-01",
+      "end": "2025-11-06",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "410010367",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,543.60 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "412221345_TBA-0415 _2025-11-12_2025-11-16",
+      "resourceId": "TBA-0415",
+      "title": "Lunn, Stephen (1)",
+      "start": "2025-11-12",
+      "end": "2025-11-16",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "412221345",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,126.25 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "411078786_TBA-0415 _2025-11-19_2025-12-19",
+      "resourceId": "TBA-0415",
+      "title": "MacLean, Carol",
+      "start": "2025-11-19",
+      "end": "2025-12-19",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "411078786",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Guaranteed",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "Home Owner",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "410994543_TBA-0415 _2025-12-30_2026-01-02",
+      "resourceId": "TBA-0415",
+      "title": "Shikhiban, Tshepiso",
+      "start": "2025-12-30",
+      "end": "2026-01-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0415_reservations.csv",
+        "confirmationNumber": "410994543",
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "4,140.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "lastUpdated": "2025-07-10T13:15:48.884Z"
+      }
+    },
+    {
+      "id": "414332846_TBA-0416 _2025-07-03_2025-07-06",
+      "resourceId": "TBA-0416",
+      "title": "Asoud, Fareed",
+      "start": "2025-07-03",
+      "end": "2025-07-06",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "414332846",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Checked Out",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,000.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "414425638_TBA-0416 _2025-07-07_2025-07-09",
+      "resourceId": "TBA-0416",
+      "title": "Asoud, Fareed",
+      "start": "2025-07-07",
+      "end": "2025-07-09",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "414425638",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Checked Out",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,000.00 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "414540779_TBA-0416 _2025-07-14_2025-07-15",
+      "resourceId": "TBA-0416",
+      "title": "Singh, Maneshree",
+      "start": "2025-07-14",
+      "end": "2025-07-15",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "414540779",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,210.00 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "414541109_TBA-0416 _2025-07-17_2025-07-18",
+      "resourceId": "TBA-0416",
+      "title": "Singh, Maneshree",
+      "start": "2025-07-17",
+      "end": "2025-07-18",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "414541109",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,210.00 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "414414490_TBA-0416 _2025-07-28_2025-08-06",
+      "resourceId": "TBA-0416",
+      "title": "Abdul, Suraka",
+      "start": "2025-07-28",
+      "end": "2025-08-06",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "414414490",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Non - Guarantee",
+        "nights": "9",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes972.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "410826847_TBA-0416 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0416",
+      "title": "Otto, Patrick",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "410826847",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "410218881_TBA-0416 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0416",
+      "title": "Chantel",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0416_reservations.csv",
+        "confirmationNumber": "410218881",
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.885Z"
+      }
+    },
+    {
+      "id": "414220438_TBA-0417 _2025-07-08_2025-08-07",
+      "resourceId": "TBA-0417",
+      "title": "Badeji, Oluwapelum, Mr",
+      "start": "2025-07-08",
+      "end": "2025-08-07",
+      "classNames": [
+        "reservation-inhouse"
+      ],
+      "extendedProps": {
+        "fileName": "0417_reservations.csv",
+        "confirmationNumber": "414220438",
+        "roomNumber": "0417",
+        "roomType": "STU-URB",
+        "status": "In House",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "500.00 ZAR",
+        "source": "Long Term",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.886Z"
+      }
+    },
+    {
+      "id": "410826865_TBA-0417 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0417",
+      "title": "Rodrigues, Rick",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0417_reservations.csv",
+        "confirmationNumber": "410826865",
+        "roomNumber": "0417",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.886Z"
+      }
+    },
+    {
+      "id": "410218551_TBA-0417 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0417",
+      "title": "Aux",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0417_reservations.csv",
+        "confirmationNumber": "410218551",
+        "roomNumber": "0417",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.886Z"
+      }
+    },
+    {
+      "id": "410826626_TBA-0418 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0418",
+      "title": "Sarigny, Gavin de",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0418_reservations.csv",
+        "confirmationNumber": "410826626",
+        "roomNumber": "0418",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.886Z"
+      }
+    },
+    {
+      "id": "410218757_TBA-0418 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0418",
+      "title": "Michele",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0418_reservations.csv",
+        "confirmationNumber": "410218757",
+        "roomNumber": "0418",
+        "roomType": "STU-URB",
+        "status": "Cancelled",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.886Z"
+      }
+    },
+    {
+      "id": "410826880_TBA-0419 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0419",
+      "title": "Oddy, John",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0419_reservations.csv",
+        "confirmationNumber": "410826880",
+        "roomNumber": "0419",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.887Z"
+      }
+    },
+    {
+      "id": "410218517_TBA-0419 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0419",
+      "title": "Graeme",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0419_reservations.csv",
+        "confirmationNumber": "410218517",
+        "roomNumber": "0419",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.887Z"
+      }
+    },
+    {
+      "id": "413149114_TBA-0420 _2025-08-01_2025-08-31",
+      "resourceId": "TBA-0420",
+      "title": "Hart, Maybe",
+      "start": "2025-08-01",
+      "end": "2025-08-31",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0420_reservations.csv",
+        "confirmationNumber": "413149114",
+        "roomNumber": "0420",
+        "roomType": "STU-URB",
+        "status": "Guaranteed",
+        "nights": "30",
+        "adults": "1",
+        "children": "0",
+        "rate": "600.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview420",
+        "lastUpdated": "2025-07-10T13:15:48.887Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221716931721025193.ics?s=8e77b0f039b0131646b2e8bba07b7613"
+      }
+    },
+    {
+      "id": "410218508_TBA-0420 _2025-11-10_2025-11-13",
+      "resourceId": "TBA-0420",
+      "title": "Erin",
+      "start": "2025-11-10",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0420_reservations.csv",
+        "confirmationNumber": "410218508",
+        "roomNumber": "0420",
+        "roomType": "STU-URB",
+        "status": "Definite Group",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,540.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview420",
+        "lastUpdated": "2025-07-10T13:15:48.887Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221716931721025193.ics?s=8e77b0f039b0131646b2e8bba07b7613"
+      }
+    },
+    {
+      "id": "414316892_TBA-0501 _2025-07-03_2025-07-04",
+      "resourceId": "TBA-0501",
+      "title": "Harding, Chania, MS",
+      "start": "2025-07-03",
+      "end": "2025-07-04",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0501_reservations.csv",
+        "confirmationNumber": "414316892",
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "2",
+        "children": "0",
+        "rate": "960.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "lastUpdated": "2025-07-10T13:15:48.888Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "414380511_TBA-0501 _2025-07-08_2025-07-11",
+      "resourceId": "TBA-0501",
+      "title": "Kritzinger, Liezl",
+      "start": "2025-07-08",
+      "end": "2025-07-11",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0501_reservations.csv",
+        "confirmationNumber": "414380511",
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "status": "Cancelled",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,552.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "lastUpdated": "2025-07-10T13:15:48.888Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "410078381_TBA-0501 _2025-07-12_2025-07-13",
+      "resourceId": "TBA-0501",
+      "title": "Ngandundu, Freddy",
+      "start": "2025-07-12",
+      "end": "2025-07-13",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0501_reservations.csv",
+        "confirmationNumber": "410078381",
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "738.86 ZAR",
+        "source": "",
+        "travelAgent": "AirBnB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "lastUpdated": "2025-07-10T13:15:48.888Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "410036984_TBA-0501 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0501",
+      "title": "Storm",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0501_reservations.csv",
+        "confirmationNumber": "410036984",
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "lastUpdated": "2025-07-10T13:15:48.888Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "411466138_TBA-0502 _2025-07-29_2025-08-01",
+      "resourceId": "TBA-0502",
+      "title": "Graburn, Alice (1)",
+      "start": "2025-07-29",
+      "end": "2025-08-01",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0502_reservations.csv",
+        "confirmationNumber": "411466138",
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,358.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.889Z"
+      }
+    },
+    {
+      "id": "414278816_TBA-0502 _2025-08-09_2025-08-14",
+      "resourceId": "TBA-0502",
+      "title": "Mashabi, Alaa",
+      "start": "2025-08-09",
+      "end": "2025-08-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0502_reservations.csv",
+        "confirmationNumber": "414278816",
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,309.50 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.889Z"
+      }
+    },
+    {
+      "id": "414215017_TBA-0502 _2025-10-01_2025-10-05",
+      "resourceId": "TBA-0502",
+      "title": "Light, Hayley (1)",
+      "start": "2025-10-01",
+      "end": "2025-10-05",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0502_reservations.csv",
+        "confirmationNumber": "414215017",
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,858.50 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.889Z"
+      }
+    },
+    {
+      "id": "414414489_TBA-0502 _2025-10-19_2025-10-26",
+      "resourceId": "TBA-0502",
+      "title": "Russak, Gerhard",
+      "start": "2025-10-19",
+      "end": "2025-10-26",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0502_reservations.csv",
+        "confirmationNumber": "414414489",
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,795.51 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.889Z"
+      }
+    },
+    {
+      "id": "410036970_TBA-0502 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0502",
+      "title": "Andrew",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0502_reservations.csv",
+        "confirmationNumber": "410036970",
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.889Z"
+      }
+    },
+    {
+      "id": "413916728_TBA-0503 _2025-07-06_2025-07-10",
+      "resourceId": "TBA-0503",
+      "title": "Carnegie, Christopher, Mr",
+      "start": "2025-07-06",
+      "end": "2025-07-10",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "413916728",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Cancelled",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,087.50 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "413917038_TBA-0503 _2025-07-13_2025-07-17",
+      "resourceId": "TBA-0503",
+      "title": "Carnegie, Christopher, Mr",
+      "start": "2025-07-13",
+      "end": "2025-07-17",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "413917038",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,087.50 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "413917056_TBA-0503 _2025-07-28_2025-08-01",
+      "resourceId": "TBA-0503",
+      "title": "Carnegie, Christopher, Mr",
+      "start": "2025-07-28",
+      "end": "2025-08-01",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "413917056",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,087.50 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "410370748_TBA-0503 _2025-09-05_2025-09-09",
+      "resourceId": "TBA-0503",
+      "title": "Doherty, Martin (1)",
+      "start": "2025-09-05",
+      "end": "2025-09-09",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "410370748",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,396.50 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "412976518_TBA-0503 _2025-10-01_2025-10-05",
+      "resourceId": "TBA-0503",
+      "title": "Steel, Sarah",
+      "start": "2025-10-01",
+      "end": "2025-10-05",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "412976518",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,862.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "410036840_TBA-0503 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0503",
+      "title": "Carla",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "410036840",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "414380668_TBA-0503 _2026-06-24_2026-06-27",
+      "resourceId": "TBA-0503",
+      "title": "Whiteside, Stephanie",
+      "start": "2026-06-24",
+      "end": "2026-06-27",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0503_reservations.csv",
+        "confirmationNumber": "414380668",
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,012.50 ZAR",
+        "source": "",
+        "travelAgent": "HotelBeds",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.890Z"
+      }
+    },
+    {
+      "id": "410826450_TBA-0504 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0504",
+      "title": "Clapham, Martin",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0504_reservations.csv",
+        "confirmationNumber": "410826450",
+        "roomNumber": "0504",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview504",
+        "lastUpdated": "2025-07-10T13:15:48.891Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+      }
+    },
+    {
+      "id": "410217876_TBA-0504 _2025-11-09_2025-11-13",
+      "resourceId": "TBA-0504",
+      "title": "Hailey",
+      "start": "2025-11-09",
+      "end": "2025-11-13",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0504_reservations.csv",
+        "confirmationNumber": "410217876",
+        "roomNumber": "0504",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview504",
+        "lastUpdated": "2025-07-10T13:15:48.891Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+      }
+    },
+    {
+      "id": "413272126_TBA-0504 _2026-02-08_2026-02-13",
+      "resourceId": "TBA-0504",
+      "title": "Dladla, Thuthuka",
+      "start": "2026-02-08",
+      "end": "2026-02-13",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0504_reservations.csv",
+        "confirmationNumber": "413272126",
+        "roomNumber": "0504",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "2,800.00 ZAR",
+        "source": "Return Guest",
+        "travelAgent": "Travel with Flair - Cape Town",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview504",
+        "lastUpdated": "2025-07-10T13:15:48.891Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+      }
+    },
+    {
+      "id": "414044396_TBA-0506 _2025-07-17_2025-07-19",
+      "resourceId": "TBA-0506",
+      "title": "Brande, Wesley",
+      "start": "2025-07-17",
+      "end": "2025-07-19",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0506_reservations.csv",
+        "confirmationNumber": "414044396",
+        "roomNumber": "0506",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,215.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview506",
+        "lastUpdated": "2025-07-10T13:15:48.892Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+      }
+    },
+    {
+      "id": "410807379_TBA-0506 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0506",
+      "title": "Jensen, Andrew, Mr",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0506_reservations.csv",
+        "confirmationNumber": "410807379",
+        "roomNumber": "0506",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview506",
+        "lastUpdated": "2025-07-10T13:15:48.892Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+      }
+    },
+    {
+      "id": "410217786_TBA-0506 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0506",
+      "title": "Brian",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0506_reservations.csv",
+        "confirmationNumber": "410217786",
+        "roomNumber": "0506",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview506",
+        "lastUpdated": "2025-07-10T13:15:48.892Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+      }
+    },
+    {
+      "id": "410484692_TBA-0508 _2025-07-20_2025-07-26",
+      "resourceId": "TBA-0508",
+      "title": "Fitzgerald, Rachek (1)",
+      "start": "2025-07-20",
+      "end": "2025-07-26",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0508_reservations.csv",
+        "confirmationNumber": "410484692",
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "0",
+        "rate": "924.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.893Z"
+      }
+    },
+    {
+      "id": "414501755_TBA-0508 _2025-07-27_2025-07-28",
+      "resourceId": "TBA-0508",
+      "title": "O Keefe, Sean",
+      "start": "2025-07-27",
+      "end": "2025-07-28",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0508_reservations.csv",
+        "confirmationNumber": "414501755",
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,100.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.893Z"
+      }
+    },
+    {
+      "id": "410808183_TBA-0508 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0508",
+      "title": "Vuuren, Jacques van",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0508_reservations.csv",
+        "confirmationNumber": "410808183",
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.893Z"
+      }
+    },
+    {
+      "id": "410217819_TBA-0508 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0508",
+      "title": "Karen",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0508_reservations.csv",
+        "confirmationNumber": "410217819",
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "412656992_TBA-0508 _2026-03-10_2026-03-14",
+      "resourceId": "TBA-0508",
+      "title": "Askew, Paul",
+      "start": "2026-03-10",
+      "end": "2026-03-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0508_reservations.csv",
+        "confirmationNumber": "412656992",
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,837.50 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "413922124_TBA-0509 _2025-07-09_2025-07-11",
+      "resourceId": "TBA-0509",
+      "title": "Sihlono, Zola",
+      "start": "2025-07-09",
+      "end": "2025-07-11",
+      "classNames": [
+        "reservation-inhouse"
+      ],
+      "extendedProps": {
+        "fileName": "0509_reservations.csv",
+        "confirmationNumber": "413922124",
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "status": "In House",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,580.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "414044395_TBA-0509 _2025-07-17_2025-07-19",
+      "resourceId": "TBA-0509",
+      "title": "Hijlkema, Patrick",
+      "start": "2025-07-17",
+      "end": "2025-07-19",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0509_reservations.csv",
+        "confirmationNumber": "414044395",
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,215.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "410826245_TBA-0509 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0509",
+      "title": "Wait, Vernon",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0509_reservations.csv",
+        "confirmationNumber": "410826245",
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "410218162_TBA-0509 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0509",
+      "title": "Tashin",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0509_reservations.csv",
+        "confirmationNumber": "410218162",
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.894Z"
+      }
+    },
+    {
+      "id": "410807109_TBA-0511 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0511",
+      "title": "McWilliams, Garry, Mr",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "410807109",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "412822968_TBA-0511 _2025-08-24_2025-08-27",
+      "resourceId": "TBA-0511",
+      "title": "Singh, Farhana",
+      "start": "2025-08-24",
+      "end": "2025-08-27",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "412822968",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,232.00 ZAR",
+        "source": "",
+        "travelAgent": "TravelIT",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "412132233_TBA-0511 _2025-10-23_2025-10-26",
+      "resourceId": "TBA-0511",
+      "title": "Fry, Sylvia",
+      "start": "2025-10-23",
+      "end": "2025-10-26",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "412132233",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,694.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "410218179_TBA-0511 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0511",
+      "title": "Thembi",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "410218179",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "409675141_TBA-0511 _2025-12-22_2026-01-04",
+      "resourceId": "TBA-0511",
+      "title": "Bettencourt, Charlie",
+      "start": "2025-12-22",
+      "end": "2026-01-04",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "409675141",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "13",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "Home Owner",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "412413228_TBA-0511 _2026-02-21_2026-02-24",
+      "resourceId": "TBA-0511",
+      "title": "Dickinson, Geoffrey",
+      "start": "2026-02-21",
+      "end": "2026-02-24",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0511_reservations.csv",
+        "confirmationNumber": "412413228",
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,960.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.896Z"
+      }
+    },
+    {
+      "id": "411479704_TBA-0513 _2025-10-18_2025-10-23",
+      "resourceId": "TBA-0513",
+      "title": "Mittelhuber, Bernd",
+      "start": "2025-10-18",
+      "end": "2025-10-23",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0513_reservations.csv",
+        "confirmationNumber": "411479704",
+        "roomNumber": "0513",
+        "roomType": "2-BR",
+        "status": "Cancelled",
+        "nights": "5",
+        "adults": "3",
+        "children": "0",
+        "rate": "3,740.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.897Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1273908503357043458.ics?s=1a06935ca97d1e8b2b0dd27c957c1c17"
+      }
+    },
+    {
+      "id": "410691418_TBA-0514 _2025-11-02_2025-11-06",
+      "resourceId": "TBA-0514",
+      "title": "Lawlor, Alibhe (1)",
+      "start": "2025-11-02",
+      "end": "2025-11-06",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0514_reservations.csv",
+        "confirmationNumber": "410691418",
+        "roomNumber": "0514",
+        "roomType": "STU-BALC",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,396.50 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview514",
+        "lastUpdated": "2025-07-10T13:15:48.897Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221693800160287643.ics?s=2972a50a8e4277c45de99ad553033944"
+      }
+    },
+    {
+      "id": "410037113_TBA-0514 _2025-11-09_2025-11-14",
+      "resourceId": "TBA-0514",
+      "title": "Ruan",
+      "start": "2025-11-09",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0514_reservations.csv",
+        "confirmationNumber": "410037113",
+        "roomNumber": "0514",
+        "roomType": "STU-BALC",
+        "status": "Definite Group",
+        "nights": "5",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,850.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview514",
+        "lastUpdated": "2025-07-10T13:15:48.897Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221693800160287643.ics?s=2972a50a8e4277c45de99ad553033944"
+      }
+    },
+    {
+      "id": "411692075_TBA-0515 _2025-07-04_2025-07-05",
+      "resourceId": "TBA-0515",
+      "title": "Phan, Melissa",
+      "start": "2025-07-04",
+      "end": "2025-07-05",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "411692075",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Cancelled",
+        "nights": "1",
+        "adults": "4",
+        "children": "0",
+        "rate": "2,430.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "411629962_TBA-0515 _2025-07-11_2025-07-14",
+      "resourceId": "TBA-0515",
+      "title": "Kenny, Adrian (3)",
+      "start": "2025-07-11",
+      "end": "2025-07-14",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "411629962",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Guaranteed",
+        "nights": "3",
+        "adults": "4",
+        "children": "0",
+        "rate": "1,890.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "414044391_TBA-0515 _2025-07-17_2025-07-19",
+      "resourceId": "TBA-0515",
+      "title": "Theunissen, Heila",
+      "start": "2025-07-17",
+      "end": "2025-07-19",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "414044391",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "2",
+        "adults": "2",
+        "children": "0",
+        "rate": "2,160.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "410508264_TBA-0515 _2025-07-23_2025-07-28",
+      "resourceId": "TBA-0515",
+      "title": "Jones, Reuben",
+      "start": "2025-07-23",
+      "end": "2025-07-28",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "410508264",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Guaranteed",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "Rate Changes1,890.00 ZAR",
+        "source": "Stay 4 Pay 3",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "413331475_TBA-0515 _2025-08-03_2025-08-06",
+      "resourceId": "TBA-0515",
+      "title": "Reid, Suzy",
+      "start": "2025-08-03",
+      "end": "2025-08-06",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "413331475",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Cancelled",
+        "nights": "3",
+        "adults": "2",
+        "children": "1",
+        "rate": "1,890.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "413657210_TBA-0515 _2025-08-09_2025-08-14",
+      "resourceId": "TBA-0515",
+      "title": "Mashabi, Alaa",
+      "start": "2025-08-09",
+      "end": "2025-08-14",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "413657210",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "5",
+        "adults": "4",
+        "children": "0",
+        "rate": "1,993.75 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "410784074_TBA-0515 _2025-08-14_2025-08-17",
+      "resourceId": "TBA-0515",
+      "title": "Carney, Cormac (2)",
+      "start": "2025-08-14",
+      "end": "2025-08-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "410784074",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "2",
+        "children": "1",
+        "rate": "1,890.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "414477996_TBA-0515 _2025-09-01_2025-09-04",
+      "resourceId": "TBA-0515",
+      "title": "Hutz, Julian",
+      "start": "2025-09-01",
+      "end": "2025-09-04",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "414477996",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "3,740.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "410900867_TBA-0515 _2025-09-14_2025-09-20",
+      "resourceId": "TBA-0515",
+      "title": "Chang, Ching-Yen",
+      "start": "2025-09-14",
+      "end": "2025-09-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "410900867",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "4",
+        "children": "0",
+        "rate": "3,740.01 ZAR",
+        "source": "",
+        "travelAgent": "Expedia",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "412142734_TBA-0515 _2025-09-21_2025-09-28",
+      "resourceId": "TBA-0515",
+      "title": "Watson, Claire",
+      "start": "2025-09-21",
+      "end": "2025-09-28",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "412142734",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "1",
+        "rate": "2,532.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "414164235_TBA-0515 _2025-10-16_2025-10-20",
+      "resourceId": "TBA-0515",
+      "title": "Masondo, Sizwe",
+      "start": "2025-10-16",
+      "end": "2025-10-20",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "414164235",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "4",
+        "adults": "4",
+        "children": "0",
+        "rate": "2,992.00 ZAR",
+        "source": "",
+        "travelAgent": "Profit Room",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "411475320_TBA-0515 _2025-10-18_2025-10-23",
+      "resourceId": "TBA-0515",
+      "title": "Nagel, Julia",
+      "start": "2025-10-18",
+      "end": "2025-10-23",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "411475320",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Cancelled",
+        "nights": "5",
+        "adults": "2",
+        "children": "0",
+        "rate": "3,366.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "412058198_TBA-0515 _2025-10-26_2025-11-02",
+      "resourceId": "TBA-0515",
+      "title": "Grealis, Kelly (2)",
+      "start": "2025-10-26",
+      "end": "2025-11-02",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "412058198",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "3",
+        "children": "0",
+        "rate": "2,532.00 ZAR",
+        "source": "Trailfinders",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.900Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "413696268_TBA-0515 _2025-11-22_2025-12-01",
+      "resourceId": "TBA-0515",
+      "title": "Male Kawuma, Patrick",
+      "start": "2025-11-22",
+      "end": "2025-12-01",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "413696268",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "9",
+        "adults": "3",
+        "children": "0",
+        "rate": "3,740.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "413102221_TBA-0515 _2025-12-14_2025-12-17",
+      "resourceId": "TBA-0515",
+      "title": "Mavis, Ngobe",
+      "start": "2025-12-14",
+      "end": "2025-12-17",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "413102221",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "3",
+        "adults": "4",
+        "children": "0",
+        "rate": "3,366.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "412367779_TBA-0515 _2025-12-27_2026-01-03",
+      "resourceId": "TBA-0515",
+      "title": "Ntloko, Lesedi",
+      "start": "2025-12-27",
+      "end": "2026-01-03",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "412367779",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "7",
+        "adults": "2",
+        "children": "0",
+        "rate": "5,283.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com (VCC)",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "413220701_TBA-0515 _2026-01-21_2026-01-25",
+      "resourceId": "TBA-0515",
+      "title": "Williams, Ian",
+      "start": "2026-01-21",
+      "end": "2026-01-25",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "413220701",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Cancelled",
+        "nights": "4",
+        "adults": "3",
+        "children": "0",
+        "rate": "Rate Changes3,010.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "412321467_TBA-0515 _2026-02-18_2026-02-24",
+      "resourceId": "TBA-0515",
+      "title": "Jackson, Amber (3)",
+      "start": "2026-02-18",
+      "end": "2026-02-24",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "412321467",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "2",
+        "children": "2",
+        "rate": "2,829.17 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "411557317_TBA-0515 _2026-04-05_2026-04-09",
+      "resourceId": "TBA-0515",
+      "title": "Callear, David",
+      "start": "2026-04-05",
+      "end": "2026-04-09",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0515_reservations.csv",
+        "confirmationNumber": "411557317",
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "status": "Guaranteed",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "Rate Changes3,395.00 ZAR",
+        "source": "",
+        "travelAgent": "Followme2Africa (PTY) Limited",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "lastUpdated": "2025-07-10T13:15:48.901Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "414312858_TBA-0516 _2025-07-05_2025-07-08",
+      "resourceId": "TBA-0516",
+      "title": "Kritzinger, Liezl",
+      "start": "2025-07-05",
+      "end": "2025-07-08",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0516_reservations.csv",
+        "confirmationNumber": "414312858",
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "status": "Cancelled",
+        "nights": "3",
+        "adults": "2",
+        "children": "0",
+        "rate": "1,408.00 ZAR",
+        "source": "",
+        "travelAgent": "Booking.com",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.901Z"
+      }
+    },
+    {
+      "id": "414348223_TBA-0516 _2025-07-13_2025-07-19",
+      "resourceId": "TBA-0516",
+      "title": "Zitoni, Tristan",
+      "start": "2025-07-13",
+      "end": "2025-07-19",
+      "classNames": [
+        "reservation-nonguarantee"
+      ],
+      "extendedProps": {
+        "fileName": "0516_reservations.csv",
+        "confirmationNumber": "414348223",
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "status": "Non - Guarantee",
+        "nights": "6",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,150.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.901Z"
+      }
+    },
+    {
+      "id": "410826429_TBA-0516 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0516",
+      "title": "Ferrant, Dave",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0516_reservations.csv",
+        "confirmationNumber": "410826429",
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.901Z"
+      }
+    },
+    {
+      "id": "410218189_TBA-0516 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0516",
+      "title": "NO NAME",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0516_reservations.csv",
+        "confirmationNumber": "410218189",
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.901Z"
+      }
+    },
+    {
+      "id": "410826524_TBA-0517 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0517",
+      "title": "Mulckhuyse, Arjen",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0517_reservations.csv",
+        "confirmationNumber": "410826524",
+        "roomNumber": "0517",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.902Z"
+      }
+    },
+    {
+      "id": "410218454_TBA-0517 _2025-11-10_2025-11-14",
+      "resourceId": "TBA-0517",
+      "title": "NO NAME",
+      "start": "2025-11-10",
+      "end": "2025-11-14",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0517_reservations.csv",
+        "confirmationNumber": "410218454",
+        "roomNumber": "0517",
+        "roomType": "STU-LUX",
+        "status": "Definite Group",
+        "nights": "4",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,700.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.902Z"
+      }
+    },
+    {
+      "id": "414327892_TBA-0518 _2025-07-04_2025-07-06",
+      "resourceId": "TBA-0518",
+      "title": "Pansegrouw, Willem",
+      "start": "2025-07-04",
+      "end": "2025-07-06",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "414327892",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Checked Out",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "414037767_TBA-0518 _2025-07-08_2025-07-10",
+      "resourceId": "TBA-0518",
+      "title": "Pansegrouw, Willem",
+      "start": "2025-07-08",
+      "end": "2025-07-10",
+      "classNames": [
+        "reservation-cancelled"
+      ],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "414037767",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Cancelled",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "412034013_TBA-0518 _2025-07-25_2025-07-28",
+      "resourceId": "TBA-0518",
+      "title": "Pansegrouw, Willem",
+      "start": "2025-07-25",
+      "end": "2025-07-28",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "412034013",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "3",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "412704625_TBA-0518 _2025-07-30_2025-08-08",
+      "resourceId": "TBA-0518",
+      "title": "Boone Buiske",
+      "start": "2025-07-30",
+      "end": "2025-08-08",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "412704625",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "9",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "412552468_TBA-0518 _2025-08-09_2025-08-16",
+      "resourceId": "TBA-0518",
+      "title": "Pansegrouw, Willem",
+      "start": "2025-08-09",
+      "end": "2025-08-16",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "412552468",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "7",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "412552942_TBA-0518 _2025-08-18_2025-08-25",
+      "resourceId": "TBA-0518",
+      "title": "Pansegrouw, Willem",
+      "start": "2025-08-18",
+      "end": "2025-08-25",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0518_reservations.csv",
+        "confirmationNumber": "412552942",
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "7",
+        "adults": "1",
+        "children": "0",
+        "rate": "0.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "414327235_TBA-0519 _2025-07-03_2025-07-04",
+      "resourceId": "TBA-0519",
+      "title": "Mkhona, Yonela",
+      "start": "2025-07-03",
+      "end": "2025-07-04",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0519_reservations.csv",
+        "confirmationNumber": "414327235",
+        "roomNumber": "0519",
+        "roomType": "STU-LUX",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,130.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "410826559_TBA-0519 _2025-08-22_2025-08-24",
+      "resourceId": "TBA-0519",
+      "title": "Jensen, Mark",
+      "start": "2025-08-22",
+      "end": "2025-08-24",
+      "classNames": [
+        "reservation-guaranteed"
+      ],
+      "extendedProps": {
+        "fileName": "0519_reservations.csv",
+        "confirmationNumber": "410826559",
+        "roomNumber": "0519",
+        "roomType": "STU-LUX",
+        "status": "Guaranteed",
+        "nights": "2",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,125.00 ZAR",
+        "source": "Roelof Troskie",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": null,
+        "lastUpdated": "2025-07-10T13:15:48.903Z"
+      }
+    },
+    {
+      "id": "414385715_TBA-0520 _2025-07-05_2025-07-06",
+      "resourceId": "TBA-0520",
+      "title": " Mkhona, Yonala",
+      "start": "2025-07-05",
+      "end": "2025-07-06",
+      "classNames": [],
+      "extendedProps": {
+        "fileName": "0520_reservations.csv",
+        "confirmationNumber": "414385715",
+        "roomNumber": "0520",
+        "roomType": "STU-LUX",
+        "status": "Checked Out",
+        "nights": "1",
+        "adults": "1",
+        "children": "0",
+        "rate": "1,150.00 ZAR",
+        "source": "",
+        "travelAgent": "",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview520",
+        "lastUpdated": "2025-07-10T13:15:48.904Z",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211338228155057949.ics?s=5da0b66c3496167c283f944dbbe872e0"
+      }
+    }
+  ]
+}

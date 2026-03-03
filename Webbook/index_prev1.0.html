@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Properties Reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bg-vacation-blue { background-color: #2A3F5F; }
+    .text-vacation-white { color: #FFFFFF; }
+    .text-vacation-dark { color: #1A2A44; }
+    .border-vacation-light { border-color: #A3BFFA; }
+    .placeholder-vacation-dark::placeholder { color: #3B4A8D; opacity: 1; }
+    .bg-vacation-dark { background-color: #1A2A44; }
+    input::selection, select::selection { background: #A3BFFA; color: #1A2A44; }
+    input[type="date"] { position: relative; padding-right: 3rem; }
+    input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; position: absolute; right: 0.5rem; width: 2rem; height: 2rem; cursor: pointer; }
+    input[type="date"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232A3F5F' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.5rem center; background-size: 2rem 2rem; }
+    input:focus, select:focus { outline: 2px solid #A3BFFA; outline-offset: 2px; }
+    .full-height { min-height: 100dvh; }
+    /* Availability Status Styles */
+    .status-checking { color: #A3BFFA; /* Light blue */ }
+    .status-available { color: #34D399; /* Green */ font-weight: bold; }
+    .status-unavailable { color: #F87171; /* Red */ font-weight: bold; }
+    .status-error { color: #FBBF24; /* Amber */ }
+
+    /* Style for Room ID Prefix */
+    .room-id-container { display: flex; align-items: stretch; }
+    .room-id-prefix {
+        padding: 0.5rem 0.75rem; /* Match input padding */
+        background-color: #e9ecef; /* Light grey background for prefix */
+        border: 1px solid #A3BFFA; /* Match input border */
+        border-right: none; /* Remove right border */
+        border-radius: 0.25rem 0 0 0.25rem; /* Rounded left corners */
+        color: #495057; /* Darker text color */
+        display: flex;
+        align-items: center; /* Center text vertically */
+        font-weight: bold;
+    }
+    /* Adjust input style to connect with prefix */
+    #roomIdSuffix {
+        border-left: none; /* Remove left border */
+        border-radius: 0 0.25rem 0.25rem 0; /* Rounded right corners */
+        flex-grow: 1; /* Allow input to take remaining space */
+    }
+    #roomIdSuffix:focus {
+      /* Apply focus styles potentially to container or keep on input */
+       outline: 2px solid #A3BFFA;
+       outline-offset: -1px; /* Adjust offset due to no left border */
+       position: relative; /* Needed for z-index if overlapping borders */
+       z-index: 1;
+    }
+
+  </style>
+</head>
+<body class="bg-vacation-blue flex items-center justify-center">
+  <div class="bg-vacation-blue p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto full-height flex flex-col justify-center">
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="vacprop.jpg" alt="Vacation Properties Logo" class="w-32">
+    </div>
+
+    <!-- Form Title -->
+    <h1 class="text-2xl font-bold mb-4 text-center text-vacation-white">Check Availability & Reserve</h1>
+
+    <!-- Form -->
+    <form id="reservationForm" class="space-y-4">
+      <!-- Personal Info -->
+      <input type="text" name="surname" placeholder="Surname (e.g., Smith)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="text" name="name" placeholder="Name (e.g., John)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="tel" name="phone" placeholder="Phone Number (e.g., 1234567890)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+
+      <!-- Property Dropdown -->
+      <div>
+        <label for="property" class="block text-sm font-medium text-vacation-white mb-1">Property</label>
+        <select id="property" name="property" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+          <option value="" disabled>Select Property</option>
+          <!-- IMPORTANT: Replace 'TBA', 'TTR' etc. with your ACTUAL propertyId values -->
+          <option value="TBA" selected>The Barracks</option> <!-- Default Selected -->
+          <option value="TTBH">The Trade</option>
+          <option value="LAW">Lawhill Luxury Suites</option>
+          <option value="TQA">The Quarter Apartments</option>
+          <option value="CRY">The Crystal Apartments</option>
+          <option value="MPV">Mouille Point Village</option>
+          <option value="HES">Harbouredge Suites</option>
+           <!-- Add other properties as needed -->
+        </select>
+      </div>
+
+      <!-- Room ID Input with Prefix -->
+      <div>
+          <label for="roomIdSuffix" class="block text-sm font-medium text-vacation-white mb-1">Room ID</label>
+          <div class="room-id-container">
+              <span id="roomIdPrefix" class="room-id-prefix">TBA-</span> <!-- Default Prefix -->
+              <input type="text" id="roomIdSuffix" name="roomIdSuffix" placeholder="e.g., 0302" class="w-full p-2 border border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+          </div>
+      </div>
+
+      <!-- Dates -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label for="checkin" class="block text-sm font-medium text-vacation-white mb-1">Check-in</label>
+          <input type="date" id="checkin" name="checkin" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+        </div>
+        <div>
+          <label for="checkout" class="block text-sm font-medium text-vacation-white mb-1">Check-out</label>
+          <input type="date" id="checkout" name="checkout" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+        </div>
+      </div>
+
+      <!-- Availability Status Display -->
+      <div id="availabilityStatus" class="text-center text-lg h-6">
+          <!-- Status will be inserted here by JavaScript -->
+      </div>
+
+      <!-- Rate and Discount -->
+      <input type="number" name="dailyRate" placeholder="Daily Rate (e.g., 1850)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="text" name="discountCode" placeholder="Discount Code (Optional)" value="OTH" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark"> <!-- Default Value Added -->
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-blue-600 text-vacation-white p-2 rounded hover:bg-blue-700">Submit Reservation</button>
+    </form>
+
+    <!-- Result Display (for form submission result) -->
+    <div id="result" class="mt-4 text-center hidden bg-vacation-dark text-vacation-white p-2 rounded"></div>
+  </div>
+
+  <script>
+    // --- Elements ---
+    const propertySelect = document.getElementById('property');
+    const roomIdPrefixSpan = document.getElementById('roomIdPrefix'); // Span for prefix display
+    const roomIdSuffixInput = document.getElementById('roomIdSuffix'); // Input for the number part
+    const checkinInput = document.getElementById('checkin');
+    const checkoutInput = document.getElementById('checkout');
+    const availabilityStatusDiv = document.getElementById('availabilityStatus');
+    const reservationForm = document.getElementById('reservationForm');
+    const resultDiv = document.getElementById('result');
+
+    // --- API Endpoint ---
+    // *** Use your actual getAvailability function URL ***
+    const availabilityApiUrl = 'https://getavailability-yzrm33bhsq-uc.a.run.app';
+
+    // --- Function to set initial state ---
+    const setInitialState = () => {
+        const initialPropertyId = propertySelect.value;
+        if (initialPropertyId) {
+            roomIdPrefixSpan.textContent = initialPropertyId + '-';
+        } else {
+            roomIdPrefixSpan.textContent = ''; // Handle case where default isn't set
+        }
+        // Optional: set min date for checkin/checkout if needed
+        const today = new Date().toISOString().split('T')[0];
+        checkinInput.setAttribute('min', today);
+        checkoutInput.setAttribute('min', today); // Initially set min for checkout too
+    };
+
+    // --- Function to check availability ---
+    let availabilityCheckTimeout;
+    const checkAvailability = async () => {
+        clearTimeout(availabilityCheckTimeout); // Debounce requests
+
+        const propertyId = propertySelect.value;
+        const roomSuffix = roomIdSuffixInput.value.trim().toUpperCase(); // Get suffix
+        const checkinDateStr = checkinInput.value;
+        const checkoutDateStr = checkoutInput.value;
+
+        // Construct full room ID
+        const roomId = propertyId && roomSuffix ? `${propertyId}-${roomSuffix}` : ''; // Only form full ID if both parts exist
+
+        // Clear status if not all required fields are filled
+        // (propertyId is handled by select, roomSuffix check added)
+        if (!propertyId || !roomSuffix || !checkinDateStr || !checkoutDateStr) {
+            availabilityStatusDiv.textContent = '';
+            availabilityStatusDiv.className = 'text-center text-lg h-6'; // Reset class
+            return;
+        }
+
+        // Basic date validation
+        const checkinDate = new Date(checkinDateStr);
+        const checkoutDate = new Date(checkoutDateStr);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set time to start of day for comparison
+
+        if (isNaN(checkinDate.getTime()) || isNaN(checkoutDate.getTime())) {
+             availabilityStatusDiv.textContent = 'Invalid date format.';
+             availabilityStatusDiv.className = 'text-center text-lg h-6 status-error';
+             return;
+        }
+         if (checkinDate < today) {
+            availabilityStatusDiv.textContent = 'Check-in date cannot be in the past.';
+            availabilityStatusDiv.className = 'text-center text-lg h-6 status-error';
+            return;
+        }
+        if (checkoutDate <= checkinDate) {
+            availabilityStatusDiv.textContent = 'Check-out must be after Check-in.';
+            availabilityStatusDiv.className = 'text-center text-lg h-6 status-error';
+            return;
+        }
+
+        // Debounce: Wait 500ms after the last input before firing the API call
+        availabilityCheckTimeout = setTimeout(async () => {
+            availabilityStatusDiv.textContent = 'Checking...';
+            availabilityStatusDiv.className = 'text-center text-lg h-6 status-checking';
+
+            try {
+                // Format dates as YYYY-MM-DD for the API
+                const startDate = checkinDateStr;
+                const endDate = checkoutDateStr; // API needs range covering the stay
+
+                // Use the constructed full roomId
+                const apiUrl = `${availabilityApiUrl}?propertyId=${encodeURIComponent(propertyId)}&startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+
+                const response = await fetch(apiUrl);
+
+                if (!response.ok) {
+                    throw new Error(`API Error (${response.status})`);
+                }
+
+                const data = await response.json();
+
+                // Check availability for the specific room (full ID) within the date range
+                if (!data.availability || !data.availability[roomId]) {
+                   // Try to give a more specific error if possible
+                   if (!data.availability) {
+                       throw new Error(`Availability data missing for property "${propertyId}".`);
+                   } else {
+                       throw new Error(`Room ID "${roomId}" not found for property "${propertyId}". Check Room number.`);
+                   }
+                }
+
+                let isOccupied = false;
+                const currentCheckDate = new Date(checkinDate); // Start from check-in
+
+                while (currentCheckDate < checkoutDate) { // Loop up to (but not including) checkout date
+                    const dateString = currentCheckDate.toISOString().split('T')[0]; // YYYY-MM-DD
+
+                    // Check if the date exists for the room and if it's 'occupied'
+                    if (data.availability[roomId][dateString] && data.availability[roomId][dateString] === 'occupied') {
+                        isOccupied = true;
+                        break; // Found an occupied day, no need to check further
+                    }
+                    // Move to the next day
+                    currentCheckDate.setDate(currentCheckDate.getDate() + 1);
+                }
+
+                if (isOccupied) {
+                    availabilityStatusDiv.textContent = 'Unavailable';
+                    availabilityStatusDiv.className = 'text-center text-lg h-6 status-unavailable';
+                } else {
+                    availabilityStatusDiv.textContent = 'Available!';
+                    availabilityStatusDiv.className = 'text-center text-lg h-6 status-available';
+                }
+
+            } catch (error) {
+                console.error('Availability Check Error:', error);
+                // Display only the error message part without the stack trace if possible
+                const errorMessage = error.message || 'Failed to check availability.';
+                availabilityStatusDiv.textContent = `Error: ${errorMessage}`;
+                availabilityStatusDiv.className = 'text-center text-lg h-6 status-error';
+            }
+        }, 500); // 500ms delay
+    };
+
+    // --- Event Listeners ---
+
+    // Update Room ID Prefix when Property changes
+    propertySelect.addEventListener('change', (e) => {
+        const selectedPropertyId = e.target.value;
+        if (selectedPropertyId) {
+            roomIdPrefixSpan.textContent = selectedPropertyId + '-';
+        } else {
+            roomIdPrefixSpan.textContent = ''; // Clear prefix if no property selected
+        }
+        roomIdSuffixInput.value = ''; // Clear the suffix input when property changes
+        checkAvailability(); // Re-check availability (will likely clear status)
+    });
+
+    // Set default Check-out date when Check-in date changes
+    checkinInput.addEventListener('change', () => {
+        const checkinDateStr = checkinInput.value;
+        if (checkinDateStr) {
+            try {
+                const checkinDate = new Date(checkinDateStr);
+                if (!isNaN(checkinDate.getTime())) {
+                    const nextDay = new Date(checkinDate);
+                    nextDay.setDate(checkinDate.getDate() + 1);
+                    const nextDayStr = nextDay.toISOString().split('T')[0];
+                    checkoutInput.value = nextDayStr;
+                     // Also update the min attribute for checkout to prevent invalid selections
+                    checkoutInput.setAttribute('min', nextDayStr);
+                     // Manually trigger availability check as programmatic change might not fire input event
+                    checkAvailability();
+                }
+            } catch (e) {
+                console.error("Error setting default checkout date:", e);
+                 // Optionally clear checkout date or show an error
+            }
+        } else {
+             // If check-in is cleared, clear checkout and its min attribute
+             checkoutInput.value = '';
+             const today = new Date().toISOString().split('T')[0];
+             checkoutInput.setAttribute('min', today);
+             checkAvailability(); // Update status (will likely clear)
+        }
+    });
+
+
+    roomIdSuffixInput.addEventListener('input', checkAvailability); // Check on suffix input
+    checkoutInput.addEventListener('input', checkAvailability); // Keep check on checkout input
+
+    // --- Initial Setup ---
+    document.addEventListener('DOMContentLoaded', setInitialState); // Set initial prefix on load
+
+
+    // --- Original Form Submission Logic (Modified for Room ID) ---
+    reservationForm.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default form submission
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+
+      // Construct the full roomId for submission
+      const propertyId = propertySelect.value;
+      const roomSuffix = roomIdSuffixInput.value.trim().toUpperCase();
+      if (!propertyId || !roomSuffix) {
+          resultDiv.textContent = 'Property and Room ID suffix are required.';
+          resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded status-error';
+          return; // Stop submission
+      }
+      data.roomId = `${propertyId}-${roomSuffix}`; // Add the combined roomId
+      delete data.roomIdSuffix; // Remove the temporary suffix field from data object
+
+      // Optional: Re-check availability one last time before submitting?
+      // Consider if the delay is acceptable vs risk of race condition
+      // await checkAvailability(); // This waits for the debounced check
+      // await new Promise(resolve => setTimeout(resolve, 600)); // Ensure check completes
+      // if (availabilityStatusDiv.classList.contains('status-unavailable') || availabilityStatusDiv.classList.contains('status-error')) {
+      //    resultDiv.textContent = 'Cannot submit, selected dates/room are unavailable or invalid.';
+      //    resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded status-error';
+      //    resultDiv.style.display = 'block'; // Make sure it's visible
+      //    return; // Stop submission
+      // }
+
+      // Format dates for the *reservation capture* backend (adjust if needed)
+      try {
+          // Ensure dates are valid before formatting
+          if (!data.checkin || !data.checkout) throw new Error("Dates are missing.");
+          const checkinDateObj = new Date(data.checkin);
+          const checkoutDateObj = new Date(data.checkout);
+          if (isNaN(checkinDateObj.getTime()) || isNaN(checkoutDateObj.getTime())) throw new Error("Invalid date format entered.");
+
+          // Using DD.MM.YYYY format
+          const formatDate = (dateObj) => {
+              const day = String(dateObj.getDate()).padStart(2, '0');
+              const month = String(dateObj.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+              const year = dateObj.getFullYear();
+              return `${day}.${month}.${year}`;
+          }
+          data.checkin = formatDate(checkinDateObj);
+          data.checkout = formatDate(checkoutDateObj);
+
+      } catch (formatError){
+          console.error("Date formatting error:", formatError);
+          resultDiv.textContent = `Error formatting dates: ${formatError.message}`;
+          resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded status-error';
+          resultDiv.style.display = 'block'; // Make sure it's visible
+          return;
+      }
+
+
+      resultDiv.innerHTML = 'Submitting...';
+      resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded'; // Show processing
+      resultDiv.style.display = 'block'; // Make sure it's visible
+
+      try {
+        // *** Use your actual reservation capture endpoint URL ***
+        const response = await fetch('https://vprop.co.za/resloader', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const resultData = await response.json(); // Changed variable name
+
+        if (!response.ok || resultData.error) {
+            throw new Error(resultData.error || `Submission failed (${response.status})`);
+        }
+        resultDiv.innerHTML = `Reservation Confirmed! Number: ${resultData.confirmationNumber}`;
+        resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded status-available'; // Use green for success
+        // Optionally clear form:
+        // reservationForm.reset();
+        // setInitialState(); // Reset prefix and other defaults
+        // availabilityStatusDiv.textContent = '';
+        // availabilityStatusDiv.className = 'text-center text-lg h-6';
+      } catch (error) {
+        console.error('Submission Error:', error);
+        resultDiv.innerHTML = `Submission Error: ${error.message}`;
+        resultDiv.className = 'mt-4 text-center bg-vacation-dark text-vacation-white p-2 rounded status-error'; // Use red/amber for error
+      }
+    });
+  </script>
+</body>
+</html>

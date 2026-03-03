@@ -1,0 +1,164 @@
+# Installation Guide for Airbnb Availability Updater
+
+This document provides detailed instructions on how to set up and run the Airbnb Availability Updater.
+
+## System Requirements
+
+- **Operating System**: Windows, macOS, or Linux
+- **Node.js**: Version 14.0.0 or higher
+- **Memory**: At least 2GB RAM (4GB recommended)
+- **Disk Space**: At least 500MB free space
+- **Internet Connection**: Required for accessing Airbnb
+
+## Step 1: Install Node.js
+
+1. Download Node.js from [https://nodejs.org/](https://nodejs.org/)
+2. Install the LTS (Long Term Support) version
+3. Verify installation by opening a terminal/command prompt and typing:
+   ```
+   node --version
+   npm --version
+   ```
+
+## Step 2: Install Playwright
+
+Playwright is a browser automation library that this script uses to interact with Airbnb's website.
+
+1. Create a new directory for your project
+2. Open a terminal/command prompt in that directory
+3. Initialize a new Node.js project:
+   ```
+   npm init -y
+   ```
+4. Install Playwright:
+   ```
+   npm install playwright
+   ```
+5. Install browser drivers:
+   ```
+   npx playwright install chromium
+   ```
+
+## Step 3: Set Up the Script Files
+
+1. Download the following files from this repository:
+   - `airbnb-availability-updater.js` (main script)
+   - `config.js` (configuration file)
+   
+2. Place them in your project directory
+
+## Step 4: Configure the Script
+
+1. Open `config.js` in a text editor
+2. Update the following settings:
+   - `calendarDataPath`: Path to your calendar-data.json file
+   - `airbnbEmail`: Your Airbnb host account email
+   - `airbnbPassword`: Your Airbnb password
+   - `updateDays`: How many days into the future to update (default: 180)
+   - `batchSize`: How many listings to process in one batch (default: 5)
+   - `headless`: Set to `false` to see the browser during execution, `true` for server usage
+   - `dryRun`: Set to `true` to simulate updates without actually making changes, `false` to apply changes
+
+## Step 5: Review and Update Room Mapping
+
+1. Open `airbnb-availability-updater.js` in a text editor
+2. Locate the `roomMapping` object (near the top of the file)
+3. Make sure all your hotel rooms are correctly mapped to Airbnb listings
+4. For each room, verify:
+   - The correct Airbnb listing ID
+   - The correct listing title
+   - The correct room type
+   - The correct URL
+
+Example mapping:
+```javascript
+"0302": {
+  airbnbId: "B302",
+  airbnbTitle: "Fabulous studio with balcony & views!",
+  roomType: "STU-BALC",
+  url: "airbnb.co.za/h/cityview302"
+}
+```
+
+## Step 6: Run the Script
+
+1. Open a terminal/command prompt in your project directory
+2. Run the script:
+   ```
+   node airbnb-availability-updater.js
+   ```
+3. Watch the console output for progress and any errors
+4. First run should be in `dryRun: true` mode to verify everything works as expected
+
+## Step 7: Verify Results
+
+1. Check the console output for any errors or warnings
+2. If running in dry run mode, review what changes would have been made
+3. If not in dry run mode, log in to Airbnb manually to verify the changes
+
+## Step 8: Schedule Regular Updates (Optional)
+
+### On Windows:
+
+1. Open Task Scheduler
+2. Create a new Basic Task
+3. Name it "Airbnb Availability Update"
+4. Choose when you want it to run (daily is recommended)
+5. Select "Start a program"
+6. In "Program/script" enter: `node`
+7. In "Add arguments" enter: `C:\path\to\your\airbnb-availability-updater.js`
+8. In "Start in" enter: `C:\path\to\your\project\directory`
+9. Complete the wizard
+
+### On Linux/macOS:
+
+1. Open terminal
+2. Edit your crontab:
+   ```
+   crontab -e
+   ```
+3. Add a line like this to run daily at 2 AM:
+   ```
+   0 2 * * * cd /path/to/your/project && /usr/bin/node airbnb-availability-updater.js >> updater.log 2>&1
+   ```
+4. Save and exit
+
+## Troubleshooting
+
+### Script fails to login to Airbnb
+
+- Verify your Airbnb credentials in config.js
+- Check if Airbnb requires additional verification (e.g., 2FA)
+- Try logging in manually to see if there are any issues with your account
+
+### Script can't find elements on Airbnb's website
+
+- Airbnb may have updated their website structure
+- Check the console for specific error messages
+- Update the selectors in the script to match Airbnb's current structure
+
+### Script can't read the calendar-data.json file
+
+- Verify the file exists at the specified path
+- Check if the file is properly formatted JSON
+- Ensure the script has read permissions for the file
+
+### Browser closes unexpectedly
+
+- Increase the `actionDelay` in config.js
+- Set `headless` to `false` to see what's happening
+- Check console for error messages
+
+## Need Help?
+
+If you encounter any issues not covered here, please:
+
+1. Check the console output for specific error messages
+2. Look for screenshot files which may show what was happening when the error occurred
+3. Reach out for support via email or create an issue on GitHub
+
+## Support
+
+For questions or issues, please contact:
+- Email: your-email@example.com
+- GitHub Issues: https://github.com/yourusername/airbnb-availability-updater/issues

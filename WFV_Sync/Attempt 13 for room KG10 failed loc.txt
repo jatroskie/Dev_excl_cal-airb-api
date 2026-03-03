@@ -1,0 +1,74 @@
+Attempt 1/3 for room KG10 failed: locator.click: Element is not visible
+Call log:
+  - waiting for locator('label:has-text("CSV")').first()
+    - locator resolved to <label class="x4m" for="pt1:oc_pg_pt:r1:1:pt1:oc_srch_tmpl_167b9q:ode_bscrn_tmpl:r1:73:pt1:oc_srch_rslts_tbl_tmpl:ec1:odec_excol_frme1:odec_excol_fltype:odec_sor_sor:_1">…</label>
+  - attempting click action
+    - scrolling into view if needed
+
+Processing room 74/96: KG10 for WFV
+Attempt 2/3 for room KG10 failed: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Arrival From' }) to be visible
+
+Processing room 74/96: KG10 for WFV
+Attempt 3/3 for room KG10 failed: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Arrival From' }) to be visible
+
+Skipping room KG10 after reaching max attempts.
+Processing room 75/96: P003 for WFV
+Attempt 1/3 for room P003 failed: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Arrival From' }) to be visible
+
+Processing room 75/96: P003 for WFV
+Attempt 2/3 for room P003 failed: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Arrival From' }) to be visible
+
+Processing room 75/96: P003 for WFV
+Attempt 3/3 for room P003 failed: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Arrival From' }) to be visible
+
+Skipping room P003 after reaching max attempts.
+
+!!! ABORTING HOTEL: Encountered 2 consecutive failed rooms. There might be a systemic issue with Waterfront Village.
+
+
+Completed processing for WFV.
+Skipped rooms due to unrecoverable errors: KG10, P003
+
+--- Starting processing for Lawhill Apartments ---
+Switching to Lawhill Apartments...
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[id="pt1\\:oc_pg_pt\\:ode_pg_mnhdr_rght_cntnt_lnk"]')
+    - locator resolved to <a title="" href="#" data-afr-tlen="0" data-afr-fcs="true" class="x3yb xt1 p_AFTextOnly" onclick="this.focus();return false" id="pt1:oc_pg_pt:ode_pg_mnhdr_rght_cntnt_lnk">…</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="AFModalGlassPane"></div> from <div data-afr-fid="f1" class="AFZOrderLayerContainer" id="f1::DhtmlZOrderManagerLayerContainer">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="AFModalGlassPane"></div> from <div data-afr-fid="f1" class="AFZOrderLayerContainer" id="f1::DhtmlZOrderManagerLayerContainer">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="AFModalGlassPane"></div> from <div data-afr-fid="f1" class="AFZOrderLayerContainer" id="f1::DhtmlZOrderManagerLayerContainer">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+    at OperaExtractor.switchHotel (C:\Users\Johan\cal_airb_api\extractor.js:52:25)
+    at async runApp (C:\Users\Johan\cal_airb_api\app.js:85:7) {
+  name: 'TimeoutError'
+}

@@ -1,0 +1,23 @@
+--- Yi Outdoor Monitor (EVENT DRIVEN / MQTT) ---
+broker listening on 1883...
+[MQTT Client] Connected to Mosquitto Broker!
+[MQTT Client] Sending ARM commands to camera...
+[MQTT Recv] [RETAINED] yicam/status: online
+[MQTT Client] Subscribed to 'yicam/#'
+[MQTT Recv] yicam/cmnd/motion_detection: on
+[MQTT Recv] yicam/cmnd/mqtt_motion_detection: on
+[MQTT Recv] yicam/cmnd/status: status
+[Manager] loaded config for yi-outdoor-1
+[Heartbeat] Listening for Motion Events (1 active cameras)...
+[MQTT Recv] yicam/motion_detection: motion_start
+[MQTT] 🚨 MOTION DETECTED via Mosquitto!
+[yi-outdoor-1] Triggered by MQTT! Capturing...
+[12:11:37] [yi-outdoor-1] Processing Event...
+   [yi-outdoor-1] Capturing FULL frame from RTSP Stream...
+   [yi-outdoor-1] Frame captured in 3207ms. Size: 21810 bytes
+   [yi-outdoor-1] AI: "Person using a computer."
+   > Image uploaded: https://storage.googleapis.com/cal-airb-api.firebasestorage.app/camera_snapshots%2F2026-02-19%2Fyi-outdoor-1%2F1771495902482.jpg
+   [Webhook] Sending to: https://vacprop.com/api/camllm
+   [yi-outdoor-1] !!! ALERTING !!!
+   [WhatsApp] DISABLED by user request.
+   [Webhook] ✅ Success: 200 "Event recorded"

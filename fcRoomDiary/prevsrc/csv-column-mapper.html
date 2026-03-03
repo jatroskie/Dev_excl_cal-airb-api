@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Column Mapper Tool</title>
+  
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .upload-panel {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    #error-log {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #f00;
+      background-color: #fff0f0;
+      display: none;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    #csv-preview {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f5f5f5;
+      display: none;
+      max-height: 300px;
+      overflow: auto;
+    }
+    
+    .mapping-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      display: none;
+    }
+    
+    .mapping-row {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    
+    .mapping-row label {
+      width: 150px;
+      font-weight: bold;
+    }
+    
+    .mapping-row select {
+      width: 200px;
+      padding: 5px;
+    }
+    
+    .result-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f0f8ff;
+      display: none;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f0f0f0;
+    }
+    
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    .code-block {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSV Column Mapper Tool</h1>
+  <p>This tool helps identify and map your CSV columns to the expected format for the Hotel Calendar.</p>
+  
+  <div class="upload-panel">
+    <h2>Upload a CSV File</h2>
+    <p>Select one CSV file to analyze its structure.</p>
+    <input type="file" id="csv-file" accept=".csv">
+    <button id="analyze-btn" style="margin-top: 10px;">Analyze CSV</button>
+    <div id="error-log"></div>
+    <div id="csv-preview"></div>
+  </div>
+  
+  <div id="mapping-container" class="mapping-container">
+    <h2>Map Your CSV Columns</h2>
+    <p>Match your CSV columns to the required fields for the Hotel Calendar:</p>
+    
+    <div class="mapping-row">
+      <label for="map-room">Room:</label>
+      <select id="map-room"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-room-type">Room Type:</label>
+      <select id="map-room-type"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-name">Guest Name:</label>
+      <select id="map-name"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-arrival">Arrival Date:</label>
+      <select id="map-arrival"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-departure">Departure Date:</label>
+      <select id="map-departure"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-nights">Nights:</label>
+      <select id="map-nights"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="map-res-type">Reservation Type:</label>
+      <select id="map-res-type"></select>
+    </div>
+    
+    <div class="mapping-row">
+      <label for="date-format">Date Format:</label>
+      <select id="date-format">
+        <option value="dd.mm.yyyy" selected>DD.MM.YYYY (31.08.2024)</option>
+        <option value="mm.dd.yyyy">MM.DD.YYYY (08.31.2024)</option>
+        <option value="yyyy-mm-dd">YYYY-MM-DD (2024-08-31)</option>
+      </select>
+    </div>
+    
+    <button id="generate-btn">Generate Code With Mappings</button>
+  </div>
+  
+  <div id="result-container" class="result-container">
+    <h2>Results</h2>
+    <p>Based on your column mappings, update the process-csv.js file with this code:</p>
+    
+    <div id="code-snippet" class="code-block"></div>
+    
+    <h3>Instructions:</h3>
+    <ol>
+      <li>Copy the code above</li>
+      <li>Open the process-csv.js file in a text editor</li>
+      <li>Find the section that creates reservation objects (around line 100)</li>
+      <li>Replace it with the generated code</li>
+      <li>Save the file and try loading your CSV files again</li>
+    </ol>
+    
+    <button id="download-btn">Download Modified process-csv.js</button>
+  </div>
+
+  <script>
+    // Global variables
+    let csvData = null;
+    let csvHeaders = [];
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set up event handlers
+      document.getElementById('csv-file').addEventListener('change', handleFileSelect);
+      document.getElementById('analyze-btn').addEventListener('click', analyzeCSV);
+      document.getElementById('generate-btn').addEventListener('click', generateCode);
+      document.getElementById('download-btn').addEventListener('click', downloadScript);
+    });
+    
+    // Function to handle file selection
+    function handleFileSelect(event) {
+      document.getElementById('error-log').style.display = 'none';
+      document.getElementById('csv-preview').style.display = 'none';
+      document.getElementById('mapping-container').style.display = 'none';
+      document.getElementById('result-container').style.display = 'none';
+    }
+    
+    // Function to show error messages
+    function showError(message) {
+      const errorLog = document.getElementById('error-log');
+      errorLog.textContent = message;
+      errorLog.style.display = 'block';
+    }
+    
+    // Function to analyze the CSV content
+    function analyzeCSV() {
+      const fileInput = document.getElementById('csv-file');
+      if (!fileInput.files || fileInput.files.length === 0) {
+        showError("Please select a CSV file first.");
+        return;
+      }
+      
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+        const content = e.target.result;
+        
+        try {
+          Papa.parse(content, {
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+              if (results.errors.length > 0) {
+                showError("CSV parsing errors: " + results.errors.map(e => e.message).join(", "));
+                return;
+              }
+              
+              csvData = results.data;
+              csvHeaders = results.meta.fields;
+              
+              // Show the preview
+              const previewDiv = document.getElementById('csv-preview');
+              previewDiv.style.display = 'block';
+              
+              // Create table for preview
+              let html = '<h3>CSV Preview (First 5 rows)</h3>';
+              html += '<table><thead><tr>';
+              
+              // Create table headers
+              csvHeaders.forEach(header => {
+                html += `<th>${header}</th>`;
+              });
+              
+              html += '</tr></thead><tbody>';
+              
+              // Add rows (limit to 5)
+              const previewRows = csvData.slice(0, 5);
+              previewRows.forEach(row => {
+                html += '<tr>';
+                csvHeaders.forEach(header => {
+                  html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+              });
+              
+              html += '</tbody></table>';
+              previewDiv.innerHTML = html;
+              
+              // Show mapping interface
+              document.getElementById('mapping-container').style.display = 'block';
+              
+              // Populate mapping dropdowns
+              populateMappingDropdowns();
+            }
+          });
+        } catch (error) {
+          showError("Error parsing CSV: " + error.message);
+        }
+      };
+      
+      reader.onerror = function() {
+        showError("Error reading file.");
+      };
+      
+      reader.readAsText(file);
+    }
+    
+    // Function to populate mapping dropdowns
+    function populateMappingDropdowns() {
+      const dropdowns = [
+        'map-room',
+        'map-room-type',
+        'map-name',
+        'map-arrival',
+        'map-departure',
+        'map-nights',
+        'map-res-type'
+      ];
+      
+      dropdowns.forEach(id => {
+        const dropdown = document.getElementById(id);
+        dropdown.innerHTML = '<option value="">-- Select Column --</option>';
+        
+        // Add option for each header
+        csvHeaders.forEach(header => {
+          const option = document.createElement('option');
+          option.value = header;
+          option.textContent = header;
+          
+          // If the header name seems to match the field, select it by default
+          if (id === 'map-room' && (header === 'Room' || header.toLowerCase().includes('room'))) {
+            option.selected = true;
+          } else if (id === 'map-room-type' && (header === 'Room Type' || header.toLowerCase().includes('type'))) {
+            option.selected = true;
+          } else if (id === 'map-name' && (header === 'Name' || header.toLowerCase().includes('name') || header.toLowerCase().includes('guest'))) {
+            option.selected = true;
+          } else if (id === 'map-arrival' && (header === 'Arrival' || header.toLowerCase().includes('checkin') || header.toLowerCase().includes('arrival'))) {
+            option.selected = true;
+          } else if (id === 'map-departure' && (header === 'Departure' || header.toLowerCase().includes('checkout') || header.toLowerCase().includes('departure'))) {
+            option.selected = true;
+          } else if (id === 'map-nights' && (header === 'Nights' || header.toLowerCase().includes('night'))) {
+            option.selected = true;
+          } else if (id === 'map-res-type' && (header === 'Reservation Type' || header.toLowerCase().includes('status') || header.toLowerCase().includes('type'))) {
+            option.selected = true;
+          }
+          
+          dropdown.appendChild(option);
+        });
+      });
+    }
+    
+    // Function to generate code with the selected mappings
+    function generateCode() {
+      const mappings = {
+        room: document.getElementById('map-room').value,
+        roomType: document.getElementById('map-room-type').value,
+        name: document.getElementById('map-name').value,
+        arrival: document.getElementById('map-arrival').value,
+        departure: document.getElementById('map-departure').value,
+        nights: document.getElementById('map-nights').value,
+        resType: document.getElementById('map-res-type').value,
+        dateFormat: document.getElementById('date-format').value
+      };
+      
+      // Validate that required fields are mapped
+      if (!mappings.room || !mappings.arrival || !mappings.departure) {
+        showError("Room, Arrival, and Departure mappings are required.");
+        return;
+      }
+      
+      // Generate code for parseDate function
+      let parseDateCode = '';
+      switch (mappings.dateFormat) {
+        case 'dd.mm.yyyy':
+          parseDateCode = `function parseDate(dateStr) {
+  if (!dateStr) return null;
+  try {
+    const [day, month, year] = dateStr.split('.');
+    return \`\${year}-\${month}-\${day}\`;
+  } catch (error) {
+    console.error('Date parsing error for:', dateStr, error);
+    return null;
+  }
+}`;
+          break;
+        case 'mm.dd.yyyy':
+          parseDateCode = `function parseDate(dateStr) {
+  if (!dateStr) return null;
+  try {
+    const [month, day, year] = dateStr.split('.');
+    return \`\${year}-\${month}-\${day}\`;
+  } catch (error) {
+    console.error('Date parsing error for:', dateStr, error);
+    return null;
+  }
+}`;
+          break;
+        case 'yyyy-mm-dd':
+          parseDateCode = `function parseDate(dateStr) {
+  if (!dateStr) return null;
+  try {
+    return dateStr; // Already in YYYY-MM-DD format
+  } catch (error) {
+    console.error('Date parsing error for:', dateStr, error);
+    return null;
+  }
+}`;
+          break;
+      }
+      
+      // Generate code for processing CSV
+      const processingCode = `// Process a single CSV file
+function processCSVFile(fileContent, roomNumber, fileName) {
+  return new Promise((resolve, reject) => {
+    try {
+      console.log(\`Processing file: \${fileName}\`);
+      
+      Papa.parse(fileContent, {
+        header: true,
+        skipEmptyLines: true,
+        dynamicTyping: true,
+        error: function(error) {
+          console.error("PapaParse error:", error, "in file", fileName);
+          reject(error);
+        },
+        complete: function(results) {
+          console.log(\`Successfully parsed \${fileName}, found \${results.data.length} rows\`);
+          
+          const reservations = [];
+          
+          results.data.forEach((row, index) => {
+            try {
+              // Use the custom column mappings
+              const roomValue = row['${mappings.room}'];
+              
+              if (!roomValue) {
+                console.warn(\`Row \${index} missing Room value in \${fileName}\`);
+                return;
+              }
+              
+              if (!row['${mappings.arrival}'] || !row['${mappings.departure}']) {
+                console.warn(\`Row \${index} missing date values in \${fileName}\`, row);
+                return;
+              }
+              
+              // Save room type info
+              const roomType = row['${mappings.roomType}'] || '';
+              roomTypes[roomValue] = roomType;
+              
+              if (!allRooms.includes(roomValue)) {
+                allRooms.push(roomValue);
+              }
+              
+              const startDate = parseDate(row['${mappings.arrival}']);
+              const endDate = parseDate(row['${mappings.departure}']);
+              
+              if (!startDate || !endDate) {
+                console.warn(\`Invalid date format for row \${index} in \${fileName}\`, row['${mappings.arrival}'], row['${mappings.departure}']);
+                return;
+              }
+              
+              // Create reservation object
+              reservations.push({
+                id: row['Confirmation Number'] || \`res_\${index}_\${fileName}\`,
+                resourceId: roomValue.toString(),
+                title: row['${mappings.name}'] || 'Unnamed Reservation',
+                start: startDate,
+                end: endDate,
+                nights: row['${mappings.nights}'],
+                status: row['${mappings.resType}'],
+                color: row['Display Color'],
+                className: getReservationColor(row['${mappings.resType}']),
+                extendedProps: {
+                  roomType: roomType,
+                  rate: row['Rate'],
+                  adults: row['Adults'],
+                  children: row['Children'],
+                  company: row['Company'],
+                  source: row['Source'],
+                  status: row['${mappings.resType}']
+                }
+              });
+            } catch (rowError) {
+              console.error(\`Error processing row \${index} in \${fileName}:\`, rowError, row);
+            }
+          });
+          
+          console.log(\`Created \${reservations.length} reservation objects from \${fileName}\`);
+          resolve(reservations);
+        }
+      });
+    } catch (error) {
+      console.error(\`Error in processCSVFile for \${fileName}:\`, error);
+      reject(error);
+    }
+  });
+}`;
+
+      // Show the generated code
+      document.getElementById('code-snippet').textContent = parseDateCode + '\n\n' + processingCode;
+      document.getElementById('result-container').style.display = 'block';
+    }
+    
+          // Function to download the modified script
+    function downloadScript() {
+      // Create a base script with the new functions
+      const parseDateFunc = document.getElementById('code-snippet').textContent.split('\n\n')[0];
+      const processingFunc = document.getElementById('code-snippet').textContent.split('\n\n')[1];
+      
+      // Create modified script content
+      const scriptContent = `// Modified CSV Processing Script for Hotel Reservation Calendar
+// This script was generated by the CSV Column Mapper Tool
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize variables
+  let allReservations = [];
+  let allRooms = [];
+  let roomTypes = {};
+  let calendar;
+  
+  // Date parsing function - customized for your format
+  ${parseDateFunc}
+  
+  // Function to get reservation color based on status
+  function getReservationColor(status) {
+    status = (status || '').toLowerCase();
+    if (status.includes('in house')) {
+      return 'reservation-inhouse';
+    } else if (status.includes('guaranteed')) {
+      return 'reservation-guaranteed';
+    } else if (status.includes('non')) {
+      return 'reservation-nonguarantee';
+    } else if (status.includes('tentative')) {
+      return 'reservation-tentative';
+    } else if (status.includes('stay over')) {
+      return 'reservation-stayover';
+    }
+    return 'reservation-guaranteed'; // Default
+  }
+  
+  // Process CSV file - customized for your column mappings
+  ${processingFunc}
+  
+  // Handle file uploads
+  document.getElementById('csv-files').addEventListener('change', async function(e) {
+    const files = e.target.files;
+    
+    if (files.length === 0) {
+      alert('Please select at least one CSV file.');
+      return;
+    }
+    
+    // Show loading indicator
+    document.getElementById('loading').style.display = 'flex';
+    document.getElementById('loading').innerHTML = 'Loading reservation data...';
+    
+    // Reset data
+    allReservations = [];
+    allRooms = [];
+    roomTypes = {};
+    
+    // Create a more detailed error display div
+    let errorDiv = document.getElementById('error-details');
+    if (!errorDiv) {
+      errorDiv = document.createElement('div');
+      errorDiv.id = 'error-details';
+      errorDiv.style.cssText = 'margin-top: 20px; padding: 10px; border: 1px solid #f00; background: #fff0f0; display: none;';
+      document.body.appendChild(errorDiv);
+    }
+    errorDiv.style.display = 'none';
+    errorDiv.innerHTML = '';
+    
+    const processPromises = [];
+    const fileNames = [];
+    
+    // Process each file
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      fileNames.push(file.name);
+      
+      // Read file content
+      const filePromise = new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        
+        reader.onload = function(event) {
+          const fileContent = event.target.result;
+          processCSVFile(fileContent, null, file.name)
+            .then(reservations => {
+              allReservations = [...allReservations, ...reservations];
+              resolve();
+            })
+            .catch(err => {
+              console.error(\`Error processing \${file.name}:\`, err);
+              reject({file: file.name, error: err});
+            });
+        };
+        
+        reader.onerror = function() {
+          console.error('FileReader error:', reader.error);
+          reject({file: file.name, error: reader.error});
+        };
+        
+        reader.readAsText(file);
+      });
+      
+      processPromises.push(filePromise);
+    }
+    
+    // Handle all file processing
+    Promise.allSettled(processPromises)
+      .then(results => {
+        console.log("All files processed:", results);
+        
+        const errors = results.filter(r => r.status === 'rejected').map(r => r.reason);
+        if (errors.length > 0) {
+          console.error(\`\${errors.length} files had errors:\`, errors);
+          
+          // Show error details
+          errorDiv.innerHTML = \`<h3>Errors processing files:</h3>
+            <p>\${errors.length} of \${files.length} files had issues.</p>
+            <ul>\${errors.map(e => \`<li>\${e.file}: \${e.error}</li>\`).join('')}</ul>
+            <p>Check the browser console (F12) for more details.</p>\`;
+          errorDiv.style.display = 'block';
+        }
+        
+        if (allReservations.length > 0) {
+          console.log(\`Successfully loaded \${allReservations.length} reservations from \${files.length} files\`);
+          console.log("Room numbers found:", allRooms);
+          initializeCalendar();
+        } else {
+          console.error("No valid reservations found in any file");
+          document.getElementById('loading').innerHTML = 'No valid reservation data found in the selected files.';
+          errorDiv.style.display = 'block';
+        }
+      })
+      .catch(error => {
+        console.error("Fatal error processing files:", error);
+        document.getElementById('loading').innerHTML = 'Error loading data. Please check the console for details.';
+        errorDiv.innerHTML = \`<h3>Error loading data</h3><p>\${error.message || error}</p>\`;
+        errorDiv.style.display = 'block';
+      });
+  });
+  
+  // Function to create resource groups based on room types
+  function createResourceGroups() {
+    allRooms.sort((a, b) => {
+      // Convert to numbers if possible for proper sorting
+      return Number(a) - Number(b);
+    });
+    
+    const resources = allRooms.map(room => {
+      const roomType = roomTypes[room] || '';
+      const roomTypeClass = roomType.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      
+      return {
+        id: room.toString(),
+        title: \`Room \${room}\`,
+        type: roomType,
+        classNames: \`room-\${roomTypeClass}\`
+      };
+    });
+    
+    return resources;
+  }
+  
+  // Initialize FullCalendar
+  function initializeCalendar() {
+    try {
+      console.log("Initializing calendar with:", allReservations.length, "reservations for", allRooms.length, "rooms");
+      
+      // Create resources
+      const resources = createResourceGroups();
+      
+      // Initialize filter options
+      populateFilterOptions(resources);
+      
+      // Calculate initial date to show (closest future month)
+      let initialDate = new Date();
+      
+      // Check for March 2025 data
+      if (allReservations.some(res => res.start && res.start.includes('2025-03'))) {
+        initialDate = new Date('2025-03-01');
+      }
+      
+      // Initialize calendar
+      const calendarEl = document.getElementById('calendar');
+      calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'resourceTimelineMonth',
+        initialDate: initialDate,
+        headerToolbar: false, // We use our custom header
+        schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source', // For non-commercial use
+        resources: resources,
+        events: allReservations,
+        resourceAreaWidth: '150px',
+        height: 'auto',
+        slotDuration: { days: 1 },
+        slotLabelFormat: {
+          day: 'numeric',
+          weekday: 'short'
+        },
+        resourceAreaHeaderContent: 'Rooms',
+        eventTimeFormat: {
+          hour: 'numeric',
+          minute: '2-digit',
+          omitZeroMinute: true,
+          meridiem: 'short'
+        },
+        eventClick: function(info) {
+          showEventDetails(info.event, info.el);
+        },
+        datesSet: function(dateInfo) {
+          document.getElementById('current-date').textContent = dateInfo.start.toLocaleDateString('en-US', {
+            month: 'long',
+            year: 'numeric'
+          });
+        },
+        resourceLabelDidMount: function(info) {
+          // Add room type to the resource label
+          const roomType = info.resource.extendedProps.type || '';
+          info.el.innerHTML = \`<div class="room-label">Room \${info.resource.id}<br><small>\${roomType}</small></div>\`;
+        }
+      });
+      
+      // Render the calendar
+      calendar.render();
+      
+      // Hide loading indicator
+      document.getElementById('loading').style.display = 'none';
+      
+      // Set up event handlers
+      setupEventHandlers();
+      
+      console.log("Calendar successfully initialized");
+      
+    } catch (error) {
+      console.error('Error initializing calendar:', error);
+      document.getElementById('loading').textContent = 'Error loading data. Please try again.';
+      
+      // Show more detailed error
+      let errorDiv = document.getElementById('error-details');
+      if (errorDiv) {
+        errorDiv.innerHTML = \`<h3>Calendar initialization error</h3><p>\${error.message || error}</p>\`;
+        errorDiv.style.display = 'block';
+      }
+    }
+  }
+  
+  // Populate filter options
+  function populateFilterOptions(resources) {
+    // Room filter
+    const roomFilter = document.getElementById('room-filter');
+    roomFilter.innerHTML = '<option value="all">All Rooms</option>'; // Reset
+    
+    resources.forEach(resource => {
+      const option = document.createElement('option');
+      option.value = resource.id;
+      option.textContent = \`Room \${resource.id}\`;
+      roomFilter.appendChild(option);
+    });
+    
+    // Room type filter
+    const typeFilter = document.getElementById('type-filter');
+    typeFilter.innerHTML = '<option value="all">All Types</option>'; // Reset
+    
+    const uniqueTypes = [...new Set(resources.map(resource => resource.type))];
+    uniqueTypes.forEach(type => {
+      if (type) {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        typeFilter.appendChild(option);
+      }
+    });
+  }
+  
+  // Set up event handlers for buttons and filters
+  function setupEventHandlers() {
+    // Navigation buttons
+    document.getElementById('prev-button').addEventListener('click', () => {
+      calendar.prev();
+    });
+    
+    document.getElementById('next-button').addEventListener('click', () => {
+      calendar.next();
+    });
+    
+    document.getElementById('today-button').addEventListener('click', () => {
+      calendar.today();
+    });
+    
+    // View selector
+    document.getElementById('view-selector').addEventListener('change', (e) => {
+      const days = parseInt(e.target.value);
+      calendar.setOption('duration', { days: days });
+      calendar.refetchEvents();
+    });
+    
+    // Filter button
+    document.getElementById('filter-button').addEventListener('click', applyFilters);
+    
+    // Reset button
+    document.getElementById('reset-button').addEventListener('click', resetFilters);
+    
+    // Search input
+    document.getElementById('search-input').addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') {
+        applyFilters();
+      }
+    });
+    
+    // Close tooltip when clicking outside
+    document.addEventListener('click', (e) => {
+      const tooltip = document.getElementById('reservation-tooltip');
+      if (tooltip && !tooltip.contains(e.target) && e.target.className !== 'fc-event-title') {
+        tooltip.style.display = 'none';
+      }
+    });
+  }
+  
+  // Apply filters to the calendar
+  function applyFilters() {
+    const roomFilter = document.getElementById('room-filter').value;
+    const typeFilter = document.getElementById('type-filter').value;
+    const searchFilter = document.getElementById('search-input').value.toLowerCase();
+    
+    let filteredEvents = allReservations;
+    
+    // Apply room filter
+    if (roomFilter !== 'all') {
+      filteredEvents = filteredEvents.filter(event => event.resourceId === roomFilter);
+    }
+    
+    // Apply room type filter
+    if (typeFilter !== 'all') {
+      filteredEvents = filteredEvents.filter(event => 
+        event.extendedProps.roomType === typeFilter
+      );
+    }
+    
+    // Apply search filter
+    if (searchFilter) {
+      filteredEvents = filteredEvents.filter(event => 
+        event.title.toLowerCase().includes(searchFilter)
+      );
+    }
+    
+    // Update calendar events
+    calendar.setOption('events', filteredEvents);
+    calendar.refetchEvents();
+  }
+  
+  // Reset all filters
+  function resetFilters() {
+    document.getElementById('room-filter').value = 'all';
+    document.getElementById('type-filter').value = 'all';
+    document.getElementById('search-input').value = '';
+    
+    calendar.setOption('events', allReservations);
+    calendar.refetchEvents();
+  }
+  
+  // Show event details in tooltip
+  function showEventDetails(event, element) {
+    const tooltip = document.getElementById('reservation-tooltip');
+    const rect = element.getBoundingClientRect();
+    
+    // Format dates
+    const startDate = new Date(event.start);
+    const endDate = event.end ? new Date(event.end) : null;
+    
+    const formattedStart = startDate.toLocaleDateString();
+    const formattedEnd = endDate ? endDate.toLocaleDateString() : '';
+    
+    // Build tooltip content
+    tooltip.innerHTML = \`
+      <h3>\${event.title}</h3>
+      <p><strong>Room:</strong> \${event.resourceId}</p>
+      <p><strong>Room Type:</strong> \${event.extendedProps.roomType || 'N/A'}</p>
+      <p><strong>Check-in:</strong> \${formattedStart}</p>
+      <p><strong>Check-out:</strong> \${formattedEnd}</p>
+      <p><strong>Nights:</strong> \${event.extendedProps.nights || 'N/A'}</p>
+      <p><strong>Status:</strong> \${event.extendedProps.status || 'N/A'}</p>
+      <p><strong>Rate:</strong> \${event.extendedProps.rate || 'N/A'}</p>
+      <p><strong>Guests:</strong> \${event.extendedProps.adults || 0} Adults, \${event.extendedProps.children || 0} Children</p>
+      <p><strong>Company:</strong> \${event.extendedProps.company || 'N/A'}</p>
+      <p><strong>Source:</strong> \${event.extendedProps.source || 'N/A'}</p>
+    \`;
+    
+    // Position the tooltip
+    tooltip.style.display = 'block';
+    tooltip.style.top = \`\${rect.bottom + window.scrollY + 10}px\`;
+    tooltip.style.left = \`\${rect.left + window.scrollX}px\`;
+  }
+});`;
+
+      // Create blob and download
+      const blob = new Blob([scriptContent], { type: 'text/javascript' });
+      const url = URL.createObjectURL(blob);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'process-csv-modified.js';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://hes2-ssd-ohs.oracleindustry.com/oam/server/obrareq.cgi?encquery%3DPlKNGVD1LVENOMWf5XV0NlT72gTdZdE68aqp2TcX4e3mrXcOYIye1vwx0paG24dmkQbtp3gOaYZDy9ATb1PP3Tlm7ov%2BpqOs%2F8jqpzWPl8WYCU3rqe1Xvz5ybW6yxUBsw5Xx2fLY92I3b8KSKxiJcwuiJT2aXDF%2FCP6%2FU0sGwwF%2BDO3OfXSSiQW20xhtW4xpuDOpstDEkDrfynhgpKPrfGEqeoXjAnZKgZNzp8pSvR7pbfhsAIRGPOeeDX%2FbtJHv%2BgRbFsu1UUBlkYknyZ91L7pG5x4kI5pafeCS7X3d%2FZzAQfbPQcSuUM5vCHBFBR3SDeCFaUqJqwdisQdzJf8ESWTxSG4lMb1i8t6l61LhtIGbOX4zAwNBsAbtvjycLEKW%20agentid%3DOAM_RoyalPalm%20ver%3D1%20crmethod%3D2%26cksum%3D0f2fbb4e4de6b56a7f17718ceeace1d139d0ef75&ECID-Context=1.006DPBH8vm603zOUuislkH0006mQ0001YM%3BkXjE');
+  await page.getByRole('textbox', { name: 'User Name' }).click();
+  await page.getByRole('textbox', { name: 'User Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'User Name' }).fill('JOHANT');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Password' }).fill('Alebert123456#');
+  await page.getByText('Remember Me').click();
+  await page.getByRole('button', { name: 'Sign In' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('Albert123456#');
+  await page.getByRole('button', { name: 'Sign In' }).click();
+  await page.getByRole('link', { name: 'Click to go to OPERA Cloud' }).click();
+  const page1Promise = page.waitForEvent('popup');
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/adf.task-flow?adf.tfId=opera-cloud-index&adf.tfDoc=/WEB-INF/taskflows/opera-cloud-index.xml');
+  const page1 = await page1Promise;
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/opera-cloud-index/OperaCloud');
+  await page.locator('[id="pt1\\:oc_pg_pt\\:ode_pg_mnhdr_rght_cntnt_lnk"]').click();
+  await page.getByRole('link', { name: 'Change Location' }).click();
+  await page.getByText('Waterfront Village').click();
+  await page.getByRole('button', { name: 'Select' }).click();
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/opera-cloud-index/OperaCloud');
+  await page.locator('[id="pt1\\:oc_pg_pt\\:ode_pg_mnhdr_rght_cntnt_lnk"]').click();
+  await page.getByRole('link', { name: 'Change Location' }).click();
+  await page.getByText('The Barracks').click();
+  await page.getByRole('button', { name: 'Select' }).click();
+  await page.goto('https://mtce4.oraclehospitality.eu-frankfurt-1.ocs.oraclecloud.com/OPERA9/opera/operacloud/faces/opera-cloud-index/OperaCloud');
+});

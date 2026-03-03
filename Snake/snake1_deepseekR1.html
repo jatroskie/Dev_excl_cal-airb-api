@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        canvas {
+            border: 2px solid #333;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .score {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .game-over {
+            position: absolute;
+            color: red;
+            font-size: 48px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="score">Score: <span id="score">0</span></div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="game-over" id="gameOver">Game Over!</div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+        const gameOverElement = document.getElementById('gameOver');
+
+        let snake = [];
+        let mouse = { x: 10, y: 10 };
+        let dx = 0;
+        let dy = 0;
+        let score = 0;
+        let gameLoop;
+
+        function initGame() {
+            // Reset game state
+            snake = [{ x: 5, y: 5 }];
+            mouse = { x: 10, y: 10 };
+            score = 0;
+            scoreElement.textContent = score;
+            gameOverElement.style.display = 'none';
+
+            // Random initial direction
+            const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+            const randomDir = directions[Math.floor(Math.random() * directions.length)];
+            dx = randomDir[0];
+            dy = randomDir[1];
+
+            // Clear previous game
+            if (gameLoop) clearInterval(gameLoop);
+            gameLoop = setInterval(update, 100);
+        }
+
+        function draw() {
+            // Clear canvas
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw snake
+            snake.forEach((segment, index) => {
+                ctx.fillStyle = '#333';
+                ctx.fillRect(segment.x * 15, segment.y * 15, 14, 14);
+            });
+
+            // Draw mouse
+            ctx.fillStyle = 'red';
+            ctx.fillRect(mouse.x * 15, mouse.y * 15, 14, 14);
+        }
+
+        function update() {
+            // Move snake
+            const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+            
+            // Check wall collision
+            if (head.x < 0 || head.x >= canvas.width/15 || head.y < 0 || head.y >= canvas.height/15) {
+                gameOver();
+                return;
+            }
+
+            // Check self-collision
+            for (let i = 0; i < snake.length; i++) {
+                if (head.x === snake[i].x && head.y === snake[i].y) {
+                    gameOver();
+                    return;
+                }
+            }
+
+            snake.unshift(head);
+
+            // Check mouse collision
+            if (head.x === mouse.x && head.y === mouse.y) {
+                score += 10;
+                scoreElement.textContent = score;
+                growSnake();
+            } else {
+                snake.pop();
+            }
+
+            draw();
+        }
+
+        function growSnake() {
+            // Add one more segment to the snake
+            for (let i = snake.length - 1; i >= 0; i--) {
+                if (i > 0) {
+                    const temp = snake[i].x;
+                    snake[i] = { x: snake[i-1].x, y: snake[i-1].y };
+                    snake[i+1].x = temp;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        function gameOver() {
+            clearInterval(gameLoop);
+            gameOverElement.style.display = 'block';
+            canvas.width = 600;
+            canvas.height = 300;
+            ctx.fillStyle = 'black';
+            ctx.font = '48px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Game Over!', canvas.width/2, canvas.height/2);
+        }
+
+        // Handle keyboard input
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowUp':
+                    if (dy !== 1) {
+                        dx = 0;
+                        dy = -1;
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (dy !== -1) {
+                        dx = 0;
+                        dy = 1;
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (dx !== 1) {
+                        dx = -1;
+                        dy = 0;
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (dx !== -1) {
+                        dx = 1;
+                        dy = 0;
+                    }
+                    break;
+            }
+        });
+
+        // Start game
+        initGame();
+    </script>
+</body>
+</html>

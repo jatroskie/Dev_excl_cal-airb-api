@@ -1,0 +1,48 @@
+ {
+        "id": "CRY-0101",
+        "title": "0101-1-BR",
+        "extendedProps": {
+          "roomNumber": "0101",
+          "roomType": "One Bedroom",
+          "property": "CRY",
+          "url": null,
+          "iCal": null
+        }
+      }
+
+D19-GM1B - Garden-Mountain-View-1=BR
+6-AMAND-STU-1 - 6-Amanda-Studio-1=BR
+5BC-V2BR - 2-Bed Room
+0309-2BL = 2 Bedroom Loft 
+
+ 0101-1-BR
+ 0102-2-BR
+ 0104-1-BR
+ 0105-1-BR
+ 0106-1-BR
+ 0107-1-BR
+ 0108-1-BR
+ 0109-1-BR
+ 0110-1-BR
+ 0111-1-BR
+ 0113-1-BR
+ 0114-2-BR
+ 0115-1-BR
+ 0116-STU
+ 0117-STU
+ 0118-LUX-1
+ 0201-2-BR
+ 0202-2-BR
+ 0210-2-BR
+ 0301-2-BR
+ 0302-SSUP-2
+ 0303-2BL
+ 0306-2BL
+ 0308-2BL
+ 0309-2BL
+ 0313-2-BR
+ 41BC-VSTU
+ 5BC-V2BR
+ 6-AMAND-STU-1
+ D19-GM1B
+ D27-GM3B

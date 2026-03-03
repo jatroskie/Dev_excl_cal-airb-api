@@ -1,0 +1,761 @@
+[
+  {
+    "id": "TBA-0302",
+    "title": "0302-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0302",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityviewt201",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1297713377500685821.ics?s=2bb58758919cb021889cd34ae98ef5af"
+    }
+  },
+  {
+    "id": "TBA-0303",
+    "title": "0303-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0303",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview303",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+    }
+  },
+  {
+    "id": "TBA-0304",
+    "title": "0304-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0304",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview404",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+    }
+  },
+  {
+    "id": "TBA-0305",
+    "title": "0305-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0305",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0306",
+    "title": "0306-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0306",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0307",
+    "title": "0307-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0307",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview307",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+    }
+  },
+  {
+    "id": "TBA-0308",
+    "title": "0308-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0308",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0309",
+    "title": "0309-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0309",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview309",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1229590273883233451.ics?s=714b2c07dac299d78ce0d5c739ea63b0"
+    }
+  },
+  {
+    "id": "TBA-0311",
+    "title": "0311-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0311",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0312",
+    "title": "0312-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0312",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview312",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1231279072193286203.ics?s=287ac4863e3e1f46f57e48a365c128d5"
+    }
+  },
+  {
+    "id": "TBA-0313",
+    "title": "0313-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0313",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0314",
+    "title": "0314-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0314",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0315",
+    "title": "0315-1-BR",
+    "extendedProps": {
+      "roomNumber": "0315",
+      "roomType": "1-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview315",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+    }
+  },
+  {
+    "id": "TBA-0317",
+    "title": "0317-1-BR",
+    "extendedProps": {
+      "roomNumber": "0317",
+      "roomType": "1-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview317",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1212347449286873783.ics?s=9ed8f1213f87e4ac6d8d4cdad35f32c2"
+    }
+  },
+  {
+    "id": "TBA-0318",
+    "title": "0318-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0318",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0319",
+    "title": "0319-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0319",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview319",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1212358372296730196.ics?s=4c1a84bb707478eb99ccefa8e64f5418"
+    }
+  },
+  {
+    "id": "TBA-0320",
+    "title": "0320-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0320",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0321",
+    "title": "0321-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0321",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview321",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1221657676388110334.ics?s=b91f16ef14ad7a9bafea0e41d9c78939"
+    }
+  },
+  {
+    "id": "TBA-0323",
+    "title": "0323-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0323",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview323",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1221670892542894285.ics?s=a4412a8c4b354b8cf4168a80db584c6c"
+    }
+  },
+  {
+    "id": "TBA-0400",
+    "title": "0400-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0400",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview400",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1209304586053489362.ics?s=1e6f02ef61b5172628143028a3769a45"
+    }
+  },
+  {
+    "id": "TBA-0401",
+    "title": "0401-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0401",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview401",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+    }
+  },
+  {
+    "id": "TBA-0402",
+    "title": "0402-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0402",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview402",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+    }
+  },
+  {
+    "id": "TBA-0403",
+    "title": "0403-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0403",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0404",
+    "title": "0404-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0404",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0405",
+    "title": "0405-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0405",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0406",
+    "title": "0406-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0406",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0407",
+    "title": "0407-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0407",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview407",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1224994790515851136.ics?s=6d5a2a29d3c96c219acb3d7bec827a39"
+    }
+  },
+  {
+    "id": "TBA-0408",
+    "title": "0408-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0408",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview408",
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0409",
+    "title": "0409-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0409",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0411",
+    "title": "0411-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0411",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview411",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+    }
+  },
+  {
+    "id": "TBA-0412",
+    "title": "0412-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0412",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0413",
+    "title": "0413-1-BR",
+    "extendedProps": {
+      "roomNumber": "0413",
+      "roomType": "1-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview413",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+    }
+  },
+  {
+    "id": "TBA-0415",
+    "title": "0415-1-BR",
+    "extendedProps": {
+      "roomNumber": "0415",
+      "roomType": "1-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityviews415",
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0416",
+    "title": "0416-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0416",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0417",
+    "title": "0417-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0417",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0418",
+    "title": "0418-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0418",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0419",
+    "title": "0419-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0419",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0420",
+    "title": "0420-STU-URB",
+    "extendedProps": {
+      "roomNumber": "0420",
+      "roomType": "STU-URB",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview420",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1221716931721025193.ics?s=8e77b0f039b0131646b2e8bba07b7613"
+    }
+  },
+  {
+    "id": "TBA-0501",
+    "title": "0501-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0501",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview501",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+    }
+  },
+  {
+    "id": "TBA-0502",
+    "title": "0502-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0502",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0503",
+    "title": "0503-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0503",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0504",
+    "title": "0504-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0504",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview504",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+    }
+  },
+  {
+    "id": "TBA-0506",
+    "title": "0506-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0506",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview506",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+    }
+  },
+  {
+    "id": "TBA-0507",
+    "title": "0507-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0507",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview507",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1228676934909732817.ics?s=456467007b241e83f2be7cd79b9627a4"
+    }
+  },
+  {
+    "id": "TBA-0508",
+    "title": "0508-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0508",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0509",
+    "title": "0509-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0509",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0511",
+    "title": "0511-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0511",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0513",
+    "title": "0513-2-BR",
+    "extendedProps": {
+      "roomNumber": "0513",
+      "roomType": "2-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview513",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1273908503357043458.ics?s=1a06935ca97d1e8b2b0dd27c957c1c17"
+    }
+  },
+  {
+    "id": "TBA-0514",
+    "title": "0514-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0514",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview514",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1221693800160287643.ics?s=2972a50a8e4277c45de99ad553033944"
+    }
+  },
+  {
+    "id": "TBA-0515",
+    "title": "0515-2-BR",
+    "extendedProps": {
+      "roomNumber": "0515",
+      "roomType": "2-BR",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview515",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+    }
+  },
+  {
+    "id": "TBA-0516",
+    "title": "0516-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0516",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0517",
+    "title": "0517-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0517",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0518",
+    "title": "0518-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0518",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0519",
+    "title": "0519-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0519",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": null,
+      "iCal": null
+    }
+  },
+  {
+    "id": "TBA-0520",
+    "title": "0520-STU-LUX",
+    "extendedProps": {
+      "roomNumber": "0520",
+      "roomType": "STU-LUX",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview520",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1211338228155057949.ics?s=5da0b66c3496167c283f944dbbe872e0"
+    }
+  },
+  {
+    "id": "27Bellair",
+    "title": "27Bellair-2-BR",
+    "extendedProps": {
+      "roomNumber": "27Bellair",
+      "roomType": "2-BR",
+      "property": "NOTTPF",
+      "url": "airbnb.co.za/h/27bellair",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1099848746094296878.ics?s=2f8f7434b3affe7d4b025bfd68b2e7ec"
+    }
+  },
+  {
+    "id": "WFV-G102",
+    "title": "G102-1-BR-LUX",
+    "extendedProps": {
+      "roomNumber": "G102",
+      "roomType": "1-BR-LUX",
+      "property": "WFV",
+      "url": "airbnb.co.za/h/waterfront-g102",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1225013720851311501.ics?s=73dd16813e2b3ef9384dad4d124a4146"
+    }
+  },
+  {
+    "id": "WFV-G205",
+    "title": "G205-1-BR-LUX",
+    "extendedProps": {
+      "roomNumber": "G205",
+      "roomType": "1-BR-LUX",
+      "property": "WFV",
+      "url": "airbnb.co.za/h/waterfront-g205",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1226585159048320019.ics?s=70d25ff88df21f8312fdb415c3e1e41c"
+    }
+  },
+  {
+    "id": "WFV-H003",
+    "title": "H003-1-BR-LUX",
+    "extendedProps": {
+      "roomNumber": "H003",
+      "roomType": "1-BR-LUX",
+      "property": "WFV",
+      "url": "airbnb.co.za/h/waterfront-h003",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1227248080634159829.ics?s=42d357bf612c32b2252a315df53c7007"
+    }
+  },
+  {
+    "id": "WFV-F104",
+    "title": "F104-1-BR-LUX",
+    "extendedProps": {
+      "roomNumber": "F104",
+      "roomType": "1-BR-LUX",
+      "property": "WFV",
+      "url": "airbnb.co.za/h/cityviewf104",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1329019802755184020.ics?s=83627472021f5ce790143912e980b7ea"
+    }
+  },
+  {
+    "id": "TTBH-T202",
+    "title": "T202-STU",
+    "extendedProps": {
+      "roomNumber": "T202",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt202",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1299153500898642202.ics?s=f21e30c5e9ebe69b7b1b884e96b037de"
+    }
+  },
+  {
+    "id": "TTBH-T302",
+    "title": "T302-STU",
+    "extendedProps": {
+      "roomNumber": "T302",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt302",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1299131184723668977.ics?s=f8b8471b20585596355433c5e8917082"
+    }
+  },
+  {
+    "id": "TBA-B514A",
+    "title": "B514A-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "B514A",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview514a",
+      "iCal": null
+    }
+  },
+  {
+    "id": "TTBH-201",
+    "title": "T201-STU",
+    "extendedProps": {
+      "roomNumber": "T201",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt201",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1297713377500685821.ics?s=2bb58758919cb021889cd34ae98ef5af"
+    }
+  },
+  {
+    "id": "TTBH-T103",
+    "title": "T103-STU",
+    "extendedProps": {
+      "roomNumber": "T103",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt103",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1307158669123962781.ics?s=99b697fbb9630732dc0e7fc811c45249"
+    }
+  },
+  {
+    "id": "TTBH-T203",
+    "title": "T203-STU",
+    "extendedProps": {
+      "roomNumber": "T203",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt203",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1299242518045151769.ics?s=e90c4376880650ea2e6a23639b509490"
+    }
+  },
+  {
+    "id": "TTBH-T101",
+    "title": "T101-STU",
+    "extendedProps": {
+      "roomNumber": "T101",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt101",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1296318897242601996.ics?s=329bdf26c26000e7a733af4bae51f6e0"
+    }
+  },
+  {
+    "id": "TTBH-T303",
+    "title": "T303-STU-URB",
+    "extendedProps": {
+      "roomNumber": "T303",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt303",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1299108896114505703.ics?s=323521320504e019cf4f4949431019b7"
+    }
+  },
+  {
+    "id": "TTBH-T301",
+    "title": "T301-STU",
+    "extendedProps": {
+      "roomNumber": "T301",
+      "roomType": "STU",
+      "property": "TTBH",
+      "url": "airbnb.co.za/h/cityviewt301",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1299362489926115061.ics?s=cdceccff4ca15474352fc4bb3eb8f7d5"
+    }
+  }
+]

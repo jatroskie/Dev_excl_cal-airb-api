@@ -1,0 +1,18 @@
+Google Cloud SFTP
+
+
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+jatroskie@sftp-server:~$ sudo groupadd sftpusers
+jatroskie@sftp-server:~$ sudo mkdir -p /var/sftp/uploads
+jatroskie@sftp-server:~$ sudo chown root:root /var/sftp
+jatroskie@sftp-server:~$ sudo chmod 755 /var/sftp
+jatroskie@sftp-server:~$ sudo chown root:sftpusers /var/sftp/uploads
+jatroskie@sftp-server:~$ sudo chmod 775 /var/sftp/uploads
+jatroskie@sftp-server:~$ sudo useradd -g sftpusers -d /uploads -s /sbin/nologin clientuser
+jatroskie@sftp-server:~$ sudo passwd clientuser
+New password: 
+Retype new password: Galaxy147
+passwd: password updated successfully
+jatroskie@sftp-server:~$ 

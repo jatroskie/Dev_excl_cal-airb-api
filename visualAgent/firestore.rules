@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // --- Existing Rules for cal-airb-api ---
+    match /hotels/{hotelId} {
+      allow read: if true;
+      
+      match /knowledge_base/{docId} {
+        allow read, write: if true;
+      }
+      
+      match /training_examples/{docId} {
+        allow read, write: if true;
+      }
+    }
+    match /reservations/{reservationId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+      
+      // [NEW] Hybrid Automation: Sub-collection Auditing
+      match /audit_logs/{log} {
+        allow read: if true; // Dashboard needs read access
+        allow write: if request.auth != null; // Agents/Admin write
+      }
+    }
+    match /guests/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // --- Shared / Consolidated User Rule ---
+    match /users/{userId}/{document=**} {
+       allow read: if request.auth != null;
+       allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /mail/{mailId} {
+      allow create: if request.auth != null;
+    }
+    match /extension_requests/{requestId} {
+      allow create, read, update: if request.auth != null;
+    }
+    
+    // --- TPF Host Rules (Modified for Hybrid Automation) ---
+    match /rooms/{roomId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // [NEW] Hybrid Automation: Ledger & Audits
+    match /inventory_ledger/{ledger} {
+      allow read: if true; // Dashboard reads availability
+      allow write: if request.auth != null; // Gatekeeper/Revenue Agents write
+    }
+    match /audit_logs/{log} {
+       allow read, write: if request.auth != null;
+    }
+    
+    // --- Rates Management ---
+    match /rates/{rateId} {
+       allow read: if true; // Exposed for sync
+       allow write: if request.auth != null; // Revenue Agent writes
+    }
+
+    match /ownersApp/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // --- Rates Management (Legacy/Existing) ---
+    match /apartmentSeasonRates/{seasonId} {
+       allow read, write: if request.auth != null;
+    }
+    match /rateOverrides/{overrideId} {
+       allow read, write: if request.auth != null;
+    }
+    match /marketStats/{statId} {
+       allow read, write: if request.auth != null;
+    }
+    match /dailyRoomState/{stateId} {
+       allow read, write: if request.auth != null;
+    }
+    match /systemState/rateSyncProgress {
+       allow read, write: if request.auth != null;
+    }
+
+    // --- SplitDontArgue (New Features) ---
+    match /bills/{billId} {
+      allow create: if request.auth != null && request.resource.data.ownerId == request.auth.uid;
+      allow read, update, delete: if request.auth != null && resource.data.ownerId == request.auth.uid;
+    }
+
+    match /groups/{groupId} {
+      allow create: if request.auth != null;
+      allow read, update, delete: if request.auth != null && (
+        request.auth.uid in resource.data.members || 
+        resource.data.ownerId == request.auth.uid
+      );
+
+      match /bills/{billId} {
+         allow read, write: if request.auth != null && 
+            exists(/databases/$(database)/documents/groups/$(groupId)) && (
+               (
+                 get(/databases/$(database)/documents/groups/$(groupId)).data.ownerId == request.auth.uid
+               ) || 
+               (
+                 request.auth.uid in get(/databases/$(database)/documents/groups/$(groupId)).data.members
+               )
+            );
+      }
+    }
+
+    // Default deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,3984 @@
+{
+  "hotels": [
+    {
+      "code": "CRY",
+      "name": "The Crystal Apartments"
+    },
+    {
+      "code": "HES",
+      "name": "Harbourage Suites"
+    },
+    {
+      "code": "LAW",
+      "name": "Lawhill Apartments"
+    },
+    {
+      "code": "MPA",
+      "name": "Mouille Point Village"
+    },
+    {
+      "code": "TBA",
+      "name": "The Barracks"
+    },
+    {
+      "code": "TQA",
+      "name": "The Quarter Apartments"
+    },
+    {
+      "code": "TTBH",
+      "name": "The Trade Boutique Hotel"
+    },
+    {
+      "code": "WFV",
+      "name": "Waterfront Village"
+    },
+    {
+      "code": "NOTTPF",
+      "name": "Other properties"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "TBA-0302",
+      "title": "0302-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0302",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviewt201",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1297713377500685821.ics?s=2bb58758919cb021889cd34ae98ef5af"
+      }
+    },
+    {
+      "id": "TBA-0303",
+      "title": "0303-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0303",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview303",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1247731029392182354.ics?s=9b0c6e03ab2210297ba5ab3ec90dd22a"
+      }
+    },
+    {
+      "id": "TBA-0304",
+      "title": "0304-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0304",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview404",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231797570482523951.ics?s=a9794695b377f7350d83c7d2cb195996"
+      }
+    },
+    {
+      "id": "TBA-0305",
+      "title": "0305-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0305",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0306",
+      "title": "0306-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0306",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0307",
+      "title": "0307-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0307",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview307",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231301095469221059.ics?s=a8d15a54340c17c23d67ce537e5e9977"
+      }
+    },
+    {
+      "id": "TBA-0308",
+      "title": "0308-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0308",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0309",
+      "title": "0309-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0309",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview309",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1229590273883233451.ics?s=714b2c07dac299d78ce0d5c739ea63b0"
+      }
+    },
+    {
+      "id": "TBA-0311",
+      "title": "0311-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0311",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0312",
+      "title": "0312-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0312",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview312",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231279072193286203.ics?s=287ac4863e3e1f46f57e48a365c128d5"
+      }
+    },
+    {
+      "id": "TBA-0313",
+      "title": "0313-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0313",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0314",
+      "title": "0314-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0314",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0315",
+      "title": "0315-1-BR",
+      "extendedProps": {
+        "roomNumber": "0315",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview315",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231204448340426544.ics?s=0b15075180678b7f4477f25990715f46"
+      }
+    },
+    {
+      "id": "TBA-0317",
+      "title": "0317-1-BR",
+      "extendedProps": {
+        "roomNumber": "0317",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview317",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212347449286873783.ics?s=9ed8f1213f87e4ac6d8d4cdad35f32c2"
+      }
+    },
+    {
+      "id": "TBA-0318",
+      "title": "0318-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0318",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0319",
+      "title": "0319-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0319",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview319",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212358372296730196.ics?s=4c1a84bb707478eb99ccefa8e64f5418"
+      }
+    },
+    {
+      "id": "TBA-0320",
+      "title": "0320-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0320",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0321",
+      "title": "0321-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0321",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview321",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221657676388110334.ics?s=b91f16ef14ad7a9bafea0e41d9c78939"
+      }
+    },
+    {
+      "id": "TBA-0323",
+      "title": "0323-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0323",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview323",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221670892542894285.ics?s=a4412a8c4b354b8cf4168a80db584c6c"
+      }
+    },
+    {
+      "id": "TBA-0400",
+      "title": "0400-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0400",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview400",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1209304586053489362.ics?s=1e6f02ef61b5172628143028a3769a45"
+      }
+    },
+    {
+      "id": "TBA-0401",
+      "title": "0401-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0401",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview401",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228303256651219056.ics?s=5d0e220d38a54ce3fb6df27fe8ce4002"
+      }
+    },
+    {
+      "id": "TBA-0402",
+      "title": "0402-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0402",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview402",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228276893037734445.ics?s=daa1d92d478d2eb70388545833ae1bcd"
+      }
+    },
+    {
+      "id": "TBA-0403",
+      "title": "0403-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0403",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0404",
+      "title": "0404-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0404",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0405",
+      "title": "0405-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0405",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0406",
+      "title": "0406-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0406",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0407",
+      "title": "0407-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0407",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview407",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1224994790515851136.ics?s=6d5a2a29d3c96c219acb3d7bec827a39"
+      }
+    },
+    {
+      "id": "TBA-0408",
+      "title": "0408-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0408",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview408",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0409",
+      "title": "0409-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0409",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0411",
+      "title": "0411-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0411",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview411",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1231608210658786295.ics?s=1d6e40be7bfe32941e397554e9a4ee0e"
+      }
+    },
+    {
+      "id": "TBA-0412",
+      "title": "0412-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0412",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0413",
+      "title": "0413-1-BR",
+      "extendedProps": {
+        "roomNumber": "0413",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview413",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1263658461196930695.ics?s=e38ca36ecfd41ee3ddecccba5a07eb65"
+      }
+    },
+    {
+      "id": "TBA-0415",
+      "title": "0415-1-BR",
+      "extendedProps": {
+        "roomNumber": "0415",
+        "roomType": "1-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityviews415",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0416",
+      "title": "0416-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0416",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0417",
+      "title": "0417-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0417",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0418",
+      "title": "0418-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0418",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0419",
+      "title": "0419-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0419",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0420",
+      "title": "0420-STU-URB",
+      "extendedProps": {
+        "roomNumber": "0420",
+        "roomType": "STU-URB",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview420",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221716931721025193.ics?s=8e77b0f039b0131646b2e8bba07b7613"
+      }
+    },
+    {
+      "id": "TBA-0501",
+      "title": "0501-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0501",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview501",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1248669755951945227.ics?s=e197c90f042c9dae11ca3f39e30b99a3"
+      }
+    },
+    {
+      "id": "TBA-0502",
+      "title": "0502-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0502",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0503",
+      "title": "0503-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0503",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0504",
+      "title": "0504-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0504",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview504",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228322903507358655.ics?s=a9c396912f768aa93dce5a780d604656"
+      }
+    },
+    {
+      "id": "TBA-0506",
+      "title": "0506-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0506",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview506",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211317367250046383.ics?s=e697fbd4bf85f9e0a8583afb02c7a697"
+      }
+    },
+    {
+      "id": "TBA-0507",
+      "title": "0507-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0507",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview507",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1228676934909732817.ics?s=456467007b241e83f2be7cd79b9627a4"
+      }
+    },
+    {
+      "id": "TBA-0508",
+      "title": "0508-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0508",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0509",
+      "title": "0509-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0509",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0511",
+      "title": "0511-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0511",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0513",
+      "title": "0513-2-BR",
+      "extendedProps": {
+        "roomNumber": "0513",
+        "roomType": "2-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview513",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1273908503357043458.ics?s=1a06935ca97d1e8b2b0dd27c957c1c17"
+      }
+    },
+    {
+      "id": "TBA-0514",
+      "title": "0514-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "0514",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview514",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1221693800160287643.ics?s=2972a50a8e4277c45de99ad553033944"
+      }
+    },
+    {
+      "id": "TBA-0515",
+      "title": "0515-2-BR",
+      "extendedProps": {
+        "roomNumber": "0515",
+        "roomType": "2-BR",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview515",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1212401688791962038.ics?s=a7ad362d416504edfe75243967dd35d5"
+      }
+    },
+    {
+      "id": "TBA-0516",
+      "title": "0516-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0516",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0517",
+      "title": "0517-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0517",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0518",
+      "title": "0518-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0518",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0519",
+      "title": "0519-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0519",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TBA-0520",
+      "title": "0520-STU-LUX",
+      "extendedProps": {
+        "roomNumber": "0520",
+        "roomType": "STU-LUX",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview520",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1211338228155057949.ics?s=5da0b66c3496167c283f944dbbe872e0"
+      }
+    },
+    {
+      "id": "27Bellair",
+      "title": "27Bellair-2-BR",
+      "extendedProps": {
+        "roomNumber": "27Bellair",
+        "roomType": "2-BR",
+        "property": "NOTTPF",
+        "url": "airbnb.co.za/h/27bellair",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1099848746094296878.ics?s=2f8f7434b3affe7d4b025bfd68b2e7ec"
+      }
+    },
+    {
+      "id": "WFV-G102",
+      "title": "G102-1-BR-LUX",
+      "extendedProps": {
+        "roomNumber": "G102",
+        "roomType": "1-BR-LUX",
+        "property": "WFV",
+        "url": "airbnb.co.za/h/waterfront-g102",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1225013720851311501.ics?s=73dd16813e2b3ef9384dad4d124a4146"
+      }
+    },
+    {
+      "id": "WFV-G205",
+      "title": "G205-1-BR-LUX",
+      "extendedProps": {
+        "roomNumber": "G205",
+        "roomType": "1-BR-LUX",
+        "property": "WFV",
+        "url": "airbnb.co.za/h/waterfront-g205",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1226585159048320019.ics?s=70d25ff88df21f8312fdb415c3e1e41c"
+      }
+    },
+    {
+      "id": "WFV-H003",
+      "title": "H003-1-BR-LUX",
+      "extendedProps": {
+        "roomNumber": "H003",
+        "roomType": "1-BR-LUX",
+        "property": "WFV",
+        "url": "airbnb.co.za/h/waterfront-h003",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1227248080634159829.ics?s=42d357bf612c32b2252a315df53c7007"
+      }
+    },
+    {
+      "id": "WFV-F104",
+      "title": "F104-1-BR-LUX",
+      "extendedProps": {
+        "roomNumber": "F104",
+        "roomType": "1-BR-LUX",
+        "property": "WFV",
+        "url": "airbnb.co.za/h/cityviewf104",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1329019802755184020.ics?s=83627472021f5ce790143912e980b7ea"
+      }
+    },
+    {
+      "id": "TTBH-T202",
+      "title": "T202-STU",
+      "extendedProps": {
+        "roomNumber": "T202",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt202",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1299153500898642202.ics?s=f21e30c5e9ebe69b7b1b884e96b037de"
+      }
+    },
+    {
+      "id": "TTBH-T302",
+      "title": "T302-STU",
+      "extendedProps": {
+        "roomNumber": "T302",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt302",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1299131184723668977.ics?s=f8b8471b20585596355433c5e8917082"
+      }
+    },
+    {
+      "id": "TBA-B514A",
+      "title": "B514A-STU-BALC",
+      "extendedProps": {
+        "roomNumber": "B514A",
+        "roomType": "STU-BALC",
+        "property": "TBA",
+        "url": "airbnb.co.za/h/cityview514a",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-201",
+      "title": "T201-STU",
+      "extendedProps": {
+        "roomNumber": "T201",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt201",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1297713377500685821.ics?s=2bb58758919cb021889cd34ae98ef5af"
+      }
+    },
+    {
+      "id": "TTBH-T103",
+      "title": "T103-STU",
+      "extendedProps": {
+        "roomNumber": "T103",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt103",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1307158669123962781.ics?s=99b697fbb9630732dc0e7fc811c45249"
+      }
+    },
+    {
+      "id": "TTBH-T203",
+      "title": "T203-STU",
+      "extendedProps": {
+        "roomNumber": "T203",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt203",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1299242518045151769.ics?s=e90c4376880650ea2e6a23639b509490"
+      }
+    },
+    {
+      "id": "TTBH-T101",
+      "title": "T101-STU",
+      "extendedProps": {
+        "roomNumber": "T101",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt101",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1296318897242601996.ics?s=329bdf26c26000e7a733af4bae51f6e0"
+      }
+    },
+    {
+      "id": "TTBH-T303",
+      "title": "T303-STU-URB",
+      "extendedProps": {
+        "roomNumber": "T303",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt303",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1299108896114505703.ics?s=323521320504e019cf4f4949431019b7"
+      }
+    },
+    {
+      "id": "TTBH-T301",
+      "title": "T301-STU",
+      "extendedProps": {
+        "roomNumber": "T301",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "airbnb.co.za/h/cityviewt301",
+        "iCal": "https://www.airbnb.co.za/calendar/ical/1299362489926115061.ics?s=cdceccff4ca15474352fc4bb3eb8f7d5"
+      }
+    },
+    {
+      "id": "A002LUX-1",
+      "title": "A002-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A002",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "A202CLS-1",
+      "title": "A202-Classic One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A202",
+        "roomType": "Classic One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "A303LUX-1",
+      "title": "A303-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A303",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "A403CLS-1",
+      "title": "A403-Classic One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A403",
+        "roomType": "Classic One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "A404LUX-1",
+      "title": "A404-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A404",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "A405LUX-1",
+      "title": "A405-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "A405",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B001LUX-1",
+      "title": "B001-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B001",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B002LUX-1",
+      "title": "B002-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B002",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B003CLS-2",
+      "title": "B003-Classic Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "B003",
+        "roomType": "Classic Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B004LUX-2",
+      "title": "B004-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "B004",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B101CLS-1",
+      "title": "B101-Classic One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B101",
+        "roomType": "Classic One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B102CLS-1",
+      "title": "B102-Classic One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B102",
+        "roomType": "Classic One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B105LUX-2",
+      "title": "B105-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "B105",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B201CLS-1",
+      "title": "B201-Classic One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B201",
+        "roomType": "Classic One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B202LUX-1",
+      "title": "B202-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "B202",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B204LUX-2",
+      "title": "B204-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "B204",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B205CLS-2",
+      "title": "B205-Classic Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "B205",
+        "roomType": "Classic Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B404LUX-3",
+      "title": "B404-Luxury Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "B404",
+        "roomType": "Luxury Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B603LUX-3",
+      "title": "B603-Luxury Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "B603",
+        "roomType": "Luxury Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "B801PPENT3",
+      "title": "B801-Penthouse Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "B801",
+        "roomType": "Penthouse Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C003SUP-2",
+      "title": "C003-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "C003",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C101LUX-2",
+      "title": "C101-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "C101",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C102LUX-2",
+      "title": "C102-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "C102",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C202LUX-2",
+      "title": "C202-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "C202",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C502LUX-3",
+      "title": "C502-Luxury Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "C502",
+        "roomType": "Luxury Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "C503LUX-3",
+      "title": "C503-Luxury Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "C503",
+        "roomType": "Luxury Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "D501SUP-2",
+      "title": "D501-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "D501",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "D502LUX-2",
+      "title": "D502-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "D502",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E002LUX-1",
+      "title": "E002-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "E002",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E003CLS-2",
+      "title": "E003-Classic Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E003",
+        "roomType": "Classic Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E201LUX-2",
+      "title": "E201-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E201",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E202LUX-2",
+      "title": "E202-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E202",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E203LUX-2",
+      "title": "E203-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E203",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E303LUX-2",
+      "title": "E303-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E303",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E402LUX-2",
+      "title": "E402-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E402",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E403LUX-2",
+      "title": "E403-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E403",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E502LUX-2",
+      "title": "E502-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E502",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "E503LUX-2",
+      "title": "E503-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "E503",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "F002LUX-2",
+      "title": "F002-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "F002",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "F003LUX-1",
+      "title": "F003-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "F003",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "F104LUX-2",
+      "title": "F104-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "F104",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "F403SUP-2",
+      "title": "F403-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "F403",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "G002LUX-1",
+      "title": "G002-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "G002",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "G102LUX-1",
+      "title": "G102-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "G102",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "G205LUX-1",
+      "title": "G205-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "G205",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "H001LUX-1",
+      "title": "H001-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "H001",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "H003LUX-1",
+      "title": "H003-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "H003",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "H004LUX-2",
+      "title": "H004-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "H004",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "H302LUX-2",
+      "title": "H302-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "H302",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "H402LUX-2",
+      "title": "H402-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "H402",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J003LUX-1",
+      "title": "J003-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J003",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J007LUX-1",
+      "title": "J007-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J007",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J103LUX-1",
+      "title": "J103-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J103",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J108LUX-1",
+      "title": "J108-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J108",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J211SUP-2",
+      "title": "J211-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "J211",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J503LUX-1",
+      "title": "J503-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J503",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J507LUX-1",
+      "title": "J507-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "J507",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J510SUP-2",
+      "title": "J510-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "J510",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J602LUX-2",
+      "title": "J602-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "J602",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J603SUP-3",
+      "title": "J603-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "J603",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J604SUP-3",
+      "title": "J604-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "J604",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J605LUX-2",
+      "title": "J605-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "J605",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "J606SUP-2",
+      "title": "J606-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "J606",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K005LUX-2",
+      "title": "K005-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K005",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K102LUX-1",
+      "title": "K102-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "K102",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K105LUX-2",
+      "title": "K105-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K105",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K201LUX-2",
+      "title": "K201-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K201",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K303LUX-2",
+      "title": "K303-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K303",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K404LUX-2",
+      "title": "K404-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K404",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K406LUX-2",
+      "title": "K406-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K406",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K408SUP-2",
+      "title": "K408-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K408",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K409SUP-2",
+      "title": "K409-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K409",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "K509LUX-2",
+      "title": "K509-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "K509",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "KG10LUX-1",
+      "title": "KG10-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "KG10",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "P003SUP-1",
+      "title": "P003-Supreme One Bedroom",
+      "extendedProps": {
+        "roomNumber": "P003",
+        "roomType": "Supreme One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "P202LUX-2",
+      "title": "P202-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "P202",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "P203SUP-2",
+      "title": "P203-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "P203",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL002SUP-1",
+      "title": "PAL002-Supreme One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL002",
+        "roomType": "Supreme One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL003LUX-1",
+      "title": "PAL003-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL003",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL004LUX-2",
+      "title": "PAL004-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL004",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL005SSUP-3",
+      "title": "PAL005-Super Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL005",
+        "roomType": "Super Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL102SUP-1",
+      "title": "PAL102-Supreme One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL102",
+        "roomType": "Supreme One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL103LUX-1",
+      "title": "PAL103-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL103",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL104LUX-2",
+      "title": "PAL104-Luxury Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL104",
+        "roomType": "Luxury Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PAL501PEN-3",
+      "title": "PAL501-Penthouse Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PAL501",
+        "roomType": "Penthouse Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PB302SUP-3",
+      "title": "PB302-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PB302",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PB305LUX-1",
+      "title": "PB305-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PB305",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PB404SUP-2",
+      "title": "PB404-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PB404",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PBG11LUX-1",
+      "title": "PBG11-Luxury One Bedroom",
+      "extendedProps": {
+        "roomNumber": "PBG11",
+        "roomType": "Luxury One Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PQ003SUP-3",
+      "title": "PQ003-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PQ003",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PQ005SUP-2",
+      "title": "PQ005-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PQ005",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PQ201SUP-2",
+      "title": "PQ201-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PQ201",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PQ303SUP-2",
+      "title": "PQ303-Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PQ303",
+        "roomType": "Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PQ401PENT-3",
+      "title": "PQ401-Penthouse Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PQ401",
+        "roomType": "Penthouse Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PR001SUP-3",
+      "title": "PR001-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PR001",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PR101SUP-3",
+      "title": "PR101-Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PR101",
+        "roomType": "Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PR201SSUP-3",
+      "title": "PR201-Super Supreme Three Bedroom",
+      "extendedProps": {
+        "roomNumber": "PR201",
+        "roomType": "Super Supreme Three Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "PR202SSUP-2",
+      "title": "PR202-Super Supreme Two Bedroom",
+      "extendedProps": {
+        "roomNumber": "PR202",
+        "roomType": "Super Supreme Two Bedroom",
+        "property": "WFV",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0101",
+      "title": "0101-STU",
+      "extendedProps": {
+        "roomNumber": "0101",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt101",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0102",
+      "title": "0102-STU",
+      "extendedProps": {
+        "roomNumber": "0102",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt102",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0103",
+      "title": "0103-STU",
+      "extendedProps": {
+        "roomNumber": "0103",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt103",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0104",
+      "title": "0104-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0104",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0105",
+      "title": "0105-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0105",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0106",
+      "title": "0106-SUI-FAM",
+      "extendedProps": {
+        "roomNumber": "0106",
+        "roomType": "SUI-FAM",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0107",
+      "title": "0107-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0107",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0201",
+      "title": "0201-STU",
+      "extendedProps": {
+        "roomNumber": "0201",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt201",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0202",
+      "title": "0202-STU",
+      "extendedProps": {
+        "roomNumber": "0202",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt202",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0203",
+      "title": "0203-STU",
+      "extendedProps": {
+        "roomNumber": "0203",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt203",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0204",
+      "title": "0204-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0204",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0205",
+      "title": "0205-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0205",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0206",
+      "title": "0206-SUI-FAM",
+      "extendedProps": {
+        "roomNumber": "0206",
+        "roomType": "SUI-FAM",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0207",
+      "title": "0207-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0207",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0301",
+      "title": "0301-STU",
+      "extendedProps": {
+        "roomNumber": "0301",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt301",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0302",
+      "title": "0302-STU",
+      "extendedProps": {
+        "roomNumber": "0302",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt302",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0303",
+      "title": "0303-STU",
+      "extendedProps": {
+        "roomNumber": "0303",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt303",
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0304",
+      "title": "0304-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0304",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0305",
+      "title": "0305-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0305",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0306",
+      "title": "0306-SUI-FAM",
+      "extendedProps": {
+        "roomNumber": "0306",
+        "roomType": "SUI-FAM",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0307",
+      "title": "0307-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0307",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0401",
+      "title": "0401-RM-URB",
+      "extendedProps": {
+        "roomNumber": "0401",
+        "roomType": "RM-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0402",
+      "title": "0402-RM-URB",
+      "extendedProps": {
+        "roomNumber": "0402",
+        "roomType": "RM-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0403",
+      "title": "0403-RM-URB",
+      "extendedProps": {
+        "roomNumber": "0403",
+        "roomType": "RM-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0404",
+      "title": "0404-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0404",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0405",
+      "title": "0405-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0405",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0406",
+      "title": "0406-SUI-FAM",
+      "extendedProps": {
+        "roomNumber": "0406",
+        "roomType": "SUI-FAM",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0407",
+      "title": "0407-SUI-URB",
+      "extendedProps": {
+        "roomNumber": "0407",
+        "roomType": "SUI-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0501",
+      "title": "0501-RM-URB",
+      "extendedProps": {
+        "roomNumber": "0501",
+        "roomType": "RM-URB",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0502",
+      "title": "0502-RM-LUX",
+      "extendedProps": {
+        "roomNumber": "0502",
+        "roomType": "RM-LUX",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0503",
+      "title": "0503-RM-LUX",
+      "extendedProps": {
+        "roomNumber": "0503",
+        "roomType": "RM-LUX",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0504",
+      "title": "0504-SUI-LUX",
+      "extendedProps": {
+        "roomNumber": "0504",
+        "roomType": "SUI-LUX",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0505",
+      "title": "0505-SUI-LUX",
+      "extendedProps": {
+        "roomNumber": "0505",
+        "roomType": "SUI-LUX",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+    {
+      "id": "TTBH-0506",
+      "title": "0506-SUI-FAM",
+      "extendedProps": {
+        "roomNumber": "0506",
+        "roomType": "SUI-FAM",
+        "property": "TTBH",
+        "url": null,
+        "iCal": null
+      }
+    },
+      {
+        "id": "HES-101",
+        "title": "101-3-BR",
+        "extendedProps": {
+          "roomNumber": "101",
+          "roomType": "Three Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-102",
+        "title": "102-STU",
+        "extendedProps": {
+          "roomNumber": "102",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-103",
+        "title": "103-STU",
+        "extendedProps": {
+          "roomNumber": "103",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-105",
+        "title": "105-STU",
+        "extendedProps": {
+          "roomNumber": "105",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-202",
+        "title": "202-STU",
+        "extendedProps": {
+          "roomNumber": "202",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-207",
+        "title": "207-STU",
+        "extendedProps": {
+          "roomNumber": "207",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-208",
+        "title": "208-STU",
+        "extendedProps": {
+          "roomNumber": "208",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-212",
+        "title": "212-STU",
+        "extendedProps": {
+          "roomNumber": "212",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-217",
+        "title": "217-STU",
+        "extendedProps": {
+          "roomNumber": "217",
+          "roomType": "Studio",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-303",
+        "title": "303-2-BR",
+        "extendedProps": {
+          "roomNumber": "303",
+          "roomType": "Two Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-502",
+        "title": "502-2-BR",
+        "extendedProps": {
+          "roomNumber": "502",
+          "roomType": "Two Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-505",
+        "title": "505-2-BR",
+        "extendedProps": {
+          "roomNumber": "505",
+          "roomType": "Two Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-509",
+        "title": "509-2-BR",
+        "extendedProps": {
+          "roomNumber": "509",
+          "roomType": "Two Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-608",
+        "title": "608-2-BR",
+        "extendedProps": {
+          "roomNumber": "608",
+          "roomType": "Two Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-IC1108",
+        "title": "IC1108-ICO-1BR",
+        "extendedProps": {
+          "roomNumber": "IC1108",
+          "roomType": "One Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-IC1403",
+        "title": "IC1403-ICO-1BR",
+        "extendedProps": {
+          "roomNumber": "IC1403",
+          "roomType": "One Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-IC1502",
+        "title": "IC1502-ICO-1BR",
+        "extendedProps": {
+          "roomNumber": "IC1502",
+          "roomType": "One Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-IC808",
+        "title": "IC808-ICO-1BR",
+        "extendedProps": {
+          "roomNumber": "IC808",
+          "roomType": "One Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+      {
+        "id": "HES-IC902",
+        "title": "IC902-ICO-1BR",
+        "extendedProps": {
+          "roomNumber": "IC902",
+          "roomType": "One Bedroom",
+          "property": "HES",
+          "url": null,
+          "iCal": null
+        }
+      },
+        {
+          "id": "MPA-0102",
+          "title": "0102-SEA-1",
+          "extendedProps": {
+            "roomNumber": "0102",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-103A",
+          "title": "103A-STU-SEA",
+          "extendedProps": {
+            "roomNumber": "103A",
+            "roomType": "Studio Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-103B",
+          "title": "103B-OCE-1",
+          "extendedProps": {
+            "roomNumber": "103B",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0107",
+          "title": "0107-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0107",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0108",
+          "title": "0108-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0108",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0109",
+          "title": "0109-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0109",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0110",
+          "title": "0110-STU-GOLF",
+          "extendedProps": {
+            "roomNumber": "0110",
+            "roomType": "Studio Golf-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0202",
+          "title": "0202-SEA-1",
+          "extendedProps": {
+            "roomNumber": "0202",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-203A",
+          "title": "203A-STU-SEA",
+          "extendedProps": {
+            "roomNumber": "203A",
+            "roomType": "Studio Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-203B",
+          "title": "203B-SEA-1",
+          "extendedProps": {
+            "roomNumber": "203B",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-204A",
+          "title": "204A-STU-SEA",
+          "extendedProps": {
+            "roomNumber": "204A",
+            "roomType": "Studio Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-204B",
+          "title": "204B-SEA-1",
+          "extendedProps": {
+            "roomNumber": "204B",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0207",
+          "title": "0207-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0207",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0208",
+          "title": "0208-GOLF-2",
+          "extendedProps": {
+            "roomNumber": "0208",
+            "roomType": "2 Bedroom Golf-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0303",
+          "title": "0303-OCE-1",
+          "extendedProps": {
+            "roomNumber": "0303",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0304",
+          "title": "0304-SEA-2",
+          "extendedProps": {
+            "roomNumber": "0304",
+            "roomType": "2 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0308",
+          "title": "0308-GOLF-2",
+          "extendedProps": {
+            "roomNumber": "0308",
+            "roomType": "2 Bedroom Golf-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0407",
+          "title": "0407-GOLF-2",
+          "extendedProps": {
+            "roomNumber": "0407",
+            "roomType": "2 Bedroom Golf-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0408",
+          "title": "0408-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0408",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0410",
+          "title": "0410-STU-M",
+          "extendedProps": {
+            "roomNumber": "0410",
+            "roomType": "Studio Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0508",
+          "title": "0508-GOLF-2",
+          "extendedProps": {
+            "roomNumber": "0508",
+            "roomType": "2 Bedroom Golf-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0510",
+          "title": "0510-STU-M",
+          "extendedProps": {
+            "roomNumber": "0510",
+            "roomType": "Studio Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0602",
+          "title": "0602-SEA-1",
+          "extendedProps": {
+            "roomNumber": "0602",
+            "roomType": "1 Bedroom Sea-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0607",
+          "title": "0607-MNT-2",
+          "extendedProps": {
+            "roomNumber": "0607",
+            "roomType": "2 Bedroom Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-0610",
+          "title": "0610-STU-M",
+          "extendedProps": {
+            "roomNumber": "0610",
+            "roomType": "Studio Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-808A",
+          "title": "808A-STU-MB",
+          "extendedProps": {
+            "roomNumber": "808A",
+            "roomType": "Studio Mountain-facing Balcony",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-808B",
+          "title": "808B-STU-M",
+          "extendedProps": {
+            "roomNumber": "808B",
+            "roomType": "Studio Mountain-facing",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-809A",
+          "title": "809A-STU-MB",
+          "extendedProps": {
+            "roomNumber": "809A",
+            "roomType": "Studio Mountain-facing Balcony",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+        {
+          "id": "MPA-809B",
+          "title": "809B-STU-MB",
+          "extendedProps": {
+            "roomNumber": "809B",
+            "roomType": "Studio Mountain-facing Balcony",
+            "property": "MPA",
+            "url": null,
+            "iCal": null
+          }
+        },
+            {
+              "id": "CRY-D19",
+              "title": "D19-GM1B",
+              "extendedProps": {
+                "roomNumber": "D19",
+                "roomType": "Garden Mountain View 1 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-6-AMAND",
+              "title": "6-AMAND-STU-1",
+              "extendedProps": {
+                "roomNumber": "6-AMAND",
+                "roomType": "Amanda Studio 1 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-5BC",
+              "title": "5BC-V2BR",
+              "extendedProps": {
+                "roomNumber": "5BC",
+                "roomType": "View 2 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0309",
+              "title": "0309-2BL",
+              "extendedProps": {
+                "roomNumber": "0309",
+                "roomType": "2 Bedroom Loft",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0101",
+              "title": "0101-1-BR",
+              "extendedProps": {
+                "roomNumber": "0101",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0102",
+              "title": "0102-2-BR",
+              "extendedProps": {
+                "roomNumber": "0102",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0104",
+              "title": "0104-1-BR",
+              "extendedProps": {
+                "roomNumber": "0104",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0105",
+              "title": "0105-1-BR",
+              "extendedProps": {
+                "roomNumber": "0105",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0106",
+              "title": "0106-1-BR",
+              "extendedProps": {
+                "roomNumber": "0106",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0107",
+              "title": "0107-1-BR",
+              "extendedProps": {
+                "roomNumber": "0107",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0108",
+              "title": "0108-1-BR",
+              "extendedProps": {
+                "roomNumber": "0108",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0109",
+              "title": "0109-1-BR",
+              "extendedProps": {
+                "roomNumber": "0109",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0110",
+              "title": "0110-1-BR",
+              "extendedProps": {
+                "roomNumber": "0110",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0111",
+              "title": "0111-1-BR",
+              "extendedProps": {
+                "roomNumber": "0111",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0113",
+              "title": "0113-1-BR",
+              "extendedProps": {
+                "roomNumber": "0113",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0114",
+              "title": "0114-2-BR",
+              "extendedProps": {
+                "roomNumber": "0114",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0115",
+              "title": "0115-1-BR",
+              "extendedProps": {
+                "roomNumber": "0115",
+                "roomType": "One Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0116",
+              "title": "0116-STU",
+              "extendedProps": {
+                "roomNumber": "0116",
+                "roomType": "Studio",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0117",
+              "title": "0117-STU",
+              "extendedProps": {
+                "roomNumber": "0117",
+                "roomType": "Studio",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0118",
+              "title": "0118-LUX-1",
+              "extendedProps": {
+                "roomNumber": "0118",
+                "roomType": "Luxury 1 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0201",
+              "title": "0201-2-BR",
+              "extendedProps": {
+                "roomNumber": "0201",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0202",
+              "title": "0202-2-BR",
+              "extendedProps": {
+                "roomNumber": "0202",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0210",
+              "title": "0210-2-BR",
+              "extendedProps": {
+                "roomNumber": "0210",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0301",
+              "title": "0301-2-BR",
+              "extendedProps": {
+                "roomNumber": "0301",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0302",
+              "title": "0302-SSUP-2",
+              "extendedProps": {
+                "roomNumber": "0302",
+                "roomType": "Superior 2 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0303",
+              "title": "0303-2BL",
+              "extendedProps": {
+                "roomNumber": "0303",
+                "roomType": "2 Bedroom Loft",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0306",
+              "title": "0306-2BL",
+              "extendedProps": {
+                "roomNumber": "0306",
+                "roomType": "2 Bedroom Loft",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0308",
+              "title": "0308-2BL",
+              "extendedProps": {
+                "roomNumber": "0308",
+                "roomType": "2 Bedroom Loft",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-0313",
+              "title": "0313-2-BR",
+              "extendedProps": {
+                "roomNumber": "0313",
+                "roomType": "Two Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-41BC",
+              "title": "41BC-VSTU",
+              "extendedProps": {
+                "roomNumber": "41BC",
+                "roomType": "View Studio",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            {
+              "id": "CRY-D27",
+              "title": "D27-GM3B",
+              "extendedProps": {
+                "roomNumber": "D27",
+                "roomType": "Garden Mountain View 3 Bedroom",
+                "property": "CRY",
+                "url": null,
+                "iCal": null
+              }
+            },
+            [
+                {
+                  "id": "TQA-0301",
+                  "title": "0301-2-BR",
+                  "extendedProps": {
+                    "roomNumber": "0301",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0302",
+                  "title": "0302-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0302",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0303",
+                  "title": "0303-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0303",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0304",
+                  "title": "0304-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0304",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0305",
+                  "title": "0305-STU",
+                  "extendedProps": {
+                    "roomNumber": "0305",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0306",
+                  "title": "0306-STU",
+                  "extendedProps": {
+                    "roomNumber": "0306",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0307",
+                  "title": "0307-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0307",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0308",
+                  "title": "0308-STU",
+                  "extendedProps": {
+                    "roomNumber": "0308",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0310",
+                  "title": "0310-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0310",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0311",
+                  "title": "0311-STU",
+                  "extendedProps": {
+                    "roomNumber": "0311",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0312",
+                  "title": "0312-STU",
+                  "extendedProps": {
+                    "roomNumber": "0312",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0313",
+                  "title": "0313-STU",
+                  "extendedProps": {
+                    "roomNumber": "0313",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0314",
+                  "title": "0314-STU",
+                  "extendedProps": {
+                    "roomNumber": "0314",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0315",
+                  "title": "0315-STU",
+                  "extendedProps": {
+                    "roomNumber": "0315",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0316",
+                  "title": "0316-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0316",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0317",
+                  "title": "0317-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0317",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0403",
+                  "title": "0403-2-BR",
+                  "extendedProps": {
+                    "roomNumber": "0403",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-403SOMDW",
+                  "title": "403SOMDW-SOM",
+                  "extendedProps": {
+                    "roomNumber": "403SOMDW",
+                    "roomType": "Somerset - De Waterkant",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0405",
+                  "title": "0405-RM-LUX",
+                  "extendedProps": {
+                    "roomNumber": "0405",
+                    "roomType": "The Quarter - Room Luxury - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0406",
+                  "title": "0406-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0406",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0407",
+                  "title": "0407-RM-LUX",
+                  "extendedProps": {
+                    "roomNumber": "0407",
+                    "roomType": "The Quarter - Room Luxury - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0408",
+                  "title": "0408-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0408",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0409",
+                  "title": "0409-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0409",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0410",
+                  "title": "0410-RM",
+                  "extendedProps": {
+                    "roomNumber": "0410",
+                    "roomType": "The Quarter - Room",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0411",
+                  "title": "0411-RM-LUX",
+                  "extendedProps": {
+                    "roomNumber": "0411",
+                    "roomType": "The Quarter - Room Luxury - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0412",
+                  "title": "0412-STU",
+                  "extendedProps": {
+                    "roomNumber": "0412",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0413",
+                  "title": "0413-RM",
+                  "extendedProps": {
+                    "roomNumber": "0413",
+                    "roomType": "The Quarter - Room",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0414",
+                  "title": "0414-STU",
+                  "extendedProps": {
+                    "roomNumber": "0414",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0415",
+                  "title": "0415-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0415",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-415SIGDW",
+                  "title": "415SIGDW-STU",
+                  "extendedProps": {
+                    "roomNumber": "415SIGDW",
+                    "roomType": "Signature - De Waterkant - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0416",
+                  "title": "0416-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0416",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0501",
+                  "title": "0501-2-BR",
+                  "extendedProps": {
+                    "roomNumber": "0501",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-5ALDW",
+                  "title": "5ALDW-1BR",
+                  "extendedProps": {
+                    "roomNumber": "5ALDW",
+                    "roomType": "5A Loader - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-5BLDW",
+                  "title": "5BLDW-1BR",
+                  "extendedProps": {
+                    "roomNumber": "5BLDW",
+                    "roomType": "5B Loader - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-5CLDW",
+                  "title": "5CLDW-2BR",
+                  "extendedProps": {
+                    "roomNumber": "5CLDW",
+                    "roomType": "5C Loader - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0601",
+                  "title": "0601-2-BRR",
+                  "extendedProps": {
+                    "roomNumber": "0601",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0604",
+                  "title": "0604-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0604",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0607",
+                  "title": "0607-2BRR",
+                  "extendedProps": {
+                    "roomNumber": "0607",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0609",
+                  "title": "0609-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0609",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0610",
+                  "title": "0610-STU",
+                  "extendedProps": {
+                    "roomNumber": "0610",
+                    "roomType": "The Quarter - Studio",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0701",
+                  "title": "0701-2-BR",
+                  "extendedProps": {
+                    "roomNumber": "0701",
+                    "roomType": "The Quarter - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-0706",
+                  "title": "0706-1-BR",
+                  "extendedProps": {
+                    "roomNumber": "0706",
+                    "roomType": "The Quarter - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-D505DW",
+                  "title": "D505DW-2BRR",
+                  "extendedProps": {
+                    "roomNumber": "D505DW",
+                    "roomType": "Devonshire - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-P202DW",
+                  "title": "P202DW-3BR",
+                  "extendedProps": {
+                    "roomNumber": "P202DW",
+                    "roomType": "Piazza - De Waterkant - Three Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-RW115RW",
+                  "title": "RW115RW-1BR",
+                  "extendedProps": {
+                    "roomNumber": "RW115RW",
+                    "roomType": "Rockwell - 1 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-RW504RW",
+                  "title": "RW504RW-2BR",
+                  "extendedProps": {
+                    "roomNumber": "RW504RW",
+                    "roomType": "Rockwell - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-RW519RW",
+                  "title": "RW519RW-2BR",
+                  "extendedProps": {
+                    "roomNumber": "RW519RW",
+                    "roomType": "Rockwell - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },
+                {
+                  "id": "TQA-RW606RW",
+                  "title": "RW606RW-2BR",
+                  "extendedProps": {
+                    "roomNumber": "RW606RW",
+                    "roomType": "Rockwell - 2 Bedroom",
+                    "property": "TQA",
+                    "url": null,
+                    "iCal": null
+                  }
+                },    
+                [
+                    {
+                      "id": "LAW-001A",
+                      "title": "001A-3BSS",
+                      "extendedProps": {
+                        "roomNumber": "001A",
+                        "roomType": "3 Bedroom Superior Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-002A",
+                      "title": "002A-2BSS",
+                      "extendedProps": {
+                        "roomNumber": "002A",
+                        "roomType": "2 Bedroom Superior Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-003A",
+                      "title": "003A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "003A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-004B",
+                      "title": "004B-1BS",
+                      "extendedProps": {
+                        "roomNumber": "004B",
+                        "roomType": "1 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-005B",
+                      "title": "005B-1BSS",
+                      "extendedProps": {
+                        "roomNumber": "005B",
+                        "roomType": "1 Bedroom Superior Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-006B",
+                      "title": "006B-2BSS",
+                      "extendedProps": {
+                        "roomNumber": "006B",
+                        "roomType": "2 Bedroom Superior Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-101A",
+                      "title": "101A-3BS",
+                      "extendedProps": {
+                        "roomNumber": "101A",
+                        "roomType": "3 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-102A",
+                      "title": "102A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "102A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-103A",
+                      "title": "103A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "103A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-104B",
+                      "title": "104B-2BL",
+                      "extendedProps": {
+                        "roomNumber": "104B",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-105B",
+                      "title": "105B-1BL",
+                      "extendedProps": {
+                        "roomNumber": "105B",
+                        "roomType": "1 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-106B",
+                      "title": "106B-2BL",
+                      "extendedProps": {
+                        "roomNumber": "106B",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-201A",
+                      "title": "201A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "201A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-202A",
+                      "title": "202A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "202A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-203B",
+                      "title": "203B-2BL",
+                      "extendedProps": {
+                        "roomNumber": "203B",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-204B",
+                      "title": "204B-1BL",
+                      "extendedProps": {
+                        "roomNumber": "204B",
+                        "roomType": "1 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-205B",
+                      "title": "205B-2BL",
+                      "extendedProps": {
+                        "roomNumber": "205B",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-301A",
+                      "title": "301A-3BL",
+                      "extendedProps": {
+                        "roomNumber": "301A",
+                        "roomType": "3 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-302A",
+                      "title": "302A-2BL",
+                      "extendedProps": {
+                        "roomNumber": "302A",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-303B",
+                      "title": "303B-2BL",
+                      "extendedProps": {
+                        "roomNumber": "303B",
+                        "roomType": "2 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-304B",
+                      "title": "304B-3BL",
+                      "extendedProps": {
+                        "roomNumber": "304B",
+                        "roomType": "3 Bedroom Luxury",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-401A",
+                      "title": "401A-3BS",
+                      "extendedProps": {
+                        "roomNumber": "401A",
+                        "roomType": "3 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-402A",
+                      "title": "402A-2BS",
+                      "extendedProps": {
+                        "roomNumber": "402A",
+                        "roomType": "2 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-403B",
+                      "title": "403B-2BS",
+                      "extendedProps": {
+                        "roomNumber": "403B",
+                        "roomType": "2 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-404B",
+                      "title": "404B-3BS",
+                      "extendedProps": {
+                        "roomNumber": "404B",
+                        "roomType": "3 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-501A",
+                      "title": "501A-3BP",
+                      "extendedProps": {
+                        "roomNumber": "501A",
+                        "roomType": "3 Bedroom Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-502A",
+                      "title": "502A-2BS",
+                      "extendedProps": {
+                        "roomNumber": "502A",
+                        "roomType": "2 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-503B",
+                      "title": "503B-2BS",
+                      "extendedProps": {
+                        "roomNumber": "503B",
+                        "roomType": "2 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-504B",
+                      "title": "504B-3BS",
+                      "extendedProps": {
+                        "roomNumber": "504B",
+                        "roomType": "3 Bedroom Superior",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    },
+                    {
+                      "id": "LAW-601B",
+                      "title": "601B-3BP",
+                      "extendedProps": {
+                        "roomNumber": "601B",
+                        "roomType": "3 Bedroom Pool",
+                        "property": "LAW",
+                        "url": null,
+                        "iCal": null
+                      }
+                    }
+                  ]
+        ]
+  ]
+}

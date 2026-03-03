@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Properties Reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="vacprop.jpg" alt="Vacation Properties Logo" class="w-32">
+    </div>
+
+    <!-- Form Title -->
+    <h1 class="text-2xl font-bold mb-4 text-center">Vacation Properties Reservation</h1>
+
+    <!-- Form -->
+    <form id="reservationForm" class="space-y-4">
+      <input type="text" name="surname" placeholder="Surname (e.g., Smith)" class="w-full p-2 border rounded" required>
+      <input type="text" name="name" placeholder="Name (e.g., John)" class="w-full p-2 border rounded" required>
+      <input type="tel" name="phone" placeholder="Phone Number (e.g., 1234567890)" class="w-full p-2 border rounded" required>
+      
+      <!-- Property Dropdown -->
+      <select name="property" class="w-full p-2 border rounded" required>
+        <option value="" disabled selected>Select Property</option>
+        <option value="The Barracks">Barracks</option>
+        <option value="The Trade">The Trade</option>
+        <option value="Lawhill Luxury Suites">Lawhill Luxury Suites</option>
+        <option value="The Quarter Apartments">The Quarter Apartments</option>
+        <option value="The Crystal Apartments">The Crystal Apartments</option>
+        <option value="Mouille Point Village">Mouille Point Village</option>
+        <option value="Harbouredge Suites">Harbouredge Suites</option>
+        
+        <!-- Add more properties as needed -->
+      </select>
+
+      <input type="date" name="checkin" placeholder="Check-in Date (e.g., 15.05.2025)" class="w-full p-2 border rounded" required>
+      <input type="date" name="checkout" placeholder="Check-out Date (e.g., 18.05.2025)" class="w-full p-2 border rounded" required>
+      <input type="number" name="dailyRate" placeholder="Daily Rate (e.g., 1850)" class="w-full p-2 border rounded" required>
+      <input type="text" name="discountCode" placeholder="Discount Code (e.g., OTH)" class="w-full p-2 border rounded">
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit Reservation</button>
+    </form>
+
+    <!-- Result Display -->
+    <div id="result" class="mt-4 text-center hidden"></div>
+  </div>
+
+  <script>
+    document.getElementById('reservationForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+
+      // Format dates to DD.MM.YYYY if needed by your backend
+      data.checkin = new Date(data.checkin).toLocaleDateString('en-GB').replace(/\//g, '.');
+      data.checkout = new Date(data.checkout).toLocaleDateString('en-GB').replace(/\//g, '.');
+
+      document.getElementById('result').innerHTML = 'Processing...';
+      document.getElementById('result').classList.remove('hidden');
+
+      try {
+        const response = await fetch('http://yourserver.com:3000/capture-reservation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const result = await response.json();
+
+        if (result.error) throw new Error(result.error);
+        document.getElementById('result').innerHTML = `Reservation Confirmed! Number: ${result.confirmationNumber}`;
+        document.getElementById('result').classList.add('text-green-600');
+      } catch (error) {
+        document.getElementById('result').innerHTML = `Error: ${error.message}`;
+        document.getElementById('result').classList.add('text-red-600');
+      }
+    });
+  </script>
+</body>
+</html>

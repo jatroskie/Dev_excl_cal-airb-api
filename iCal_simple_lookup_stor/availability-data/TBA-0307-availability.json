@@ -1,0 +1,945 @@
+{
+  "property": {
+    "id": "TBA-0307",
+    "title": "0307-STU-URB",
+    "roomNumber": "0307",
+    "roomType": "STU-URB",
+    "property": "TBA",
+    "url": "airbnb.co.za/h/cityview307"
+  },
+  "lastUpdated": "2025-03-17T12:20:05.535Z",
+  "bookings": [
+    {
+      "start": "2025-03-14",
+      "end": "2025-03-15",
+      "summary": "Airbnb (Not available)"
+    },
+    {
+      "start": "2026-03-16",
+      "end": "2026-03-17",
+      "summary": "Airbnb (Not available)"
+    }
+  ],
+  "availability": {
+    "2025-03-17": {
+      "date": "2025-03-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-18": {
+      "date": "2025-03-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-19": {
+      "date": "2025-03-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-20": {
+      "date": "2025-03-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-21": {
+      "date": "2025-03-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-22": {
+      "date": "2025-03-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-23": {
+      "date": "2025-03-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-24": {
+      "date": "2025-03-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-25": {
+      "date": "2025-03-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-26": {
+      "date": "2025-03-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-27": {
+      "date": "2025-03-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-28": {
+      "date": "2025-03-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-29": {
+      "date": "2025-03-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-30": {
+      "date": "2025-03-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-03-31": {
+      "date": "2025-03-31",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-01": {
+      "date": "2025-04-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-02": {
+      "date": "2025-04-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-03": {
+      "date": "2025-04-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-04": {
+      "date": "2025-04-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-05": {
+      "date": "2025-04-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-06": {
+      "date": "2025-04-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-07": {
+      "date": "2025-04-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-08": {
+      "date": "2025-04-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-09": {
+      "date": "2025-04-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-10": {
+      "date": "2025-04-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-11": {
+      "date": "2025-04-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-12": {
+      "date": "2025-04-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-13": {
+      "date": "2025-04-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-14": {
+      "date": "2025-04-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-15": {
+      "date": "2025-04-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-16": {
+      "date": "2025-04-16",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-17": {
+      "date": "2025-04-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-18": {
+      "date": "2025-04-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-19": {
+      "date": "2025-04-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-20": {
+      "date": "2025-04-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-21": {
+      "date": "2025-04-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-22": {
+      "date": "2025-04-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-23": {
+      "date": "2025-04-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-24": {
+      "date": "2025-04-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-25": {
+      "date": "2025-04-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-26": {
+      "date": "2025-04-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-27": {
+      "date": "2025-04-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-28": {
+      "date": "2025-04-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-29": {
+      "date": "2025-04-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-04-30": {
+      "date": "2025-04-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-01": {
+      "date": "2025-05-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-02": {
+      "date": "2025-05-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-03": {
+      "date": "2025-05-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-04": {
+      "date": "2025-05-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-05": {
+      "date": "2025-05-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-06": {
+      "date": "2025-05-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-07": {
+      "date": "2025-05-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-08": {
+      "date": "2025-05-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-09": {
+      "date": "2025-05-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-10": {
+      "date": "2025-05-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-11": {
+      "date": "2025-05-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-12": {
+      "date": "2025-05-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-13": {
+      "date": "2025-05-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-14": {
+      "date": "2025-05-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-15": {
+      "date": "2025-05-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-16": {
+      "date": "2025-05-16",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-17": {
+      "date": "2025-05-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-18": {
+      "date": "2025-05-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-19": {
+      "date": "2025-05-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-20": {
+      "date": "2025-05-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-21": {
+      "date": "2025-05-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-22": {
+      "date": "2025-05-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-23": {
+      "date": "2025-05-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-24": {
+      "date": "2025-05-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-25": {
+      "date": "2025-05-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-26": {
+      "date": "2025-05-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-27": {
+      "date": "2025-05-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-28": {
+      "date": "2025-05-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-29": {
+      "date": "2025-05-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-30": {
+      "date": "2025-05-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-05-31": {
+      "date": "2025-05-31",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-01": {
+      "date": "2025-06-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-02": {
+      "date": "2025-06-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-03": {
+      "date": "2025-06-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-04": {
+      "date": "2025-06-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-05": {
+      "date": "2025-06-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-06": {
+      "date": "2025-06-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-07": {
+      "date": "2025-06-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-08": {
+      "date": "2025-06-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-09": {
+      "date": "2025-06-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-10": {
+      "date": "2025-06-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-11": {
+      "date": "2025-06-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-12": {
+      "date": "2025-06-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-13": {
+      "date": "2025-06-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-14": {
+      "date": "2025-06-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-15": {
+      "date": "2025-06-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-16": {
+      "date": "2025-06-16",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-17": {
+      "date": "2025-06-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-18": {
+      "date": "2025-06-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-19": {
+      "date": "2025-06-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-20": {
+      "date": "2025-06-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-21": {
+      "date": "2025-06-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-22": {
+      "date": "2025-06-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-23": {
+      "date": "2025-06-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-24": {
+      "date": "2025-06-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-25": {
+      "date": "2025-06-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-26": {
+      "date": "2025-06-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-27": {
+      "date": "2025-06-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-28": {
+      "date": "2025-06-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-29": {
+      "date": "2025-06-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-06-30": {
+      "date": "2025-06-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-01": {
+      "date": "2025-07-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-02": {
+      "date": "2025-07-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-03": {
+      "date": "2025-07-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-04": {
+      "date": "2025-07-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-05": {
+      "date": "2025-07-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-06": {
+      "date": "2025-07-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-07": {
+      "date": "2025-07-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-08": {
+      "date": "2025-07-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-09": {
+      "date": "2025-07-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-10": {
+      "date": "2025-07-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-11": {
+      "date": "2025-07-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-12": {
+      "date": "2025-07-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-13": {
+      "date": "2025-07-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-14": {
+      "date": "2025-07-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-15": {
+      "date": "2025-07-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-16": {
+      "date": "2025-07-16",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-17": {
+      "date": "2025-07-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-18": {
+      "date": "2025-07-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-19": {
+      "date": "2025-07-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-20": {
+      "date": "2025-07-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-21": {
+      "date": "2025-07-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-22": {
+      "date": "2025-07-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-23": {
+      "date": "2025-07-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-24": {
+      "date": "2025-07-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-25": {
+      "date": "2025-07-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-26": {
+      "date": "2025-07-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-27": {
+      "date": "2025-07-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-28": {
+      "date": "2025-07-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-29": {
+      "date": "2025-07-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-30": {
+      "date": "2025-07-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-07-31": {
+      "date": "2025-07-31",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-01": {
+      "date": "2025-08-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-02": {
+      "date": "2025-08-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-03": {
+      "date": "2025-08-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-04": {
+      "date": "2025-08-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-05": {
+      "date": "2025-08-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-06": {
+      "date": "2025-08-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-07": {
+      "date": "2025-08-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-08": {
+      "date": "2025-08-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-09": {
+      "date": "2025-08-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-10": {
+      "date": "2025-08-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-11": {
+      "date": "2025-08-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-12": {
+      "date": "2025-08-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-13": {
+      "date": "2025-08-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-14": {
+      "date": "2025-08-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-15": {
+      "date": "2025-08-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-16": {
+      "date": "2025-08-16",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-17": {
+      "date": "2025-08-17",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-18": {
+      "date": "2025-08-18",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-19": {
+      "date": "2025-08-19",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-20": {
+      "date": "2025-08-20",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-21": {
+      "date": "2025-08-21",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-22": {
+      "date": "2025-08-22",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-23": {
+      "date": "2025-08-23",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-24": {
+      "date": "2025-08-24",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-25": {
+      "date": "2025-08-25",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-26": {
+      "date": "2025-08-26",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-27": {
+      "date": "2025-08-27",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-28": {
+      "date": "2025-08-28",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-29": {
+      "date": "2025-08-29",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-30": {
+      "date": "2025-08-30",
+      "available": true,
+      "booking": null
+    },
+    "2025-08-31": {
+      "date": "2025-08-31",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-01": {
+      "date": "2025-09-01",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-02": {
+      "date": "2025-09-02",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-03": {
+      "date": "2025-09-03",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-04": {
+      "date": "2025-09-04",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-05": {
+      "date": "2025-09-05",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-06": {
+      "date": "2025-09-06",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-07": {
+      "date": "2025-09-07",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-08": {
+      "date": "2025-09-08",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-09": {
+      "date": "2025-09-09",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-10": {
+      "date": "2025-09-10",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-11": {
+      "date": "2025-09-11",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-12": {
+      "date": "2025-09-12",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-13": {
+      "date": "2025-09-13",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-14": {
+      "date": "2025-09-14",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-15": {
+      "date": "2025-09-15",
+      "available": true,
+      "booking": null
+    },
+    "2025-09-16": {
+      "date": "2025-09-16",
+      "available": true,
+      "booking": null
+    }
+  }
+}

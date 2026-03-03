@@ -1,0 +1,29 @@
+{
+  "name": "adminfuct-functions",
+  "version": "1.0.0",
+  "description": "Admin functions for JTtrack",
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.16.0",
+    "@google-cloud/vertexai": "^1.10.0",
+    "axios": "^1.9.0",
+    "busboy": "^1.6.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^7.0.3",
+    "sharp": "^0.33.5",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "serve": "firebase emulators:start --only functions --project cal-airb-api",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "private": true
+}

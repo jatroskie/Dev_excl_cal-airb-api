@@ -1,0 +1,46 @@
+{
+      "id": "TTBH-0101",
+      "title": "0101-STU",
+      "extendedProps": {
+        "roomNumber": "0101",
+        "roomType": "STU",
+        "property": "TTBH",
+        "url": "http://airbnb.co.za/h/cityviewt101",
+        "iCal": null
+      } 
+ }
+
+ 0101STU
+ 0102STU
+ 0103STU
+ 0104SUI-URB
+ 0105SUI-URB
+ 0106SUI-FAM
+ 0107SUI-URB
+ 0201STU
+ 0202STU
+ 0203STU
+ 0204SUI-URB
+ 0205SUI-URB
+ 0206SUI-FAM
+ 0207SUI-URB
+ 0301STU
+ 0302STU
+ 0303STU
+ 0304SUI-URB
+ 0305SUI-URB
+ 0306SUI-FAM
+ 0307SUI-URB
+ 0401RM-URB
+ 0402RM-URB
+ 0403RM-URB
+ 0404SUI-URB
+ 0405SUI-URB
+ 0406SUI-FAM
+ 0407SUI-URB
+ 0501RM-URB
+ 0502RM-LUX
+ 0503RM-LUX
+ 0504SUI-LUX
+ 0505SUI-LUX
+ 0506SUI-FAM

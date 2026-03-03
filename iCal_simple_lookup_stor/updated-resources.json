@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TBA-0302",
+    "title": "0302-STU-BALC",
+    "extendedProps": {
+      "roomNumber": "0302",
+      "roomType": "STU-BALC",
+      "property": "TBA",
+      "url": "airbnb.co.za/h/cityview302",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1248396969254246587.ics?s=f215a94176d9ae47f5df44f1a81d5ce0"
+    }
+  },
+  {
+    "id": "27Bellair",
+    "title": "27Bellair-2-BR",
+    "extendedProps": {
+      "roomNumber": "27Bellair",
+      "roomType": "2-BR",
+      "property": "NOTTPF",
+      "url": "airbnb.co.za/h/27bellair",
+      "iCal": "https://www.airbnb.co.za/calendar/ical/1099848746094296878.ics?s=2f8f7434b3affe7d4b025bfd68b2e7ec"
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "camllm",
+  "version": "1.0.0",
+  "description": "Yi Camera AI Monitor with WhatsApp Alerts",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.0",
+    "aedes": "^1.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "ffmpeg-static": "^5.2.0",
+    "firebase-admin": "^13.6.1",
+    "mqtt": "^5.15.0",
+    "node-fetch": "^2.7.0",
+    "node-onvif": "^0.1.7",
+    "sharp": "^0.34.5"
+  }
+}

@@ -1,0 +1,44 @@
+ {
+        "id": "MPA-103-A",
+        "title": "103A-STU-SEA",
+        "extendedProps": {
+          "roomNumber": "103A",
+          "roomType": "Studio",
+          "property": "MPA",
+          "url": null,
+          "iCal": null
+        }
+      }
+
+102SEA-1, interpret as roomnumber 0102, "1 Bedroom Sea-facing", next one: 0103-A, "Studio sea-facing", next one: 103-B, "One Bedroom-Sea-facing",
+ 809BSTU-MB = roomnumber 809B,Studio,Mountain-facing,Balcony.  
+
+ 102SEA-1
+ 103ASTU-SEA
+ 103BOCE-1
+ 107MNT-2
+ 108MNT-2
+ 109MNT-2
+ 110STU-GOLF
+ 202SEA-1
+ 203ASTU-SEA
+ 203BSEA-1
+ 204ASTU-SEA
+ 204BSEA-1
+ 207MNT-2
+ 208GOLF-2
+ 303OCE-1
+ 304SEA-2
+ 308GOLF-2
+ 407GOLF-2
+ 408MNT-2
+ 410STU-M
+ 508GOLF-2
+ 510STU-M
+ 602SEA-1
+ 607MNT-2
+ 610STU-M
+ 808ASTU-MB
+ 808BSTU-M
+ 809ASTU-MB
+ 809BSTU-MB

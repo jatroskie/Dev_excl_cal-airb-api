@@ -1,0 +1,95 @@
+const SHEET_ID = "1-wI9aK4QnQBow84YSd36CblMb0IZ1qlIptpeDdaa-OQ";   // ← ONLY CHANGE THIS
+
+function processAirbnbReservations() {
+  const ss = SpreadsheetApp.openById(SHEET_ID);
+  const sheet = ss.getSheetByName("Reservations") || ss.insertSheet("Reservations");
+  
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(["Timestamp","Property","Check-in","Check-out","Guests","Booker","Conf Code","Gross","Cleaning","Guest Svc","Host Fee","Nett"]);
+  }
+
+  const threads = GmailApp.search('from:airbnb ("Reservation confirmed" OR "New booking confirmed!")', 0, 100);
+
+  threads.forEach(thread => {
+    thread.getMessages().forEach(message => {
+      if (!message.isUnread()) return;
+
+      const html = message.getBody();
+      const subject = message.getSubject();
+      const emailDate = message.getDate();
+
+      // 1. Confirmation code
+      const confCode = (html.match(/\/reservations\/details\/([A-Z0-9]{10})/) || [])[1];
+      if (!confCode) return;
+
+      // 2. Property – tested on your HTML
+      const property = (html.match(/<h2[^>]*class="[^"]*heading2[^"]*"[^>]*>([^<]+)<\/h2>/i) || 
+                        html.match(/<h2[^>]*>([^<]+)<\/h2>/i) || 
+                        ["","Unknown Property"])[1]
+                        .replace(/&amp;/g, '&')
+                        .trim();
+
+      // 3. Booker
+      const booker = (subject.match(/confirmed[!\s-]+([^0-9]+?)\s+arrives/i) || 
+                      subject.match(/confirmed[!\s-]+(.+?)$/i) || ["","Unknown"])[1].trim();
+
+      // 4. Guests
+      const guests = (html.match(/(\d+) adults?/) || ["0"])[1];
+
+      // 5. Check-in & Check-out – TESTED ON YOUR EXACT HTML
+      const checkinRaw  = (html.match(/Check-in[\s\S]*?<p[^>]*class="[^"]*heading2[^"]*"[^>]*>([^<]+)<\/p>/i) || 
+                           html.match(/Check-in[\s\S]*?<p[^>]*heading2[^>]*>([^<]+)<\/p>/i) || 
+                           html.match(/Check-in[\s\S]*?heading2[^>]*>([^<]+)<\/[^>]*>/i) || [])[1] || "";
+      const checkoutRaw = (html.match(/Check-out[\s\S]*?<p[^>]*class="[^"]*heading2[^"]*"[^>]*>([^<]+)<\/p>/i) || 
+                           html.match(/Check-out[\s\S]*?<p[^>]*heading2[^>]*>([^<]+)<\/p>/i) || 
+                           html.match(/Check-out[\s\S]*?heading2[^>]*>([^<]+)<\/[^>]*>/i) || [])[1] || "";
+
+      const checkin  = checkinRaw  ? parseDate(checkinRaw.trim(), emailDate)  : "";
+      const checkout = checkoutRaw ? parseDate(checkoutRaw.trim(), emailDate) : "";
+
+      // 6. Money
+      const text = html.replace(/<[^>]*>/g, ' ');
+      const gross = (text.match(/R([\d,]+\.?\d*)\s*x\s*\d+\s*nights[\s\S]*?R([\d,]+\.?\d*)/i) || [])[2] || "0";
+      const cleaning = (text.match(/Cleaning fee\D*R([\d,]+\.?\d*)/i) || [])[1] || "0";
+      const guestSvc = (text.match(/Guest service fee\D*R([\d,]+\.?\d*)/i) || [])[1] || "0";
+      const hostFee = (text.match(/Host service fee\D*(-?R?[\d,]+\.?\d*)/i) || [])[1] || "0";
+      const nett = (text.match(/You earn\D*R([\d,]+\.?\d*)/i) || [])[1] || "0";
+
+      sheet.appendRow([
+        emailDate,
+        property,
+        checkin,
+        checkout,
+        guests,
+        booker,
+        confCode,
+        gross.replace(/,/g,""),
+        cleaning.replace(/,/g,""),
+        guestSvc.replace(/,/g,""),
+        hostFee.replace(/[^0-9.]/g,""),
+        nett.replace(/,/g,"")
+      ]);
+
+      message.markRead();
+      GmailApp.createLabel("Airbnb-Processed").addToThread(thread);
+    });
+  });
+}
+
+function parseDate(str, ref) {
+  if (!str) return "";
+  const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  // Handle "Wed, Dec 31, 2025" or "Sun, Nov 23"
+  const m = str.match(/([A-Za-z]{3}),?\s+([A-Za-z]+)\s+(\d{1,2})(?:,\s*(\d{4}))?/i);
+  if (!m) return "";
+
+  let year = ref.getFullYear();
+  const month = months[m[2]];
+  const day = parseInt(m[3]);
+  if (m[4]) year = parseInt(m[4]);
+
+  const d = new Date(year, month, day);
+  if (d < ref && month <= ref.getMonth()) d.setFullYear(year + 1);
+
+  return Utilities.formatDate(d, "GMT", "yyyy-MM-dd");
+}

@@ -1,0 +1,12 @@
+{
+  "name": "adminfuct-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd functions && npm run serve",
+    "start:frontend": "cd admin_fr-end && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

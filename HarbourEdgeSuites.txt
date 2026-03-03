@@ -1,0 +1,31 @@
+{
+      "id": "HES-0101",
+      "title": "0101-STU",
+      "extendedProps": {
+        "roomNumber": "0101",
+        "roomType": "STU",
+        "property": "HES",
+        "url": null,
+        "iCal": null
+      } 
+ }
+
+ 101-3-BR
+ 102STU
+ 103STU
+ 105STU
+ 202STU
+ 207STU
+ 208STU
+ 212STU
+ 217STU
+ 303-2-BR
+ 502-2-BR
+ 505-2-BR
+ 509-2-BR
+ 608-2-BR
+ IC1108-ICO-1BR
+ IC1403-ICO-1BR
+ IC1502-ICO-1BR
+ IC808-ICO-1BR
+ IC902-ICO-1BR

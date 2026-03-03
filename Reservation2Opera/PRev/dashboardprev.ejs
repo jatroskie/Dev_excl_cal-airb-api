@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Property Reservations Dashboard</h1>
+    <button id="sync-button">Sync Now</button>
+  </header>
+  
+  <main>
+    <section class="filters">
+      <div>
+        <label for="property-select">Property:</label>
+        <select id="property-select">
+          <option value="all">All Properties</option>
+          <option value="27-bellair">27 Bellair</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="date-from">From:</label>
+        <input type="date" id="date-from">
+      </div>
+      
+      <div>
+        <label for="date-to">To:</label>
+        <input type="date" id="date-to">
+      </div>
+      
+      <div>
+        <label for="guest-info-select">Guest Info:</label>
+        <select id="guest-info-select">
+          <option value="all">All Reservations</option>
+          <option value="needed">Needs Guest Info</option>
+          <option value="complete">Has Guest Info</option>
+        </select>
+      </div>
+      
+      <button id="filter-button">Apply Filters</button>
+    </section>
+    
+    <section class="reservations">
+      <table id="reservations-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Source</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Guest</th>
+            <th>Contact</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="reservations-body">
+          <!-- Reservations will be loaded here -->
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Guest Info Modal -->
+    <div id="guest-info-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Update Guest Information</h2>
+        <form id="guest-info-form">
+          <input type="hidden" id="reservation-id">
+          <div class="form-group">
+            <label for="guest-name">Guest Name:</label>
+            <input type="text" id="guest-name" required>
+          </div>
+          <div class="form-group">
+            <label for="guest-phone">Phone Number:</label>
+            <input type="text" id="guest-phone">
+          </div>
+          <div class="form-group">
+            <label for="guest-email">Email:</label>
+            <input type="email" id="guest-email">
+          </div>
+          <div class="form-group">
+            <label for="guest-notes">Notes:</label>
+            <textarea id="guest-notes"></textarea>
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

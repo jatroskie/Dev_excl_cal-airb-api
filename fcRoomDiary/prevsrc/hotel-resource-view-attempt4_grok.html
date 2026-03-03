@@ -1,0 +1,112 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const pluginStatus = document.getElementById('plugin-status');
+    const calendarEl = document.getElementById('calendar');
+    const statusMessage = document.getElementById('status-message');
+    const tooltip = document.getElementById('reservation-tooltip');
+
+    // Safety check for pluginStatus
+    if (!pluginStatus) {
+      console.error('Element with ID "plugin-status" not found in the DOM.');
+      return;
+    }
+
+    // Basic check to ensure FullCalendar is loaded
+    if (typeof FullCalendar === 'undefined') {
+      pluginStatus.textContent = "Error: FullCalendar core not loaded.";
+      pluginStatus.className = "error";
+      return;
+    }
+
+    pluginStatus.textContent = "Attempting to initialize Resource Timeline...";
+    pluginStatus.className = "info";
+
+    // Initialize calendar
+    let calendar;
+    try {
+      calendar = new FullCalendar.Calendar(calendarEl, {
+        schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+        initialView: 'resourceTimelineMonth',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth,dayGridMonth'
+        },
+        resources: [],
+        events: [],
+        resourceAreaWidth: '150px',
+        resourceAreaHeaderContent: 'Rooms',
+        slotDuration: { days: 1 },
+        initialDate: '2025-03-01',
+        resourceLabelDidMount: function(info) {
+          const roomType = info.resource.extendedProps?.roomType || '';
+          info.el.innerHTML = `
+            <div class="room-label">Room ${info.resource.id}</div>
+            <div class="room-type">${roomType}</div>
+          `;
+        },
+        eventDidMount: function(info) {
+          info.el.addEventListener('mouseover', function() {
+            showTooltip(info.event, info.el);
+          });
+          info.el.addEventListener('mouseout', hideTooltip);
+        }
+      });
+
+      calendar.render();
+      pluginStatus.textContent = "Resource Timeline initialized successfully!";
+      pluginStatus.className = "success";
+      showStatus('Calendar initialized. Ready to load data.', 'info');
+      document.getElementById('load-btn').addEventListener('click', loadCSVFiles);
+
+    } catch (error) {
+      console.error('Error initializing Resource Timeline:', error);
+      pluginStatus.textContent = "Error: Resource Timeline plugin not loaded. Falling back to basic view.";
+      pluginStatus.className = "error";
+      initializeBasicCalendar();
+    }
+
+    // Show status message function
+    function showStatus(message, type) {
+      if (statusMessage) {
+        statusMessage.textContent = message;
+        statusMessage.className = type || 'info';
+      } else {
+        console.warn('status-message element not found.');
+      }
+    }
+
+    // Tooltip functions (unchanged)
+    function showTooltip(event, element) {
+      const props = event.extendedProps;
+      tooltip.innerHTML = `
+        <h3>${event.title}</h3>
+        <p><strong>Room:</strong> ${event.resourceId}</p>
+        <p><strong>Check-in:</strong> ${formatDisplayDate(event.start)}</p>
+        <p><strong>Check-out:</strong> ${formatDisplayDate(event.end)}</p>
+        <p><strong>Nights:</strong> ${props.nights || 'N/A'}</p>
+        <p><strong>Status:</strong> ${props.status || 'N/A'}</p>
+        ${props.rate ? `<p><strong>Rate:</strong> ${props.rate}</p>` : ''}
+        <p><strong>Guests:</strong> ${props.adults || 0} Adults, ${props.children || 0} Children</p>
+        ${props.source ? `<p><strong>Source:</strong> ${props.source}</p>` : ''}
+        ${props.confirmationNumber ? `<p><strong>Confirmation:</strong> ${props.confirmationNumber}</p>` : ''}
+      `;
+      const rect = element.getBoundingClientRect();
+      tooltip.style.display = 'block';
+      tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+      tooltip.style.left = `${rect.left + window.scrollX}px`;
+    }
+
+    function hideTooltip() {
+      tooltip.style.display = 'none';
+    }
+
+    // Format date for display
+    function formatDisplayDate(date) {
+      if (!date) return 'N/A';
+      return date instanceof Date ? date.toLocaleDateString() : new Date(date).toLocaleDateString();
+    }
+
+    // Rest of your functions (initializeBasicCalendar, loadCSVFiles, etc.) remain unchanged
+  });
+</script>

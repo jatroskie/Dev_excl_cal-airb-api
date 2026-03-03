@@ -1,0 +1,143 @@
+{
+    "indexes": [
+        {
+            "collectionGroup": "dailyRoomState",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "dailyRoomState",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "roomId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "dailyRoomState",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "activeReservationsView",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "roomId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "checkOutDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "activeReservationsView",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "checkInDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "activeReservationsView",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "checkOutDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "reservations",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "propertyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "checkOutDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "reservations",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "roomId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "checkInDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "camera_events",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "device",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "timestamp",
+                    "order": "DESCENDING"
+                }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}

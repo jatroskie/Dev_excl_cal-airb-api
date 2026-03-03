@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Reservations Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+      <h1 class="dashboard-title">Property Reservations Dashboard</h1>
+      <button id="sync-button" class="filter-button">Sync Now</button>
+    </div>
+    
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <div class="filter-group">
+        <label for="property-select" class="filter-label">Property Group:</label>
+        <select id="property-select" class="filter-select">
+          <option value="all">All Properties</option>
+          <!-- Property options will be populated by JavaScript -->
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="date-from" class="filter-label">From:</label>
+        <input type="date" id="date-from" class="filter-input">
+      </div>
+      
+      <div class="filter-group">
+        <label for="date-to" class="filter-label">To:</label>
+        <input type="date" id="date-to" class="filter-input">
+      </div>
+      
+      <div class="filter-group">
+        <label for="guest-info-select" class="filter-label">Guest Info:</label>
+        <select id="guest-info-select" class="filter-select">
+          <option value="all">All Reservations</option>
+          <option value="needed">Needs Info</option>
+          <option value="complete">Complete</option>
+        </select>
+      </div>
+      
+      <button id="filter-button" class="filter-button">Apply Filters</button>
+    </div>
+    
+    <!-- Dashboard Content -->
+    <div id="dashboard-content">
+      <!-- Table will be populated by JavaScript -->
+      <div class="loading">Loading properties and reservations...</div>
+    </div>
+    
+    <!-- Guest Info Modal -->
+    <div id="guest-info-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Edit Guest Information</h2>
+          <span class="close">&times;</span>
+        </div>
+        
+        <form id="guest-info-form">
+          <input type="hidden" id="reservation-id">
+          
+          <div class="form-group">
+            <label for="guest-name" class="form-label">Guest Name</label>
+            <input type="text" id="guest-name" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="guest-phone" class="form-label">Phone Number</label>
+            <input type="text" id="guest-phone" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="guest-email" class="form-label">Email</label>
+            <input type="email" id="guest-email" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="guest-notes" class="form-label">Notes</label>
+            <textarea id="guest-notes" class="form-textarea"></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="cancel-button" onclick="document.getElementById('guest-info-modal').style.display='none'">Cancel</button>
+            <button type="submit" class="save-button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Room Reservation Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    .container {
+      max-width: 3840px;
+      margin: 0 auto;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .upload-area {
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    #calendar {
+      margin-top: 20px;
+      width: 3840px;
+      height: 1080px;
+      overflow: hidden;
+    }
+    /* Improved resource area styling for alignment */
+    .fc-resource-area {
+      background-color: #f5f5f5;
+      border-right: 2px solid #ccc !important;
+    }
+    .fc-resource-area td {
+      height: 40px !important;
+      vertical-align: middle !important;
+      position: relative;
+      padding: 0 !important;
+      text-align: left !important;
+      border-right: 1px solid #ddd;
+    }
+    .custom-room-label {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+      padding: 3px 8px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 34px;
+    }
+    .fc-timeline-lane {
+      border-left: 1px solid #ddd;
+    }
+    .fc-timeline-slot {
+      border-left: 1px solid #ddd;
+    }
+    /* Enhanced today column highlighting */
+    .today-column {
+      background-color: #e6e6e6 !important;
+      box-shadow: inset 0 0 0 1px #d0d0d0 !important;
+    }
+    .fc-col-header-cell.today-column {
+      background-color: #d9d9d9 !important;
+      font-weight: bold;
+    }
+    /* Make resource area and timeline content properly aligned */
+    .fc-resource-timeline tr {
+      height: 40px !important;
+    }
+    .fc-timeline-lane, .fc-resource-timeline tr > td {
+      height: 40px !important;
+    }
+    /* Reservation styles */
+    .reservation-inhouse, .reservation-guaranteed {
+      background-color: #e5173f !important;
+      border-color: #c01234 !important;
+      color: white !important;
+    }
+    .reservation-nonguarantee {
+      background-color: #00b0f0 !important;
+      border-color: #0099cc !important;
+      color: white !important;
+    }
+    .reservation-tentative {
+      background-color: #ffcc00 !important;
+      border-color: #e6b800 !important;
+    }
+    .reservation-stayover {
+      background-color: #92d050 !important;
+      border-color: #7cb342 !important;
+    }
+    .reservation-cancelled {
+      background-color: #d3d3d3 !important;
+      border-color: #a9a9a9 !important;
+      color: #333 !important;
+    }
+    .reservation-tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+      max-width: 300px;
+      display: none;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #status-message {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #dff0d8;
+      border: 1px solid #d6e9c6;
+      color: #3c763d;
+    }
+    .error {
+      background-color: #f2dede;
+      border: 1px solid #ebccd1;
+      color: #a94442;
+    }
+    .info {
+      background-color: #d9edf7;
+      border: 1px solid #bce8f1;
+      color: #31708f;
+    }
+    .warning {
+      background-color: #fcf8e3;
+      border: 1px solid #faebcc;
+      color: #8a6d3b;
+    }
+    #plugin-status {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    /* Make today button more prominent */
+    .fc-today-button {
+      font-weight: bold !important;
+      background-color: #4CAF50 !important;
+      color: white !important;
+    }
+    .fc-today-button:hover {
+      background-color: #45a049 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hotel Room Reservation Calendar</h1>
+    </header>
+    
+    <div class="upload-area">
+      <h2>Upload Reservation Data</h2>
+      <div id="plugin-status" class="info">Initializing calendar...</div>
+      <div id="status-message"></div>
+    </div>
+    
+    <div id="calendar"></div>
+    
+    <div id="reservation-tooltip" class="reservation-tooltip"></div>
+  </div>
+  
+  <script type="module" src="dist/bundle.js"></script>
+</body>
+</html>

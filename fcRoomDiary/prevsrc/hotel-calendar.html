@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Room Reservation Calendar</title>
+  
+  <!-- FullCalendar Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+  
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    #calendar-container {
+      margin-top: 20px;
+    }
+    
+    .header-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .date-display {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .room-label {
+      position: sticky;
+      left: 0;
+      background-color: #f3f3f3;
+      padding: 5px;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+      z-index: 10;
+    }
+    
+    /* Customize calendar appearance */
+    .fc-timeline-slot {
+      border-right: 1px solid #ddd !important;
+    }
+    
+    .fc-resource-timeline .fc-resource-group {
+      background-color: #f3f3f3;
+    }
+    
+    /* Reservation colors based on status */
+    .reservation-inhouse {
+      background-color: #e5173f !important;
+      border-color: #c01234 !important;
+      color: white !important;
+    }
+    
+    .reservation-guaranteed {
+      background-color: #e5173f !important;
+      border-color: #c01234 !important;
+      color: white !important;
+    }
+    
+    .reservation-nonguarantee {
+      background-color: #00b0f0 !important;
+      border-color: #0099cc !important;
+      color: white !important;
+    }
+    
+    .reservation-tentative {
+      background-color: #ffcc00 !important;
+      border-color: #e6b800 !important;
+    }
+    
+    .reservation-stayover {
+      background-color: #92d050 !important;
+      border-color: #7cb342 !important;
+    }
+    
+    /* Room type indicators */
+    .room-stu-balc {
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    .room-stu-urb {
+      color: #333;
+      background-color: #f1f1f1;
+    }
+    
+    .fc-timeline-slot-cushion {
+      font-weight: bold;
+    }
+    
+    /* Make the timeline header sticky */
+    .fc-timeline-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    /* Loading indicator */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      font-size: 20px;
+    }
+    
+    /* Filter controls */
+    .filter-bar {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+    
+    .filter-control select,
+    .filter-control input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .filter-control label {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    /* Tooltip styles */
+    .reservation-tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      max-width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-toolbar">
+    <div class="date-display">
+      <span id="current-date"></span>
+    </div>
+    <div class="controls">
+      <select id="view-selector">
+        <option value="7">7 Days</option>
+        <option value="14">14 Days</option>
+        <option value="30" selected>30 Days</option>
+        <option value="60">60 Days</option>
+      </select>
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+      <button id="today-button">Today</button>
+    </div>
+  </div>
+  
+  <div class="filter-bar">
+    <div class="filter-control">
+      <label for="room-filter">Room:</label>
+      <select id="room-filter">
+        <option value="all">All Rooms</option>
+      </select>
+    </div>
+    <div class="filter-control">
+      <label for="type-filter">Room Type:</label>
+      <select id="type-filter">
+        <option value="all">All Types</option>
+      </select>
+    </div>
+    <div class="filter-control">
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Guest name...">
+    </div>
+    <button id="filter-button">Apply Filters</button>
+    <button id="reset-button">Reset</button>
+  </div>
+  
+  <div id="calendar-container">
+    <div id="calendar"></div>
+  </div>
+  
+  <div id="loading">Loading reservation data...</div>
+  <div id="reservation-tooltip" class="reservation-tooltip"></div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize FullCalendar
+      let calendar;
+      let allReservations = [];
+      let allRooms = [];
+      let roomTypes = {};
+      
+      // Set current date display
+      const today = new Date();
+      document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      
+      // Function to parse date from DD.MM.YYYY format to YYYY-MM-DD
+      function parseDate(dateStr) {
+        if (!dateStr) return null;
+        const [day, month, year] = dateStr.split('.');
+        return `${year}-${month}-${day}`;
+      }
+      
+      // Function to determine reservation color based on status
+      function getReservationColor(status) {
+        status = (status || '').toLowerCase();
+        if (status.includes('in house')) {
+          return 'reservation-inhouse';
+        } else if (status.includes('guaranteed')) {
+          return 'reservation-guaranteed';
+        } else if (status.includes('non')) {
+          return 'reservation-nonguarantee';
+        } else if (status.includes('tentative')) {
+          return 'reservation-tentative';
+        } else if (status.includes('stay over')) {
+          return 'reservation-stayover';
+        }
+        return 'reservation-guaranteed'; // Default
+      }
+      
+      // Function to load CSV data
+      async function loadCSVData(filename) {
+        try {
+          const response = await fetch(filename);
+          const csvData = await response.text();
+          
+          return new Promise((resolve) => {
+            Papa.parse(csvData, {
+              header: true,
+              skipEmptyLines: true,
+              dynamicTyping: true,
+              complete: function(results) {
+                resolve(results.data);
+              }
+            });
+          });
+        } catch (error) {
+          console.error('Error loading CSV:', error);
+          return [];
+        }
+      }
+      
+      // Process all CSV files and build calendar data
+      async function processAllFiles() {
+        const fileNames = [
+          '0302_reservations.csv', 
+          '0303_reservations.csv', 
+          '0304_reservations.csv',
+          '0305_reservations.csv',
+          '0306_reservations.csv',
+          '0307_reservations.csv'
+        ];
+        
+        let reservations = [];
+        
+        for (const fileName of fileNames) {
+          const data = await loadCSVData(fileName);
+          
+          data.forEach(row => {
+            if (row.Room && row.Arrival && row.Departure) {
+              // Save room type info
+              if (row['Room Type']) {
+                roomTypes[row.Room] = row['Room Type'];
+                if (!allRooms.includes(row.Room)) {
+                  allRooms.push(row.Room);
+                }
+              }
+              
+              // Create reservation object
+              reservations.push({
+                id: row['Confirmation Number'],
+                resourceId: row.Room.toString(),
+                title: row.Name || 'Unnamed Reservation',
+                start: parseDate(row.Arrival),
+                end: parseDate(row.Departure),
+                nights: row.Nights,
+                status: row['Reservation Type'],
+                color: row['Display Color'],
+                className: getReservationColor(row['Reservation Type']),
+                extendedProps: {
+                  roomType: row['Room Type'],
+                  rate: row['Rate'],
+                  adults: row['Adults'],
+                  children: row['Children'],
+                  company: row['Company'],
+                  source: row['Source']
+                }
+              });
+            }
+          });
+        }
+        
+        return reservations;
+      }
+      
+      // Function to create resource groups based on room types
+      function createResourceGroups() {
+        allRooms.sort((a, b) => a - b);
+        
+        const resources = allRooms.map(room => {
+          const roomType = roomTypes[room] || '';
+          return {
+            id: room.toString(),
+            title: `Room ${room}`,
+            type: roomType,
+            classNames: `room-${roomType.toLowerCase().replace(' ', '-')}`
+          };
+        });
+        
+        return resources;
+      }
+      
+      // Initialize FullCalendar
+      async function initializeCalendar() {
+        try {
+          // Load reservation data
+          allReservations = await processAllFiles();
+          
+          // Create resources
+          const resources = createResourceGroups();
+          
+          // Initialize filter options
+          populateFilterOptions(resources);
+          
+          // Calculate initial date to show (closest future month)
+          let initialDate = new Date();
+          
+          // March 2025 date for demo purposes (based on the image)
+          if (allReservations.some(res => res.start && res.start.includes('2025-03'))) {
+            initialDate = new Date('2025-03-01');
+          }
+          
+          // Initialize calendar
+          const calendarEl = document.getElementById('calendar');
+          calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'resourceTimelineMonth',
+            initialDate: initialDate,
+            headerToolbar: false, // We use our custom header
+            schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source', // For non-commercial use
+            resources: resources,
+            events: allReservations,
+            resourceAreaWidth: '150px',
+            height: 'auto',
+            slotDuration: { days: 1 },
+            slotLabelFormat: {
+              day: 'numeric',
+              weekday: 'short'
+            },
+            resourceAreaHeaderContent: 'Rooms',
+            eventTimeFormat: {
+              hour: 'numeric',
+              minute: '2-digit',
+              omitZeroMinute: true,
+              meridiem: 'short'
+            },
+            eventClick: function(info) {
+              showEventDetails(info.event, info.el);
+            },
+            datesSet: function(dateInfo) {
+              document.getElementById('current-date').textContent = dateInfo.start.toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric'
+              });
+            },
+            resourceLabelDidMount: function(info) {
+              // Add room type to the resource label
+              const roomType = info.resource.extendedProps.type || '';
+              info.el.innerHTML = `<div class="room-label">Room ${info.resource.id}<br><small>${roomType}</small></div>`;
+            }
+          });
+          
+          // Render the calendar
+          calendar.render();
+          
+          // Hide loading indicator
+          document.getElementById('loading').style.display = 'none';
+          
+          // Set up event handlers
+          setupEventHandlers();
+          
+        } catch (error) {
+          console.error('Error initializing calendar:', error);
+          document.getElementById('loading').textContent = 'Error loading data. Please try again.';
+        }
+      }
+      
+      // Populate filter options
+      function populateFilterOptions(resources) {
+        // Room filter
+        const roomFilter = document.getElementById('room-filter');
+        resources.forEach(resource => {
+          const option = document.createElement('option');
+          option.value = resource.id;
+          option.textContent = `Room ${resource.id}`;
+          roomFilter.appendChild(option);
+        });
+        
+        // Room type filter
+        const typeFilter = document.getElementById('type-filter');
+        const uniqueTypes = [...new Set(resources.map(resource => resource.type))];
+        uniqueTypes.forEach(type => {
+          if (type) {
+            const option = document.createElement('option');
+            option.value = type;
+            option.textContent = type;
+            typeFilter.appendChild(option);
+          }
+        });
+      }
+      
+      // Set up event handlers for buttons and filters
+      function setupEventHandlers() {
+        // Navigation buttons
+        document.getElementById('prev-button').addEventListener('click', () => {
+          calendar.prev();
+        });
+        
+        document.getElementById('next-button').addEventListener('click', () => {
+          calendar.next();
+        });
+        
+        document.getElementById('today-button').addEventListener('click', () => {
+          calendar.today();
+        });
+        
+        // View selector
+        document.getElementById('view-selector').addEventListener('change', (e) => {
+          const days = parseInt(e.target.value);
+          calendar.setOption('duration', { days: days });
+          calendar.refetchEvents();
+        });
+        
+        // Filter button
+        document.getElementById('filter-button').addEventListener('click', applyFilters);
+        
+        // Reset button
+        document.getElementById('reset-button').addEventListener('click', resetFilters);
+        
+        // Search input
+        document.getElementById('search-input').addEventListener('keyup', (e) => {
+          if (e.key === 'Enter') {
+            applyFilters();
+          }
+        });
+        
+        // Close tooltip when clicking outside
+        document.addEventListener('click', (e) => {
+          const tooltip = document.getElementById('reservation-tooltip');
+          if (!tooltip.contains(e.target) && e.target.className !== 'fc-event-title') {
+            tooltip.style.display = 'none';
+          }
+        });
+      }
+      
+      // Apply filters to the calendar
+      function applyFilters() {
+        const roomFilter = document.getElementById('room-filter').value;
+        const typeFilter = document.getElementById('type-filter').value;
+        const searchFilter = document.getElementById('search-input').value.toLowerCase();
+        
+        let filteredEvents = allReservations;
+        
+        // Apply room filter
+        if (roomFilter !== 'all') {
+          filteredEvents = filteredEvents.filter(event => event.resourceId === roomFilter);
+        }
+        
+        // Apply room type filter
+        if (typeFilter !== 'all') {
+          filteredEvents = filteredEvents.filter(event => 
+            event.extendedProps.roomType === typeFilter
+          );
+        }
+        
+        // Apply search filter
+        if (searchFilter) {
+          filteredEvents = filteredEvents.filter(event => 
+            event.title.toLowerCase().includes(searchFilter)
+          );
+        }
+        
+        // Update calendar events
+        calendar.setOption('events', filteredEvents);
+        calendar.refetchEvents();
+      }
+      
+      // Reset all filters
+      function resetFilters() {
+        document.getElementById('room-filter').value = 'all';
+        document.getElementById('type-filter').value = 'all';
+        document.getElementById('search-input').value = '';
+        
+        calendar.setOption('events', allReservations);
+        calendar.refetchEvents();
+      }
+      
+      // Show event details in tooltip
+      function showEventDetails(event, element) {
+        const tooltip = document.getElementById('reservation-tooltip');
+        const rect = element.getBoundingClientRect();
+        
+        // Format dates
+        const startDate = new Date(event.start);
+        const endDate = event.end ? new Date(event.end) : null;
+        
+        const formattedStart = startDate.toLocaleDateString();
+        const formattedEnd = endDate ? endDate.toLocaleDateString() : '';
+        
+        // Build tooltip content
+        tooltip.innerHTML = `
+          <h3>${event.title}</h3>
+          <p><strong>Room:</strong> ${event.resourceId}</p>
+          <p><strong>Room Type:</strong> ${event.extendedProps.roomType || 'N/A'}</p>
+          <p><strong>Check-in:</strong> ${formattedStart}</p>
+          <p><strong>Check-out:</strong> ${formattedEnd}</p>
+          <p><strong>Nights:</strong> ${event.extendedProps.nights || 'N/A'}</p>
+          <p><strong>Status:</strong> ${event.extendedProps.status || 'N/A'}</p>
+          <p><strong>Rate:</strong> ${event.extendedProps.rate || 'N/A'}</p>
+          <p><strong>Guests:</strong> ${event.extendedProps.adults || 0} Adults, ${event.extendedProps.children || 0} Children</p>
+          <p><strong>Company:</strong> ${event.extendedProps.company || 'N/A'}</p>
+          <p><strong>Source:</strong> ${event.extendedProps.source || 'N/A'}</p>

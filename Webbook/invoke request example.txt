@@ -1,0 +1,42 @@
+# Define the body as JSON
+$body = @{
+    surname      = "Smith"
+    name         = "John"
+    phone        = "1234567890"
+    property     = "Barracks"
+    checkin      = "15.05.2025"
+    checkout     = "18.05.2025"
+    dailyRate    = "1850"
+    discountCode = "OTH"
+} | ConvertTo-Json
+
+# Define headers (if using an API key)
+#$headers = @{
+#    "X-API-Key" = "your-secret-key"
+#}
+
+# Send the POST request
+Invoke-WebRequest -Uri "http://165.0.97.37:25100/capture-reservation" `
+    -Method POST `
+    -Body $body `
+    -ContentType "application/json" `
+#    -Headers $headers
+
+
+Invoke-RestMethod -Uri "http://165.0.97.37:169/capture-reservation" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{
+    "surname": "Doe",
+    "name": "Jane",
+    "phone": "123-456-7890",
+    "property": "Mountain Lodge",
+    "checkin": "2025-05-01",
+    "checkout": "2025-05-05",
+    "dailyRate": "200",
+    "discountCode": "SUMMER10"
+  }'
+
+
+
+  

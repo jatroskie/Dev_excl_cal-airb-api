@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Reservation Calendar</title>
+  
+  <!-- Load all the plugins individually and explicitly -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+  
+  <!-- Load core first -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+  
+  <!-- EXPLICIT plugin loads in window namespace (this is the key to fixing the issue) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create a very simple calendar first to initialize FullCalendar
+      var calendarEl = document.getElementById('calendar');
+      var tempCalendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      
+      // Don't render it yet, just initialize it
+      
+      // Dynamically load required plugins
+      loadScript('https://cdn.jsdelivr.net/npm/@fullcalendar/resource-common@5.10.1/main.global.min.js')
+        .then(() => loadScript('https://cdn.jsdelivr.net/npm/@fullcalendar/resource-timeline@5.10.1/main.global.min.js'))
+        .then(() => {
+          console.log('All plugins loaded');
+          document.getElementById('status').textContent = 'FullCalendar plugins loaded successfully';
+          document.getElementById('load-button').disabled = false;
+        })
+        .catch(err => {
+          console.error('Error loading scripts:', err);
+          document.getElementById('status').textContent = 'Error loading plugins: ' + err.message;
+        });
+    });
+    
+    // Helper function to load scripts dynamically
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    }
+  </script>
+  
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .upload-panel {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .status {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+    }
+    
+    .log {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    
+    #calendar {
+      margin-top: 20px;
+    }
+    
+    /* FullCalendar custom styles */
+    .fc-resource-cell {
+      font-weight: bold;
+    }
+    
+    .reservation {
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    
+    .in-house {
+      background-color: #e5173f;
+      color: white;
+    }
+    
+    .guaranteed {
+      background-color: #e5173f;
+      color: white;
+    }
+    
+    .non-guarantee {
+      background-color: #00b0f0;
+      color: white;
+    }
+    
+    .tentative {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hotel Reservation Calendar</h1>
+    
+    <div class="upload-panel">
+      <h2>Upload Reservation Files</h2>
+      <input type="file" id="csv-upload" accept=".csv" multiple>
+      <button id="load-button" disabled>Load Reservations</button>
+      <div id="status" class="status">Loading FullCalendar plugins...</div>
+      <div id="log" class="log"></div>
+    </div>
+    
+    <div id="calendar"></div>
+  </div>
+  
+  <script>
+    // Logging function
+    function log(message, isError = false) {
+      const logDiv = document.getElementById('log');
+      const entry = document.createElement('div');
+      entry.textContent = message;
+      
+      if (isError) {
+        entry.classList.add('error');
+      }
+      
+      logDiv.appendChild(entry);
+      logDiv.scrollTop = logDiv.scrollHeight;
+      console.log(message);
+    }
+    
+    // Handle file upload and calendar rendering
+    document.getElementById('load-button').addEventListener('click', function() {
+      const fileInput = document.getElementById('csv-upload');
+      const files = fileInput.files;
+      
+      if (!files || files.length === 0) {
+        log('Please select at least one CSV file.', true);
+        return;
+      }
+      
+      // Process files
+      log(`Processing ${files.length} file(s)...`);
+      
+      // Initialize data arrays
+      let allRooms = [];
+      let allReservations = [];
+      let processedFiles = 0;
+      
+      // Process each file
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          log(`Parsing file: ${file.name}`);
+          
+          Papa.parse(e.target.result, {
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+              log(`Parsed ${results.data.length} rows from ${file.name}`);
+              
+              if (results.errors.length > 0) {
+                log(`Errors parsing ${file.name}: ${results.errors[0].message}`, true);
+                return;
+              }
+              
+              // Extract rooms and events
+              const rooms = new Set();
+              const reservations = [];
+              
+              results.data.forEach((row, index) => {
+                try {
+                  // Skip rows with missing data
+                  if (!row.Room || !row.Arrival || !row.Departure) return;
+                  
+                  // Add room if not already present
+                  const roomId = row.Room.toString();
+                  rooms.add(roomId);
+                  
+                  // Parse dates
+                  const startDate = parseDate(row.Arrival);
+                  const endDate = parseDate(row.Departure);
+                  
+                  // Create reservation
+                  reservations.push({
+                    id: `${file.name}_${index}`,
+                    resourceId: roomId,
+                    title: row.Name || 'Unnamed',
+                    start: startDate,
+                    end: endDate,
+                    className: getReservationClass(row['Reservation Type']),
+                    extendedProps: {
+                      roomType: row['Room Type'] || '',
+                      status: row['Reservation Type'] || '',
+                      nights: row.Nights || '',
+                      rate: row.Rate || ''
+                    }
+                  });
+                } catch (error) {
+                  log(`Error processing row ${index} in ${file.name}: ${error.message}`, true);
+                }
+              });
+              
+              // Add to global arrays
+              allRooms = [...allRooms, ...Array.from(rooms)];
+              allReservations = [...allReservations, ...reservations];
+              
+              // Update processed files count
+              processedFiles++;
+              
+              // If all files processed, render calendar
+              if (processedFiles === files.length) {
+                renderCalendar(allRooms, allReservations);
+              }
+            }
+          });
+        };
+        
+        reader.onerror = function() {
+          log(`Error reading file: ${file.name}`, true);
+          processedFiles++;
+        };
+        
+        reader.readAsText(file);
+      });
+    });
+    
+    // Helper function to parse date from DD.MM.YYYY format
+    function parseDate(dateStr) {
+      const parts = dateStr.split('.');
+      if (parts.length !== 3) {
+        throw new Error(`Invalid date format: ${dateStr}`);
+      }
+      return `${parts[2]}-${parts[1]}-${parts[0]}`;
+    }
+    
+    // Helper function to get reservation class based on status
+    function getReservationClass(status) {
+      if (!status) return 'reservation';
+      
+      const statusLower = status.toLowerCase();
+      if (statusLower.includes('in house')) {
+        return 'reservation in-house';
+      } else if (statusLower.includes('guaranteed')) {
+        return 'reservation guaranteed';
+      } else if (statusLower.includes('non')) {
+        return 'reservation non-guarantee';
+      } else if (statusLower.includes('tentative')) {
+        return 'reservation tentative';
+      }
+      
+      return 'reservation';
+    }
+    
+    // Render calendar with resources and events
+    function renderCalendar(rooms, reservations) {
+      try {
+        log('Rendering calendar...');
+        
+        // Create unique sorted list of rooms
+        const uniqueRooms = [...new Set(rooms)].sort((a, b) => {
+          return parseInt(a) - parseInt(b);
+        });
+        
+        log(`Found ${uniqueRooms.length} unique rooms`);
+        
+        // Convert to resources
+        const resources = uniqueRooms.map(room => ({
+          id: room,
+          title: `Room ${room}`
+        }));
+        
+        log(`Created ${reservations.length} reservations`);
+        
+        // Initialize calendar using standard dayGrid first
+        const calendarEl = document.getElementById('calendar');
+        
+        try {
+          // Check if the plugin is available
+          if (!FullCalendar.resourceTimelinePlugin) {
+            log('WARNING: Resource Timeline plugin not detected, using global variable', true);
+          }
+          
+          // Different approach - check for the global var from CDN
+          if (window.FullCalendarResourceTimeline) {
+            log('Found global ResourceTimeline plugin, registering it');
+            FullCalendar.globalPlugins.push(
+              window.FullCalendarResourceTimeline.default
+            );
+          }
+          
+          // Create the calendar with resource timeline
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',  // Start with a safe view
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'resourceTimelineMonth,dayGridMonth'
+            },
+            initialDate: '2025-03-01',  // Match your screenshot
+            schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+            resources: resources,
+            events: reservations,
+            eventClick: function(info) {
+              alert(
+                'Reservation Details:\n' +
+                'Guest: ' + info.event.title + '\n' +
+                'Room: ' + info.event.resourceId + '\n' +
+                'Check-in: ' + new Date(info.event.start).toLocaleDateString() + '\n' +
+                'Check-out: ' + new Date(info.event.end).toLocaleDateString() + '\n' +
+                'Status: ' + info.event.extendedProps.status + '\n' +
+                'Rate: ' + info.event.extendedProps.rate
+              );
+            }
+          });
+          
+          // Render it
+          calendar.render();
+          
+          // Try to switch to resource timeline view
+          setTimeout(() => {
+            try {
+              log('Attempting to switch to resource timeline view...');
+              calendar.changeView('resourceTimelineMonth');
+              log('Successfully switched to resource timeline view!');
+            } catch (error) {
+              log('Error switching to resource timeline: ' + error.message, true);
+              log('Staying with basic calendar view');
+            }
+          }, 1000);
+          
+          log('Calendar rendered successfully!');
+          document.getElementById('status').textContent = 'Calendar rendered successfully';
+        } catch (error) {
+          log('Error initializing calendar: ' + error.message, true);
+          document.getElementById('status').textContent = 'Error: ' + error.message;
+        }
+      } catch (error) {
+        log('Error rendering calendar: ' + error.message, true);
+        document.getElementById('status').textContent = 'Error: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Project ID                     | Client Email                                       | Path
+------------------------------------------------------------------------------------------------------------------------
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\adminfuct\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\adminfuct\functions\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\adminfuct\vis-rate-editor\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\new-service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\deployment_package\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\functions\serviceAccountKey.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\opera-extender\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\cal_airb_api\vis-rate-editor\tools\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\guestapp\new-service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\Webbook\service-account-key.json
+cal-airb-api                   | firebase-adminsdk-fbsvc@cal-airb-api.iam.gserviceaccount.com | c:/Users/jatro/Dev\WFV_Sync\new-service-account-key.json

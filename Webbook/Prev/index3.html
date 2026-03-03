@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Properties Reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bg-vacation-blue {
+      background-color: #2A3F5F;
+    }
+    .text-vacation-white {
+      color: #FFFFFF;
+    }
+    .text-vacation-dark {
+      color: #1A2A44; /* Dark blue-gray for text inside entry fields */
+    }
+    .border-vacation-light {
+      border-color: #A3BFFA; /* A lighter blue for contrast */
+    }
+    .placeholder-vacation-dark::placeholder {
+      color: #3B4A8D; /* Slightly darker blue for better contrast on mobile */
+      opacity: 1; /* Ensure placeholder color is fully opaque */
+    }
+    .bg-vacation-dark {
+      background-color: #1A2A44; /* A slightly darker shade for the result background */
+    }
+    /* Custom selection highlight */
+    input::selection,
+    select::selection {
+      background: #A3BFFA; /* Lighter blue for selected text background */
+      color: #1A2A44; /* Keep text dark when selected */
+    }
+    /* Style for the date picker input */
+    input[type="date"] {
+      position: relative; /* Ensure positioning context for the pseudo-element */
+      padding-right: 3rem; /* Make space for the larger custom icon */
+    }
+    /* Hide the default calendar picker icon */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0; /* Hide the default icon */
+      position: absolute;
+      right: 0.5rem; /* Position to ensure the clickable area remains */
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+    /* Add a custom calendar icon using a background image */
+    input[type="date"] {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232A3F5F' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      background-size: 2rem 2rem; /* Larger icon for better touch target */
+    }
+    /* Focus state for accessibility */
+    input:focus,
+    select:focus {
+      outline: 2px solid #A3BFFA; /* Lighter blue outline for focus */
+      outline-offset: 2px;
+    }
+    /* Ensure the container takes the full viewport height */
+    .full-height {
+      min-height: 100dvh; /* Use dynamic viewport height for mobile */
+    }
+  </style>
+</head>
+<body class="bg-vacation-blue flex items-center justify-center">
+  <div class="bg-vacation-blue p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto full-height flex flex-col justify-center">
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="vacprop.jpg" alt="Vacation Properties Logo" class="w-32">
+    </div>
+
+    <!-- Form Title -->
+    <h1 class="text-2xl font-bold mb-4 text-center text-vacation-white">Vacation Properties Reservation</h1>
+
+    <!-- Form -->
+    <form id="reservationForm" class="space-y-4">
+      <input type="text" name="surname" placeholder="Surname (e.g., Smith)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="text" name="name" placeholder="Name (e.g., John)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="tel" name="phone" placeholder="Phone Number (e.g., 1234567890)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      
+      <!-- Property Dropdown -->
+      <select name="property" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+        <option value="" disabled selected>Select Property</option>
+        <option value="The Barracks">Barracks</option>
+        <option value="The Trade">The Trade</option>
+        <option value="Lawhill Luxury Suites">Lawhill Luxury Suites</option>
+        <option value="The Quarter Apartments">The Quarter Apartments</option>
+        <option value="The Crystal Apartments">The Crystal Apartments</option>
+        <option value="Mouille Point Village">Mouille Point Village</option>
+        <option value="Harbouredge Suites">Harbouredge Suites</option>
+      </select>
+
+      <input type="date" name="checkin" placeholder="Check-in Date (e.g., 15.05.2025)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+      <input type="date" name="checkout" placeholder="Check-out Date (e.g., 18.05.2025)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white" required>
+      <input type="number" name="dailyRate" placeholder="Daily Rate (e.g., 1850)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark" required>
+      <input type="text" name="discountCode" placeholder="Discount Code (e.g., OTH)" class="w-full p-2 border rounded border-vacation-light text-vacation-dark bg-white placeholder-vacation-dark">
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-blue-600 text-vacation-white p-2 rounded hover:bg-blue-700">Submit Reservation</button>
+    </form>
+
+    <!-- Result Display -->
+    <div id="result" class="mt-4 text-center hidden bg-vacation-dark text-vacation-white p-2 rounded"></div>
+  </div>
+
+  <script>
+    document.getElementById('reservationForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+
+      // Format dates to DD.MM.YYYY if needed by your backend
+      data.checkin = new Date(data.checkin).toLocaleDateString('en-GB').replace(/\//g, '.');
+      data.checkout = new Date(data.checkout).toLocaleDateString('en-GB').replace(/\//g, '.');
+
+      document.getElementById('result').innerHTML = 'Processing...';
+      document.getElementById('result').classList.remove('hidden');
+
+      try {
+        const response = await fetch('http://165.0.97.37:169/capture-reservation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const result = await response.json();
+
+        if (result.error) throw new Error(result.error);
+        document.getElementById('result').innerHTML = `Reservation Confirmed! Number: ${result.confirmationNumber}`;
+      } catch (error) {
+        document.getElementById('result').innerHTML = `Error: ${error.message}`;
+      }
+    });
+  </script>
+</body>
+</html>

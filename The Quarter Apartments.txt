@@ -1,0 +1,68 @@
+   {
+              "id": "TQA-301",
+              "title": "301-2-BR",
+              "extendedProps": {
+                "roomNumber": "301",
+                "roomType": "The Quarter - 2 Bedroom",
+                "property": "TQA",
+                "url": null,
+                "iCal": null
+              }
+            }
+407-RM-LUX - 407 The Quarter - Room Luxury - Studio
+403SOMDW-SOM - Somerset 403 - De Waterkant
+415SIGDW-STU - Signature 415 - De Waterkant - Studio
+ RW606RW-2BR - Rockwell - Two Bedroom
+P202DW-3BR   - Piazza - De Waterkant - Three Bedroom
+D505DW-2BRR  - Devonshire 505 -2 Bedroom
+5CLDW-2BR - 5C Loader - 2 Bedroom
+
+ 301-2-BR
+ 302-1-BR
+ 303-1-BR
+ 304-1-BR
+ 305-STU
+ 306-STU
+ 307-1-BR
+ 308-STU
+ 310-1-BR
+ 311-STU
+ 312-STU
+ 313-STU
+ 314-STU
+ 315-STU
+ 316-1-BR
+ 317-1-BR
+ 403-2-BR
+ 403SOMDW-SOM
+ 405-RM-LUX
+ 406-1-BR
+ 407-RM-LUX
+ 408-1-BR
+ 409-1-BR
+ 410-RM
+ 411-RM-LUX
+ 412-STU
+ 413-RM
+ 414-STU
+ 415-1-BR
+ 415-SIGDW-STU
+ 416-1-BR
+ 501-2-BR
+ 5ALDW-1BR
+ 5BLDW-1BR
+ 5CLDW-2BR
+ 601-2-BRR
+ 604-1-BR
+ 607-2BRR
+ 609-1-BR
+ 610-STU
+ 701-2-BR
+ 706-1-BR
+ D505DW-2BRR
+ P202DW-3BR
+ RW115RW-1BR
+ RW504RW-2BR
+ RW519RW-2BR
+ RW606RW-2BR
+

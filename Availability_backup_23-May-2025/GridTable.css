@@ -1,0 +1,260 @@
+/* ================================== */
+/* File: GridTable.css              */
+/* Styles using Sticky Positioning  */
+/* Uses CSS Variables from JS       */
+/* --- CLEANED UP VERSION ---       */
+/* ================================== */
+
+/* --- CSS Variables (Set via inline style on .grid-table) --- */
+:root {
+  --room-column-width: 120px; /* Default room width */
+  --cell-width: 60px;         /* Default date cell width */
+  --row-height: 38px;         /* Default row height */
+  --num-date-columns: 14;     /* Default number of dates */
+}
+
+/* --- Container: Scroll Parent --- */
+/* Apply THIS class to the direct parent div of .grid-table */
+.grid-scroll-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #A3BFFA; /* Consistent border */
+    position: relative; /* Context for sticky elements within */
+    background-color: #fff; /* Background for the container */
+    box-sizing: border-box;
+
+    /* --- ADJUST THIS VALUE --- */
+    /* Calculate max-height based on viewport minus elements above the grid.
+       180px is a guess; measure the actual height of your page header,
+       property selectors, date controls, etc., and use that value. */
+    max-height: calc(100vh - 180px);
+
+    /* Ensure no fixed height is set */
+    /* height: auto; */ /* Default, not strictly needed */
+
+    /* Optional: Scrollbar styling */
+    /* scrollbar-width: thin; */
+    /* scrollbar-color: #888 #f1f1f1; */
+}
+
+/* --- The Grid itself (Holds EVERYTHING now) --- */
+.grid-table {
+  display: grid;
+  /* Define grid columns: Room Column + Date Columns */
+  grid-template-columns: var(--room-column-width) repeat(var(--num-date-columns), var(--cell-width));
+  /* Define grid rows */
+  grid-auto-rows: var(--row-height);
+  position: relative; /* Context for absolutely positioned booking blocks */
+  background-color: #fff; /* Grid background, may be covered by cells */
+  border-spacing: 0;
+  /* Ensure grid expands horizontally */
+  min-width: fit-content;
+}
+
+/* --- Base Grid Cell Styling --- */
+.grid-cell {
+  border: 1px solid #ffffff; /* White grid lines - adjust if you want visible lines */
+  padding: 2px 4px;
+  font-size: 0.8em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden; /* Keep content from spilling */
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Needed for rate span + z-index stacking */
+  z-index: 1;         /* Base layer */
+  box-sizing: border-box;
+  line-height: 1.2;
+  outline: none !important; /* Remove focus outline */
+  background-color: #EFF6FF; /* Default background (Available) */
+}
+
+/* --- Base Cell Statuses --- */
+.cell-base-occupied_confirmed,
+.cell-base-occupied { /* Treat generic occupied as confirmed visually */
+    background-color: #e7f1ff; /* Light blue */
+}
+.cell-base-occupied_pending { background-color: #f1f3f5; } /* Light grey */
+.cell-base-occupied_error { background-color: #fff0f1; } /* Light pink */
+.cell-base-available { background-color: #EFF6FF; } /* Default light blue */
+.cell-base-blocked { background-color: #eeeeee; background-image: repeating-linear-gradient( 45deg, #e0e0e0, #e0e0e0 3px, #eeeeee 3px, #eeeeee 6px ); } /* Grey stripes */
+.cell-base-reserved { background-color: #fff9c4; } /* Light yellow */
+.cell-base-error { background-color: #fff3e0; } /* Light orange */
+
+
+/* --- Header Row Cells (Base for Date and Room Headers) --- */
+.grid-header {
+  font-weight: bold;
+  position: sticky; /* Make headers sticky */
+  background-color: #f5f5f5; /* Header background */
+  border: 1px solid #8FABED; /* Header border */
+  /* Ensure borders don't double up with adjacent cells */
+  border-width: 0 1px 1px 0; /* Top/Left borders handled by container/previous cell */
+  z-index: 20; /* Above regular cells and room names */
+}
+/* Add back the top border for the first row of headers */
+.grid-table .grid-header:first-child {
+    border-top-width: 1px;
+}
+/* Add back the left border for the first column of headers/cells */
+.grid-table > *:nth-child(odd):not(:first-child) { /* Odd children = start of new row? No, grid doesn't work like that */
+    /* Need a better selector or apply border consistently */
+}
+/* Let's just apply all borders and let them overlap slightly */
+.grid-header {
+    border: 1px solid #8FABED;
+}
+
+
+/* --- Date Header Cells (Top Row, starting col 2) --- */
+.date-header {
+   /* Inherits .grid-header */
+   top: 0; /* Stick to top */
+}
+
+/* --- Room Header Cell (Top-Left Corner) --- */
+.room-header-sticky {
+  /* Inherits .grid-header */
+  top: 0; /* Stick to top */
+  left: 0; /* Stick to left */
+  z-index: 25; /* Highest */
+  /* Ensure border is consistent */
+  border: 1px solid #8FABED;
+}
+
+/* --- Room Name Cells (Sticky First Column) --- */
+.room-id-sticky {
+  /* Inherits .grid-cell base styles */
+  position: sticky; /* Stick to left */
+  left: 0;
+  background-color: #fafafa; /* Slightly different background */
+  z-index: 15; /* Above base cells, below headers */
+  text-align: left;
+  justify-content: flex-start;
+  font-weight: bold;
+  padding-left: 8px;
+  /* Ensure right border is visible and consistent */
+  border: 1px solid #A3BFFA; /* Use a lighter border */
+  border-left-width: 0; /* Avoid double border with container */
+  border-top-width: 0; /* Avoid double border with header */
+}
+
+/* --- Booking Block Styling (Positioning updated in JS) --- */
+.booking-block {
+  position: absolute;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  z-index: 5; /* Above base cells, below sticky headers/names */
+  font-size: 0.8em; /* Match base cell size */
+}
+
+/* Status Specific Colors */
+.booking-block-confirmed { background-color: #42A5F5; color: #ffffff; }
+.booking-block-confirmed:hover { background-color: #1E88E5; opacity: 0.95; }
+.booking-block-pending { background-color: #ffee58; color: #424242; }
+.booking-block-pending:hover { background-color: #fdd835; opacity: 0.95; }
+.booking-block-error { background-color: #ef5350; color: #ffffff; }
+.booking-block-error:hover { background-color: #e53935; opacity: 0.95; }
+
+.booking-text {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 100%;
+   display: block;
+   line-height: 1.3;
+   pointer-events: none;
+   text-align: center;
+}
+
+
+/* --- Drag Selection Visual Feedback --- */
+.is-in-drag-range {
+  background-color: #A3BFFA !important;
+  outline: none !important;
+}
+
+/* --- Hover effect on Available Cells --- */
+.cell-base-available[style*="cursor: pointer"]:hover {
+  background-color: #D9E8FF !important;
+}
+
+/* --- Today Indicator Style --- */
+.is-today {
+   /* Applied to .date-header and relevant .grid-cell */
+   border-left: 3px solid #4299e1 !important;
+   background-clip: padding-box; /* Prevent background bleeding under border */
+}
+/* Optional: Distinct background for today's date header */
+.date-header.is-today {
+  background-color: #bee3f8; /* Lighter blue header */
+}
+
+
+/* --- Rate Display --- */
+.daily-rate {
+    position: absolute;
+    bottom: 1px; /* Closer to bottom */
+    right: 3px;  /* Closer to right */
+    font-size: 0.8em; /* Slightly larger relative to cell */
+    line-height: 1;
+    font-weight: normal; /* Less emphasis */
+    color: #555;        /* Grey color */
+    background-color: rgba(255, 255, 255, 0.7); /* More opaque background */
+    padding: 0px 3px;
+    border-radius: 2px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 2; /* Above base cell background, below booking block */
+}
+/* Don't show rate on non-available cells */
+.cell-base-occupied_confirmed .daily-rate,
+.cell-base-occupied_pending .daily-rate,
+.cell-base-occupied_error .daily-rate,
+.cell-base-blocked .daily-rate,
+.cell-base-reserved .daily-rate,
+.cell-base-error .daily-rate {
+    display: none;
+}
+
+
+/* --- Loading/No Data/Error States --- */
+ .loading, .no-data, .error {
+      padding: 25px;
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      font-size: 1.1em;
+      box-sizing: border-box;
+      /* These should likely be outside the scroll container in the HTML */
+ }
+ .error {
+      color: #c62828;
+      font-weight: bold;
+ }
+
+/* --- Optional: Media Query for Mobile --- */
+@media (max-width: 768px) {
+  /* Reduce font sizes further maybe? */
+  .grid-cell { font-size: 0.7em; }
+  .room-id-sticky { font-size: 0.7em; padding-left: 4px; }
+  .room-header-sticky { font-size: 0.7em; }
+  .booking-block { font-size: 0.7em; }
+  .daily-rate { font-size: 0.7em; }
+}
+
+/* --- REMOVE THESE DUPLICATE / CONFLICTING RULES --- */
+/* Remove the entire .availability-grid-container block */
+/* Remove duplicate definitions for .grid-cell, .daily-rate, statuses, etc.
+   that appeared later in the original file if they were redundant. */

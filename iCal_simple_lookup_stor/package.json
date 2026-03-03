@@ -1,0 +1,16 @@
+{
+  "name": "ical_simple_lookup_stor",
+  "version": "1.0.0",
+  "description": "This script fetches availability data from Airbnb iCal feeds for your properties and generates a JSON file containing booking and availability information.",
+  "main": "fixed-resources.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.3",
+    "node-ical": "^0.20.1"
+  }
+}
