@@ -1,0 +1,157 @@
+/* App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #333; /* Dark background for the overall page */
+  color: #f0f0f0; /* Light text for contrast */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack title and content area vertically */
+  height: 100vh; /* Full viewport height */
+  max-height: 100vh; /* Prevent an extra scrollbar on body */
+  background-color: #282c34; /* Dark background for the header/app area */
+}
+
+.app-title {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  background-color: #20232a; /* Slightly different dark for title bar */
+  color: white;
+  flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.main-content-area {
+  display: flex;
+  flex-grow: 1; /* Allows this area to take up remaining vertical space */
+  overflow: hidden; /* Crucial: Prevents content from breaking out of this flex container */
+  background-color: #3c3f41; /* Background for the content area itself */
+}
+
+.left-panel {
+  width: 300px; /* Fixed width for the left panel */
+  min-width: 250px; /* Minimum width before it gets too cramped */
+  border-right: 1px solid #4a4a4a; /* Darker border */
+  display: flex;
+  flex-direction: column; /* Stack HotelSelector and RoomList vertically */
+  overflow: hidden; /* Prevent its own content from overflowing */
+  background-color: #33373a; /* Background for the left panel */
+  flex-shrink: 0; /* Prevent left panel from shrinking */
+}
+
+/* Ensure HotelSelector and RoomList take up available space within left-panel */
+/* Their internal components (like ul for RoomList) will handle their own scrolling */
+.left-panel > div:first-child { /* Targets HotelSelector assuming it's the first div */
+  flex-shrink: 0; /* Prevent HotelSelector from shrinking if RoomList is long */
+}
+.left-panel > div:last-child { /* Targets RoomList assuming it's the last div */
+  flex-grow: 1;
+  overflow-y: auto; /* Make only the RoomList scrollable if its content exceeds height */
+}
+
+
+.right-panel {
+  flex-grow: 1; /* Allows this panel to take remaining horizontal space */
+  overflow-y: auto; /* Make this panel scrollable if its content is too tall */
+  padding: 15px;
+  background-color: #424242; /* Background for the right panel */
+}
+
+/* Basic styling for ImageManager (can be moved to ImageManager.css) */
+.image-manager-container { /* Assuming you add this class to ImageManager's root div */
+  border: 1px solid #555;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #4f4f4f;
+}
+
+.image-manager-header {
+  margin-top: 0;
+  border-bottom: 1px solid #666;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-thumbnails-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Styles for ImageThumbnail (can be moved to ImageThumbnail.css) */
+.image-thumbnail-container {
+  border: 1px solid #666;
+  padding: 8px; /* Increased padding */
+  margin: 5px;
+  display: inline-flex; /* Changed to inline-flex for better alignment */
+  flex-direction: column; /* Stack image and buttons vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+  background: #5a5a5a; /* Darker item background */
+  border-radius: 4px;
+  min-width: 180px; /* Ensure enough space for buttons */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.image-thumbnail-container img {
+  max-width: 150px;
+  max-height: 150px;
+  height: auto;
+  display: block;
+  margin-bottom: 8px; /* Increased margin */
+  border-radius: 3px;
+}
+
+.image-thumbnail-container small {
+  font-size: 0.75em; /* Smaller text for details */
+  color: #ccc; /* Lighter text for details */
+  margin-bottom: 3px;
+  display: block; /* Ensure each small takes its own line */
+  word-break: break-word; /* Prevent long labels from breaking layout */
+}
+
+.image-thumbnail-actions {
+  margin-top: 8px; /* Increased margin */
+  display: flex;
+  justify-content: space-around; /* Distribute space */
+  gap: 8px; /* Increased gap */
+  width: 100%; /* Make actions take full width of the container */
+}
+
+.image-thumbnail-actions button {
+  font-size: 0.8em;
+  padding: 5px 8px; /* Slightly more padding */
+  min-width: 70px; /* Ensure buttons have some width */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.image-thumbnail-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.make-cover-button { /* Example class for Make Cover */
+  background-color: #333;
+  color: white;
+}
+.make-cover-button.current-cover {
+  background-color: limegreen;
+  color: black;
+}
+
+.delete-button { /* Example class for Delete */
+  background-color: #d9534f;
+  color: white;
+}
+
+/* Apply styles from HotelSelector.css and RoomList.css as well */

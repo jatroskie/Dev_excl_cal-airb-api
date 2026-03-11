@@ -1,0 +1,46 @@
+Date Standardization Plan
+=========================
+
+--- Processing Unit Type: CRY-1-BR ---
+
+--- Processing Unit Type: LAW-1-BR ---
+  - Season '2026/High-Jan (Jan 14-Mar 1)' (ID: CcPjP0QiE3v0juKRw2kI)
+    - CHANGE endDate:   FROM 2026-03-01 00:00:00+00:00 TO 2026-01-14 00:00:00+00:00 (to match next season's start)
+  - Season '2026/Late-Summer (Mar)' (ID: M4JQyvQOdLpL27O0tkj1)
+    - CHANGE endDate:   FROM 2026-04-01 00:00:00+00:00 TO 2026-03-01 00:00:00+00:00 (to match next season's start)
+  - Season '2026/Mid (Apr 1-Apr 30)' (ID: MyrN5duIkioGFDJNAKnO)
+    - CHANGE endDate:   FROM 2026-04-30 00:00:00+00:00 TO 2026-04-01 00:00:00+00:00 (to match next season's start)
+  - Season '2026/Mid (Apr)' (ID: zThQBPmPH5lLTd0XaGEo)
+    - CHANGE endDate:   FROM 2026-05-01 00:00:00+00:00 TO 2026-04-30 00:00:00+00:00 (to match next season's start)
+  - Season '2027/Late-Summer (Mar)' (ID: ikmPb6xR0rpe3dcfo3X4)
+    - CHANGE endDate:   FROM 2027-04-01 00:00:00+00:00 TO 2027-03-01 00:00:00+00:00 (to match next season's start)
+  - Season '2027/Mid (Apr)' (ID: WwJLu975mWXRTOO4l4WR)
+    - CHANGE endDate:   FROM 2027-05-01 00:00:00+00:00 TO 2027-04-30 00:00:00+00:00 (to match next season's start)
+
+--- Processing Unit Type: LAW-2-BR ---
+
+--- Processing Unit Type: LAW-3-BR ---
+
+--- Processing Unit Type: WFV-1-BR ---
+
+--- Processing Unit Type: WFV-2-BR ---
+
+--- Processing Unit Type: WFV-3-BR ---
+
+--- Processing Unit Type: pent3Br ---
+
+--- Processing Unit Type: std1BR ---
+
+--- Processing Unit Type: std2BR ---
+
+--- Processing Unit Type: std3BR ---
+
+--- Processing Unit Type: stdStudio ---
+
+--- Processing Unit Type: sup1BR ---
+
+--- Processing Unit Type: sup2BR ---
+
+--- Processing Unit Type: sup3BR ---
+
+--- Processing Unit Type: supStudio ---
