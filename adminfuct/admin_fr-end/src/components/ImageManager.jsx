@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'; // useRef for the hidden file input
 import axios from 'axios';
-import ImageThumbnail from './imageThumbnail';   // Assuming it's in the same folder
+import ImageThumbnail from './ImageThumbnail';   // Corrected PascalCase
 // We don't need to import UploadModal here if we embed its logic or use a simpler approach for upload first
 
 // Import function URL for uploading
@@ -172,7 +172,7 @@ function ImageManager({ room, onUpdate }) {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '10px' }}>
                 {images.map((img, index) => (
                     <ImageThumbnail
-                        key={img.url || `img-${room.id}-${index}`} // More unique key
+                        key={`${img.url || 'img'}-${index}`} // Guaranteed unique key
                         image={img}
                         roomId={room.id}
                         isCover={img.isCover === true}

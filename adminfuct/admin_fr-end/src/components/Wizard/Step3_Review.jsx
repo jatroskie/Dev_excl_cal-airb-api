@@ -151,7 +151,9 @@ const Step3_Review = ({ data, updateData, back }) => {
                     rows={6}
                     value={data.description}
                     onChange={e => updateData({ description: e.target.value })}
+                    maxLength={500}
                 />
+                <span className="text-xs text-gray-400">{data.description.length}/500</span>
             </div>
 
             <div className="form-group">

@@ -10,12 +10,17 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 export const logActivity = async (action, details = {}, metadata = {}) => {
     try {
         const user = auth.currentUser;
+        // Strip undefined values to avoid Firestore errors
+        const cleanDetails = Object.fromEntries(
+            Object.entries(details).filter(([_, v]) => v !== undefined)
+        );
+
         const logEntry = {
             timestamp: serverTimestamp(),
             action: action,
             userEmail: user ? user.email : 'anonymous',
             userId: user ? user.uid : 'unknown',
-            details: details,
+            details: cleanDetails,
             metadata: {
                 ...metadata,
                 userAgent: navigator.userAgent,

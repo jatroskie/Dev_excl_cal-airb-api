@@ -1,8 +1,7 @@
-// src/components/RoomList.jsx (or wherever you have it)
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { API_BASE_URL } from '../config'; // Assuming config.js is in ../src/
+import { API_BASE_URL } from '../config'; 
+import archiveIcon from '../assets/archive-icon.png';
 
 function RoomList({ selectedDestination, onRoomSelect, selectedRoomId, refreshTrigger }) {
     const [rooms, setRooms] = useState([]);
@@ -119,16 +118,19 @@ function RoomList({ selectedDestination, onRoomSelect, selectedRoomId, refreshTr
                                         background: 'transparent',
                                         border: 'none',
                                         cursor: 'pointer',
-                                        fontSize: '1.2em',
                                         padding: '2px 5px',
                                         borderRadius: '4px',
-                                        transition: 'background 0.2s'
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
                                     }}
-                                    onMouseOver={(e) => e.target.style.background = 'rgba(255,0,0,0.1)'}
-                                    onMouseOut={(e) => e.target.style.background = 'transparent'}
                                     title="Archive Room"
                                 >
-                                    🗑️
+                                    <img 
+                                        src={archiveIcon} 
+                                        alt="Archive" 
+                                        style={{ width: '20px', height: '20px' }} 
+                                    />
                                 </button>
                             </div>
                         </li>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { GENERATE_LISTING_CONTENT_URL, UPDATE_PROPERTY_DETAILS_URL } from '../config';
+import { logActivity } from '../utils/logger';
 
 function ListingGenerator({ room, onUpdate }) {
     const [title, setTitle] = useState('');
@@ -41,8 +42,13 @@ function ListingGenerator({ room, onUpdate }) {
                 setDescription(newDesc || '');
                 setAmenities(Array.isArray(newAmenities) ? newAmenities.join(', ') : '');
                 setMessage('Content generated! Review and edit below.');
+                
+                logActivity('GENERATE_AI_CONTENT', {
+                    roomId: room.id,
+                    success: true
+                });
             } else {
-                setError('Generation returned unexpected status.');
+                setError(response.data?.message || 'Generation returned unexpected status.');
             }
         } catch (err) {
             console.error("Analysis failed:", err);
@@ -71,10 +77,16 @@ function ListingGenerator({ room, onUpdate }) {
 
             if (response.data && response.data.status === 'success') {
                 setMessage('Saved successfully!');
+                logActivity('SAVE_PROPERTY_DETAILS', {
+                    roomId: room.id,
+                    title: title,
+                    hasDescription: !!description,
+                    amenitiesCount: amenitiesArray.length
+                });
                 if (onUpdate) onUpdate(room.id);
                 setTimeout(() => setMessage(''), 3000);
             } else {
-                setError('Save failed.');
+                setError(response.data?.message || 'Save failed.');
             }
 
         } catch (err) {
@@ -144,8 +156,9 @@ function ListingGenerator({ room, onUpdate }) {
                     onChange={(e) => setDescription(e.target.value)}
                     style={{ ...inputStyle, minHeight: '100px' }}
                     placeholder="Enter full description..."
+                    maxLength={500}
                 />
-                <small>{description.length} chars (Target: 200-500)</small>
+                <small>{description.length}/500 chars (Target: 200-500)</small>
             </div>
 
             <div style={{ marginBottom: '10px' }}>

@@ -18,7 +18,9 @@ function ImageThumbnail({
     isProcessing // <-- ADD THIS PROP TO RECEIVE IT
 }) {
     // Local state to allow immediate UI updates (optimistic or result-driven)
-    const [localImageUrl, setLocalImageUrl] = useState(image.url);
+    // Support both image objects { url: "..." } and raw strings from Firestore
+    const imageUrl = (image && typeof image === 'object') ? image.url : image;
+    const [localImageUrl, setLocalImageUrl] = useState(imageUrl);
 
     // Local state for individual button actions (cover set, delete)
     const [isSettingCover, setIsSettingCover] = useState(false);
@@ -27,8 +29,8 @@ function ImageThumbnail({
 
     // Sync local state if prop changes (e.g. after parent refresh)
     React.useEffect(() => {
-        setLocalImageUrl(image.url);
-    }, [image.url]);
+        setLocalImageUrl(imageUrl);
+    }, [imageUrl]);
 
     const handleRotateClick = async () => {
         setIsRotating(true);
@@ -36,7 +38,7 @@ function ImageThumbnail({
         try {
             const response = await axios.post(ROTATE_IMAGE_FUNCTION_URL, {
                 roomId: roomId,
-                imageUrl: image.url, // Send the CURRENT url
+                imageUrl: imageUrl, // Send the extracted url
                 angle: 90
             });
             if (response.data?.status === 'success') {
@@ -44,7 +46,7 @@ function ImageThumbnail({
                 if (newUrl) {
                     setLocalImageUrl(newUrl); // Immediate local update!
                 }
-                logActivity('ROTATE_IMAGE', { roomId: roomId, imageUrl: image.url });
+                logActivity('ROTATE_IMAGE', { roomId: roomId, imageUrl: imageUrl });
                 if (onRotateSuccess) onRotateSuccess(roomId); // Trigger full refresh
             } else {
                 throw new Error(response.data?.message || 'Rotate failed');
@@ -58,33 +60,44 @@ function ImageThumbnail({
     };
 
     const handleMakeCoverClick = async () => {
+        // Pre-flight check for missing data
+        if (!imageUrl || !roomId) {
+            console.error("[ImageThumbnail] FAILED: Missing required data.", { imageUrl, roomId, image_raw: image });
+            alert("Error: Missing image data or Room ID. Cannot set cover.");
+            return;
+        }
+
         if (!window.confirm(`Make this image the cover for room ${roomId}? This will generate a new thumbnail.`)) {
             return;
         }
-        setIsSettingCover(true); // Local loading state for this button
-        onError(''); // Clear previous errors from parent
+        
+        setIsSettingCover(true);
+        if (onError) onError(''); 
+
+        console.log("[ImageThumbnail] Attempting to set cover:", { roomId, imageUrl });
 
         try {
             const response = await axios.post(SET_COVER_FUNCTION_URL, {
                 roomId: roomId,
-                selectedImageUrl: image.url
+                selectedImageUrl: imageUrl,
+                imageUrl: imageUrl // Fallback for backend parameter resilience
             });
 
+            console.log("[ImageThumbnail] Server Response:", response.data);
+
             if (response.data?.status === 'success') {
-                logActivity('SET_COVER_IMAGE', { roomId: roomId, imageUrl: image.url });
+                logActivity('SET_COVER_IMAGE', { roomId: roomId, imageUrl: imageUrl });
                 if (onSetCoverSuccess) {
-                    onSetCoverSuccess(roomId, image.url); // Notify parent
+                    onSetCoverSuccess(roomId, imageUrl);
                 }
             } else {
-                throw new Error(response.data?.message || 'Unknown error from server setting cover.');
+                throw new Error(response.data?.message || 'Unknown server error');
             }
         } catch (error) {
-            console.error("Error calling setCoverImage function:", error);
-            const errorMsg = error.response?.data?.message || error.message || 'Failed to update cover image.';
-            if (onError) {
-                onError(errorMsg); // Pass error to parent
-            }
-            // alert(`Error setting cover: ${errorMsg}`); // Alert is now handled by parent
+            const errorData = error.response?.data;
+            console.error("[ImageThumbnail] API Error:", errorData || error.message);
+            const errorMsg = errorData?.message || error.message || 'Failed to update cover image.';
+            if (onError) onError(errorMsg);
         } finally {
             setIsSettingCover(false);
         }
@@ -100,14 +113,14 @@ function ImageThumbnail({
         try {
             const response = await axios.post(DELETE_IMAGE_FUNCTION_URL, {
                 roomId: roomId,
-                imageUrlToDelete: image.url,
-                collectionName: image.collectionName || 'rooms' // Pass collection if known
+                imageUrlToDelete: imageUrl,
+                collectionName: (image && typeof image === 'object' ? image.collectionName : 'rooms')
             });
 
             if (response.data?.status === 'success') {
-                logActivity('DELETE_IMAGE', { roomId: roomId, imageUrl: image.url });
+                logActivity('DELETE_IMAGE', { roomId: roomId, imageUrl: imageUrl });
                 if (onDeleteSuccess) {
-                    onDeleteSuccess(roomId, image.url); // Notify parent component
+                    onDeleteSuccess(roomId, imageUrl); // Notify parent component
                 }
             } else {
                 throw new Error(response.data?.message || 'Unknown error from server deleting image.');
@@ -144,9 +157,9 @@ function ImageThumbnail({
                 alt={`Category: ${image.category || 'N/A'}`}
                 style={{ maxWidth: '150px', maxHeight: '150px', height: 'auto', display: 'block', margin: '0 auto 5px auto' }}
             />
-            <small>Cat: {image.category || 'N/A'}</small><br />
+            <small>Cat: {(image && typeof image === 'object' && image.category) || 'N/A'}</small><br />
             {/* <small>Labels: {(image.labels || []).join(', ')}</small><br/> */}
-            <small>Cover: {image.isCover ? 'Yes' : 'No'}</small><br />
+            <small>Cover: {isCover ? 'Yes' : 'No'}</small><br />
 
             <div style={{ marginTop: '5px', display: 'flex', justifyContent: 'space-around', gap: '5px' }}>
                 <button
@@ -166,9 +179,16 @@ function ImageThumbnail({
                 <button
                     onClick={handleDeleteClick}
                     disabled={currentlyProcessing} // Use combined processing state
-                    style={{ fontSize: '0.8em', padding: '3px 6px', backgroundColor: '#f44336', color: 'white', border: 'none', minWidth: '60px' }}
+                    style={{ 
+                        fontSize: '1.2em', 
+                        padding: '3px 6px', 
+                        backgroundColor: 'transparent', 
+                        border: 'none', 
+                        cursor: 'pointer' 
+                    }}
+                    title="Delete Image"
                 >
-                    {isDeleting ? 'Deleting...' : 'Delete'}
+                    {isDeleting ? '...' : '🗑️'}
                 </button>
             </div>
         </div>

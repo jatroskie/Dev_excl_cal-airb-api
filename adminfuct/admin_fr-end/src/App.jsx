@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import { logActivity } from './utils/logger';
+import axios from 'axios';
+import { API_BASE_URL } from './config';
 import Login from './components/Login';
 import WelcomeModal from './components/WelcomeModal';
 import Dashboard from './pages/Dashboard';
@@ -13,6 +15,7 @@ function App() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [showWelcome, setShowWelcome] = useState(false);
+    const [lowPhotoCount, setLowPhotoCount] = useState(0);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -30,6 +33,17 @@ function App() {
         });
         return () => unsubscribe();
     }, [loading]);
+
+    useEffect(() => {
+        if (user && !loading) {
+            axios.get(`${API_BASE_URL}/admin/rooms`)
+                .then(res => {
+                    const count = res.data.filter(r => (r.imageUrls?.length || 0) <= 5).length;
+                    setLowPhotoCount(count);
+                })
+                .catch(err => console.error("Error fetching room counts:", err));
+        }
+    }, [user, loading]);
 
     const handleLogout = async () => {
         try {
@@ -67,6 +81,32 @@ function App() {
                     <Link to="/" style={{ marginRight: '15px', fontWeight: 'bold', textDecoration: 'none', color: '#007bff' }}>Image Admin</Link>
                     <Link to="/list-property" style={{ textDecoration: 'none', color: '#333' }}>List New Property</Link>
                 </nav>
+
+                {lowPhotoCount > 0 && (
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '4px 12px',
+                        backgroundColor: '#f8fafc',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: '20px',
+                        fontSize: '12px',
+                        color: '#475569',
+                        fontWeight: '600',
+                        boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                        cursor: 'help'
+                    }} title="Rooms with 5 or fewer photos">
+                        <span style={{ 
+                            width: '8px', 
+                            height: '8px', 
+                            backgroundColor: '#ef4444', 
+                            borderRadius: '50%',
+                            display: 'inline-block'
+                        }}></span>
+                        {lowPhotoCount} Action Required
+                    </div>
+                )}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                     <span style={{ fontSize: '14px', color: '#666' }}>{user.email}</span>
                     <button

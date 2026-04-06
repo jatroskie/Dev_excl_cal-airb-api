@@ -11,7 +11,7 @@ const REGION = 'us-central1';      // YOUR CLOUD FUNCTIONS REGION
 
 const FUNCTIONS_BASE_URL = window.location.hostname === 'localhost'
     ? `http://127.0.0.1:5001/${PROJECT_ID}/${REGION}`
-    : `https://${REGION}-${PROJECT_ID}.cloudfunctions.net`;
+    : ''; // Empty string for relative paths
 
 // 2. Define Specific Endpoint URLs
 const SET_COVER_FUNCTION_URL = `${FUNCTIONS_BASE_URL}/setCoverImageAndGenerateThumbnail`;
