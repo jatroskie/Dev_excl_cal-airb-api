@@ -141,51 +141,36 @@ function ImageThumbnail({
     const currentlyProcessing = isProcessing || isSettingCover || isDeleting || isRotating;
 
     return (
-        <div style={{
-            border: isCover ? '3px solid limegreen' : '1px solid #ccc',
-            padding: '5px',
-            margin: '5px',
-            display: 'inline-block',
-            textAlign: 'center',
-            background: '#fff',
-            borderRadius: '4px',
-            minWidth: '170px', // Slightly wider to accommodate buttons
-            color: '#333' // Fix contrast against white background
-        }}>
+        <div className={`image-thumbnail-container ${isCover ? 'current-cover' : ''} ${currentlyProcessing ? 'processing' : ''}`}>
             <img
-                src={localImageUrl} // USE LOCAL STATE URL
+                src={localImageUrl}
                 alt={`Category: ${image.category || 'N/A'}`}
-                style={{ maxWidth: '150px', maxHeight: '150px', height: 'auto', display: 'block', margin: '0 auto 5px auto' }}
             />
-            <small>Cat: {(image && typeof image === 'object' && image.category) || 'N/A'}</small><br />
-            {/* <small>Labels: {(image.labels || []).join(', ')}</small><br/> */}
-            <small>Cover: {isCover ? 'Yes' : 'No'}</small><br />
+            <div className="image-thumbnail-details">
+                <small>Cat: {(image && typeof image === 'object' && image.category) || 'other'}</small>
+                <small>Cover: {isCover ? 'Yes' : 'No'}</small>
+            </div>
 
-            <div style={{ marginTop: '5px', display: 'flex', justifyContent: 'space-around', gap: '5px' }}>
+            <div className="image-thumbnail-actions">
                 <button
                     onClick={handleRotateClick}
                     disabled={currentlyProcessing}
-                    style={{ fontSize: '0.8em', padding: '3px 6px', minWidth: '50px' }}
+                    className="secondary-button"
+                    title="Rotate Image"
                 >
                     {isRotating ? '...' : '↻'}
                 </button>
                 <button
                     onClick={handleMakeCoverClick}
-                    disabled={isCover || currentlyProcessing} // Use combined processing state
-                    style={{ fontSize: '0.8em', padding: '3px 6px', minWidth: '80px' }}
+                    disabled={isCover || currentlyProcessing}
+                    className={`make-cover-button ${isCover ? 'current-cover' : ''}`}
                 >
-                    {isSettingCover ? 'Saving...' : (isCover ? 'Cover' : 'Make Cover')}
+                    {isSettingCover ? '...' : (isCover ? 'Cover' : 'Make Cover')}
                 </button>
                 <button
                     onClick={handleDeleteClick}
-                    disabled={currentlyProcessing} // Use combined processing state
-                    style={{ 
-                        fontSize: '1.2em', 
-                        padding: '3px 6px', 
-                        backgroundColor: 'transparent', 
-                        border: 'none', 
-                        cursor: 'pointer' 
-                    }}
+                    disabled={currentlyProcessing}
+                    className="delete-button"
                     title="Delete Image"
                 >
                     {isDeleting ? '...' : '🗑️'}

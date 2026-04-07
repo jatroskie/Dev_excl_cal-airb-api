@@ -75,61 +75,35 @@ function App() {
 
     return (
         <Router basename="/host">
-            {showWelcome && <WelcomeModal onClose={closeWelcomeModal} />}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#fff', borderBottom: '1px solid #eee' }}>
-                <nav>
-                    <Link to="/" style={{ marginRight: '15px', fontWeight: 'bold', textDecoration: 'none', color: '#007bff' }}>Image Admin</Link>
-                    <Link to="/list-property" style={{ textDecoration: 'none', color: '#333' }}>List New Property</Link>
-                </nav>
+            <div className="root-layout">
+                {showWelcome && <WelcomeModal onClose={closeWelcomeModal} />}
+                <div className="glass-nav">
+                    <nav>
+                        <Link to="/" className="nav-link active">Image Admin</Link>
+                        <Link to="/list-property" className="nav-link">List New Property</Link>
+                    </nav>
 
-                {lowPhotoCount > 0 && (
-                    <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        padding: '4px 12px',
-                        backgroundColor: '#f8fafc',
-                        border: '1px solid #cbd5e1',
-                        borderRadius: '20px',
-                        fontSize: '12px',
-                        color: '#475569',
-                        fontWeight: '600',
-                        boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-                        cursor: 'help'
-                    }} title="Rooms with 5 or fewer photos">
-                        <span style={{ 
-                            width: '8px', 
-                            height: '8px', 
-                            backgroundColor: '#ef4444', 
-                            borderRadius: '50%',
-                            display: 'inline-block'
-                        }}></span>
-                        {lowPhotoCount} Action Required
+                    {lowPhotoCount > 0 && (
+                        <div className="action-required-badge" title="Rooms with 5 or fewer photos">
+                            <span className="dot"></span>
+                            {lowPhotoCount} Action Required
+                        </div>
+                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                        <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', fontWeight: '500' }}>{user.email}</span>
+                        <button
+                            onClick={handleLogout}
+                            className="logout-button"
+                        >
+                            Logout
+                        </button>
                     </div>
-                )}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                    <span style={{ fontSize: '14px', color: '#666' }}>{user.email}</span>
-                    <button
-                        onClick={handleLogout}
-                        style={{
-                            padding: '8px 16px',
-                            backgroundColor: '#dc3545',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '4px',
-                            cursor: 'pointer',
-                            fontSize: '14px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Logout
-                    </button>
                 </div>
+                <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/list-property" element={<HostOnboarding />} />
+                </Routes>
             </div>
-            <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/list-property" element={<HostOnboarding />} />
-            </Routes>
         </Router>
     );
 }

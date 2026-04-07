@@ -28,17 +28,14 @@ const HostOnboarding = () => {
 
     return (
         <div className="host-onboarding-container">
-            {/* Header */}
-            <header className="wizard-header">
-                <div className="brand">Destinations <span className="sub-brand">Host App</span></div>
-            </header>
-
             {/* Progress Bar */}
             <div className="progress-bar-container">
                 <div
                     className="progress-bar-fill"
                     style={{ width: `${(step / 3) * 100}%` }}
-                ></div>
+                >
+                    <div className="progress-glow"></div>
+                </div>
             </div>
 
             {/* Main Content */}

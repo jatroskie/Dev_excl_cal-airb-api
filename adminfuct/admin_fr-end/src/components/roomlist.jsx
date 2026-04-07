@@ -44,20 +44,15 @@ function RoomList({ selectedDestination, onRoomSelect, selectedRoomId, refreshTr
 
     return (
         // Apply some basic styling for better presentation
-        <div style={{
-            flexGrow: 1, // Allow list to take available space
-            overflowY: 'auto', // Make the list scrollable vertically
-            borderTop: '1px solid #eee',
-            padding: '0 5px' // Add slight horizontal padding
-        }}>
-            <h3 style={{ marginTop: '10px', marginBottom: '5px', paddingLeft: '8px' }}>Rooms</h3>
-            {loading && <p style={{ paddingLeft: '8px' }}>Loading rooms...</p>}
-            {error && <p style={{ color: 'orange', paddingLeft: '8px' }}>{error}</p>}
+        <div className="room-list-container">
+            <h3>Rooms</h3>
+            {loading && <p className="status-text">Loading rooms...</p>}
+            {error && <p className="error-text">{error}</p>}
             {!loading && !error && rooms.length === 0 && selectedDestination && selectedDestination.toLowerCase() !== 'all destinations' &&
-                <p style={{ paddingLeft: '8px', fontStyle: 'italic', color: '#555' }}>No rooms found for this destination.</p>
+                <p className="status-text italic">No rooms found for this destination.</p>
             }
             {!loading && !error && rooms.length === 0 && (!selectedDestination || selectedDestination.toLowerCase() === 'all destinations') &&
-                <p style={{ paddingLeft: '8px', fontStyle: 'italic', color: '#555' }}>Select a specific destination to see rooms.</p>
+                <p className="status-text italic">Select a destination to see rooms.</p>
             }
 
             {/* Use <ul> for semantic list */}
@@ -104,32 +99,23 @@ function RoomList({ selectedDestination, onRoomSelect, selectedRoomId, refreshTr
                         <li
                             key={room.id}
                             onClick={() => onRoomSelect(room)}
-                            style={itemStyle} // Apply the dynamic style
-                            title={hasThumbnail ? 'Thumbnail exists' : 'Thumbnail missing'} // Add a tooltip
+                            className={`room-list-item ${room.id === selectedRoomId ? 'selected' : ''}`}
+                            title={hasThumbnail ? 'Thumbnail exists' : 'Thumbnail missing'}
                         >
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span>
-                                    {room.id} ({room.title || room.name || 'No Name'})
-                                    {hasThumbnail && <span style={{ color: 'limegreen', marginLeft: '5px', fontSize: '0.8em' }}>✓</span>}
+                            <div className="room-item-content">
+                                <span className="room-info">
+                                    <span className="room-id">{room.id}</span>
+                                    <span className="room-name">{room.title || room.name || 'No Name'}</span>
+                                    {hasThumbnail && <span className="check-icon">✓</span>}
                                 </span>
                                 <button
                                     onClick={(e) => handleArchive(e, room.id)}
-                                    style={{
-                                        background: 'transparent',
-                                        border: 'none',
-                                        cursor: 'pointer',
-                                        padding: '2px 5px',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}
+                                    className="archive-button"
                                     title="Archive Room"
                                 >
                                     <img 
                                         src={archiveIcon} 
                                         alt="Archive" 
-                                        style={{ width: '20px', height: '20px' }} 
                                     />
                                 </button>
                             </div>

@@ -28,10 +28,11 @@ function HotelSelector({ onDestinationSelect, selectedDestination }) {
     };
 
     return (
-        <div style={{ marginBottom: '20px', padding: '10px', borderBottom: '1px solid #ccc' }}>
-            <label htmlFor="destination-select" style={{ marginRight: '10px', fontWeight: 'bold' }}>Select Destination:</label>
+        <div className="hotel-selector-container">
+            <label htmlFor="destination-select">Select Destination</label>
             <select
                 id="destination-select"
+                className="glass-select"
                 value={selectedDestination || 'All destinations'}
                 onChange={handleChange}
                 disabled={loading}
@@ -41,7 +42,7 @@ function HotelSelector({ onDestinationSelect, selectedDestination }) {
                     <option key={dest} value={dest}>{dest}</option>
                 ))}
             </select>
-            {error && <p style={{ color: 'red', marginLeft: '10px' }}>{error}</p>}
+            {error && <p className="error-text">{error}</p>}
         </div>
     );
 }

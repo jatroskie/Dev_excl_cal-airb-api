@@ -1,157 +1,787 @@
-/* App.css */
+/* App.css overhaul */
 body, html, #root {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: sans-serif;
-  background-color: #333; /* Dark background for the overall page */
-  color: #f0f0f0; /* Light text for contrast */
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
-.app-container {
+.root-layout {
   display: flex;
-  flex-direction: column; /* Stack title and content area vertically */
-  height: 100vh; /* Full viewport height */
-  max-height: 100vh; /* Prevent an extra scrollbar on body */
-  background-color: #282c34; /* Dark background for the header/app area */
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .app-title {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin: 0;
-  background-color: #20232a; /* Slightly different dark for title bar */
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
   color: white;
-  flex-shrink: 0; /* Prevent title from shrinking */
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  flex-shrink: 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .main-content-area {
   display: flex;
-  flex-grow: 1; /* Allows this area to take up remaining vertical space */
-  overflow: hidden; /* Crucial: Prevents content from breaking out of this flex container */
-  background-color: #3c3f41; /* Background for the content area itself */
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .left-panel {
-  width: 300px; /* Fixed width for the left panel */
-  min-width: 250px; /* Minimum width before it gets too cramped */
-  border-right: 1px solid #4a4a4a; /* Darker border */
+  width: 320px;
+  min-width: 280px;
+  border-right: 1px solid var(--glass-border);
   display: flex;
-  flex-direction: column; /* Stack HotelSelector and RoomList vertically */
-  overflow: hidden; /* Prevent its own content from overflowing */
-  background-color: #33373a; /* Background for the left panel */
-  flex-shrink: 0; /* Prevent left panel from shrinking */
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: var(--glass-blur);
+  flex-shrink: 0;
 }
 
-/* Ensure HotelSelector and RoomList take up available space within left-panel */
-/* Their internal components (like ul for RoomList) will handle their own scrolling */
-.left-panel > div:first-child { /* Targets HotelSelector assuming it's the first div */
-  flex-shrink: 0; /* Prevent HotelSelector from shrinking if RoomList is long */
+.left-panel > div:first-child { 
+  flex-shrink: 0; 
+  padding: 20px 15px;
 }
-.left-panel > div:last-child { /* Targets RoomList assuming it's the last div */
+
+.left-panel > div:last-child { 
   flex-grow: 1;
-  overflow-y: auto; /* Make only the RoomList scrollable if its content exceeds height */
+  overflow-y: auto;
+  border-top: 1px solid var(--glass-border);
 }
-
 
 .right-panel {
-  flex-grow: 1; /* Allows this panel to take remaining horizontal space */
-  overflow-y: auto; /* Make this panel scrollable if its content is too tall */
-  padding: 15px;
-  background-color: #424242; /* Background for the right panel */
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 24px;
+  padding-bottom: 80px; /* Buffer for Save Changes button */
+  background: transparent;
 }
 
-/* Basic styling for ImageManager (can be moved to ImageManager.css) */
-.image-manager-container { /* Assuming you add this class to ImageManager's root div */
-  border: 1px solid #555;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  background-color: #4f4f4f;
+/* ImageManager Styling */
+.image-manager-container {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 24px;
+  margin-top: 0;
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
 }
 
 .image-manager-header {
   margin-top: 0;
-  border-bottom: 1px solid #666;
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.image-thumbnails-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+.image-manager-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
 }
 
-/* Styles for ImageThumbnail (can be moved to ImageThumbnail.css) */
+.image-thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 0;
+}
+
+/* ImageThumbnail Styling */
 .image-thumbnail-container {
-  border: 1px solid #666;
-  padding: 8px; /* Increased padding */
-  margin: 5px;
-  display: inline-flex; /* Changed to inline-flex for better alignment */
-  flex-direction: column; /* Stack image and buttons vertically */
-  align-items: center; /* Center items horizontally */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background: #5a5a5a; /* Darker item background */
-  border-radius: 4px;
-  min-width: 180px; /* Ensure enough space for buttons */
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-thumbnail-container:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-4px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
 .image-thumbnail-container img {
-  max-width: 150px;
-  max-height: 150px;
-  height: auto;
-  display: block;
-  margin-bottom: 8px; /* Increased margin */
-  border-radius: 3px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-thumbnail-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
 }
 
 .image-thumbnail-container small {
-  font-size: 0.75em; /* Smaller text for details */
-  color: #ccc; /* Lighter text for details */
-  margin-bottom: 3px;
-  display: block; /* Ensure each small takes its own line */
-  word-break: break-word; /* Prevent long labels from breaking layout */
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .image-thumbnail-actions {
-  margin-top: 8px; /* Increased margin */
   display: flex;
-  justify-content: space-around; /* Distribute space */
-  gap: 8px; /* Increased gap */
-  width: 100%; /* Make actions take full width of the container */
+  gap: 8px;
+  width: 100%;
 }
 
 .image-thumbnail-actions button {
-  font-size: 0.8em;
-  padding: 5px 8px; /* Slightly more padding */
-  min-width: 70px; /* Ensure buttons have some width */
-  border: none;
-  border-radius: 3px;
+  flex: 1;
+  font-size: 0.75rem;
+  padding: 8px 4px;
+  border-radius: 6px;
+}
+
+.success-text {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: #86efac;
+  background: rgba(16, 185, 129, 0.1);
+  margin: 5px 0 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Modal Styling */
+.glass-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.glass-modal-content {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 32px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--glass-shadow);
+  color: white;
+}
+
+.glass-modal-content h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.glass-modal-content p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.modal-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.modal-action-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.modal-action-item.completed {
+  opacity: 0.6;
+}
+
+.modal-action-item.toggle {
   cursor: pointer;
 }
 
-.image-thumbnail-actions button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.modal-action-item.toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-accent);
 }
 
-.make-cover-button { /* Example class for Make Cover */
-  background-color: #333;
+.modal-action-item.toggle.active {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-accent);
+}
+
+.modal-action-item.toggle.active .label-text {
+  color: white;
+  font-weight: 600;
+}
+
+.modal-action-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-accent);
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.primary-button {
+  background: var(--primary-accent) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.primary-button:hover {
+  background: #2563eb !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+/* Welcome Modal Specifics */
+.welcome-modal {
+  max-width: 550px;
+}
+
+.instruction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.instruction-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 28px;
+  position: relative;
+}
+
+.instruction-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-accent);
+  font-weight: 900;
+}
+
+.instruction-list li strong {
+  color: white;
+  margin-right: 4px;
+}
+
+.primary-button.Large {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+}
+
+.make-cover-button {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary-accent);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.make-cover-button:hover {
+  background: var(--primary-accent);
   color: white;
 }
+
 .make-cover-button.current-cover {
-  background-color: limegreen;
-  color: black;
+  background: var(--secondary-accent);
+  color: white;
+  border-color: var(--secondary-accent);
 }
 
-.delete-button { /* Example class for Delete */
-  background-color: #d9534f;
+.delete-button {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-accent);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.delete-button:hover {
+  background: var(--danger-accent);
   color: white;
 }
 
-/* Apply styles from HotelSelector.css and RoomList.css as well */
+/* Navigation & Badges */
+.glass-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 100;
+}
+
+.nav-link {
+  margin-right: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: white;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-accent);
+  box-shadow: 0 0 8px var(--primary-accent);
+  border-radius: 2px;
+}
+
+.action-required-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: #fca5a5;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.action-required-badge:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+.action-required-badge .dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--danger-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--danger-accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.logout-button {
+  padding: 8px 18px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: var(--danger-accent);
+  color: white;
+  border-color: var(--danger-accent);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Sidebar Components (HotelSelector & RoomList) */
+.hotel-selector-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hotel-selector-container label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.glass-select {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.glass-select:focus {
+  border-color: var(--primary-accent);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.glass-select option {
+  background: #1e293b;
+  color: white;
+}
+
+.room-list-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-list-container h3 {
+  padding: 20px 20px 10px;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.room-list-item {
+  padding: 12px 20px;
+  list-style: none;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.room-list-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  padding-left: 24px;
+}
+
+.room-list-item.selected {
+  background: rgba(59, 130, 246, 0.1);
+  border-left-color: var(--primary-accent);
+}
+
+.room-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.room-id {
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+.room-name {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.selected .room-name {
+  color: white;
+  font-weight: 600;
+}
+
+.check-icon {
+  color: var(--secondary-accent);
+  font-weight: 900;
+  font-size: 1rem;
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.archive-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+
+.archive-button:hover {
+  opacity: 1;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.archive-button img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+.status-text {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.status-text.italic {
+  font-style: italic;
+}
+
+.error-text {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  margin: 5px 20px;
+  border-radius: 6px;
+}
+
+.success-text {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: #86efac;
+  background: rgba(16, 185, 129, 0.1);
+  margin: 5px 0 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Modal Styling */
+.glass-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.glass-modal-content {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 32px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--glass-shadow);
+  color: white;
+}
+
+.modal-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.modal-action-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.modal-action-item.completed {
+  opacity: 0.6;
+}
+
+.modal-action-item.toggle {
+  cursor: pointer;
+}
+
+.modal-action-item.toggle.active {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-accent);
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.primary-button {
+  background: var(--primary-accent) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Listing Generator */
+.listing-generator-container {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.form-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glass-input, .glass-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.char-count {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.ai-button {
+  background: #6d28d9 !important;
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.3);
+}
+
+/* Login Page Wrapper Fix */
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1e293b, #0f172a);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.login-box {
+  text-align: center;
+  max-width: 400px;
+}
+
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  background: white !important;
+  color: #374151 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-login-btn img {
+  width: 22px;
+  height: 22px;
+}

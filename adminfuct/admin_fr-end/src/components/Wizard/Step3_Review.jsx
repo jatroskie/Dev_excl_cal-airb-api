@@ -128,7 +128,17 @@ const Step3_Review = ({ data, updateData, back }) => {
     return (
         <div className="step-container">
             {generating && (
-                <div className="p-4 bg-blue-50 text-blue-700 rounded mb-4 text-center">
+                <div style={{
+                    padding: '1rem',
+                    background: 'rgba(59, 130, 246, 0.1)',
+                    border: '1px solid rgba(59, 130, 246, 0.2)',
+                    color: '#60a5fa',
+                    borderRadius: '12px',
+                    marginBottom: '1.5rem',
+                    textAlign: 'center',
+                    fontWeight: '600'
+                }}>
+                    <span style={{ display: 'inline-block', animation: 'pulse 2s infinite', marginRight: '8px' }}>✨</span>
                     Generating stunning description and analyzing photos...
                 </div>
             )}
@@ -141,7 +151,9 @@ const Step3_Review = ({ data, updateData, back }) => {
                     onChange={e => updateData({ title: e.target.value })}
                     maxLength={50}
                 />
-                <span className="text-xs text-gray-500">{data.title.length}/50</span>
+                <span style={{ alignSelf: 'flex-end', fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '4px' }}>
+                    {data.title.length}/50
+                </span>
             </div>
 
             <div className="form-group">
@@ -153,7 +165,9 @@ const Step3_Review = ({ data, updateData, back }) => {
                     onChange={e => updateData({ description: e.target.value })}
                     maxLength={500}
                 />
-                <span className="text-xs text-gray-400">{data.description.length}/500</span>
+                <span style={{ alignSelf: 'flex-end', fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '4px' }}>
+                    {data.description.length}/500
+                </span>
             </div>
 
             <div className="form-group">
@@ -168,25 +182,35 @@ const Step3_Review = ({ data, updateData, back }) => {
             </div>
 
             <div className="form-group">
-                <label className="form-label">Amenities</label>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
-                    {AMENITIES_COMMON.map(item => (
-                        <label key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <label className="form-label" style={{ marginBottom: '1rem' }}>Amenities</label>
+                <div style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', 
+                    gap: '0.75rem',
+                    background: 'rgba(255, 255, 255, 0.02)',
+                    padding: '1.5rem',
+                    borderRadius: '16px',
+                    border: '1px solid var(--glass-border)'
+                }}>
+                    {[...new Set([...AMENITIES_COMMON, ...['Wifi', 'Essentials', 'Bed linens']])].map(item => (
+                        <label key={item} style={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '10px',
+                            fontSize: '0.9rem',
+                            color: data.amenities.includes(item) ? 'white' : 'rgba(255, 255, 255, 0.5)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease'
+                        }}>
                             <input
                                 type="checkbox"
                                 checked={data.amenities.includes(item)}
                                 onChange={() => toggleAmenity(item)}
-                            />
-                            {item}
-                        </label>
-                    ))}
-                    {/* Add Essentials/Wifi explicitly if not in common list to show they are checked */}
-                    {['Wifi', 'Essentials', 'Bed linens'].map(item => (
-                        <label key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <input
-                                type="checkbox"
-                                checked={data.amenities.includes(item)}
-                                onChange={() => toggleAmenity(item)}
+                                style={{
+                                    width: '18px',
+                                    height: '18px',
+                                    accentColor: 'var(--primary-accent)'
+                                }}
                             />
                             {item}
                         </label>

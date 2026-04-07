@@ -120,64 +120,69 @@ function ListingGenerator({ room, onUpdate }) {
     };
 
     return (
-        <div style={{ padding: '20px', borderTop: '1px solid #eee', marginTop: '20px' }}>
+        <div className="listing-generator-container">
             <h3>Listing Content (AI Enhanced)</h3>
 
-            {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
-            {message && <div style={{ color: 'green', marginBottom: '10px' }}>{message}</div>}
+            {error && <div className="error-text">{error}</div>}
+            {message && <div className="success-text">{message}</div>}
 
-            <div style={{ marginBottom: '15px' }}>
+            <div className="action-row">
                 <button
                     onClick={handleGenerate}
                     disabled={isGenerating || isSaving}
-                    style={{ ...buttonStyle, backgroundColor: isGenerating ? '#aaa' : '#6f42c1' }}
+                    className="primary-button ai-button"
                 >
                     {isGenerating ? 'Analyzing Images...' : 'Generate from AI'}
                 </button>
             </div>
 
-            <div style={{ marginBottom: '10px' }}>
-                <label style={{ display: 'block', fontWeight: 'bold' }}>Title (Title / Description50)</label>
+            <div className="form-group">
+                <label htmlFor="listing-title">Title (Max 50 chars)</label>
                 <input
+                    id="listing-title"
                     type="text"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    style={inputStyle}
+                    className="glass-input"
                     placeholder="Enter catchy title..."
                     maxLength={50}
                 />
-                <small>{title.length}/50 chars</small>
+                <small className="char-count">{title.length}/50</small>
             </div>
 
-            <div style={{ marginBottom: '10px' }}>
-                <label style={{ display: 'block', fontWeight: 'bold' }}>Marketing Description</label>
+            <div className="form-group">
+                <label htmlFor="listing-description">Marketing Description</label>
                 <textarea
+                    id="listing-description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    style={{ ...inputStyle, minHeight: '100px' }}
+                    className="glass-textarea"
                     placeholder="Enter full description..."
                     maxLength={500}
                 />
-                <small>{description.length}/500 chars (Target: 200-500)</small>
+                <small className="char-count">{description.length}/500</small>
             </div>
 
-            <div style={{ marginBottom: '10px' }}>
-                <label style={{ display: 'block', fontWeight: 'bold' }}>Amenities (Comma separated)</label>
+            <div className="form-group">
+                <label htmlFor="listing-amenities">Amenities (Comma separated)</label>
                 <textarea
+                    id="listing-amenities"
                     value={amenities}
                     onChange={(e) => setAmenities(e.target.value)}
-                    style={{ ...inputStyle, minHeight: '60px' }}
+                    className="glass-textarea small"
                     placeholder="Wifi, Pool, Balcony..."
                 />
             </div>
 
-            <button
-                onClick={handleSave}
-                disabled={isSaving || isGenerating}
-                style={{ ...buttonStyle, backgroundColor: '#28a745' }}
-            >
-                {isSaving ? 'Saving...' : 'Save Changes'}
-            </button>
+            <div className="action-row footer">
+                <button
+                    onClick={handleSave}
+                    disabled={isSaving || isGenerating}
+                    className="primary-button success"
+                >
+                    {isSaving ? 'Saving...' : 'Save Changes'}
+                </button>
+            </div>
         </div>
     );
 }

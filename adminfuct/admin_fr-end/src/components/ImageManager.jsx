@@ -120,11 +120,11 @@ function ImageManager({ room, onUpdate }) {
     const images = Array.isArray(room.imageUrls) ? room.imageUrls : [];
 
     return (
-        <div style={{ border: '1px solid #aaa', padding: '10px', marginTop: '10px', borderRadius: '5px', backgroundColor: '#f9f9f9', position: 'relative' }}>
+        <div className="image-manager-container">
             {/* Header with Room ID/Name and Upload Button */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px' }}>
+            <div className="image-manager-header">
                 <h3 style={{ margin: 0 }}>
-                    Images for Room: {room.id} ({room.name || 'No Name'})
+                    Images for Room: {room.id} ({room.title || room.name || 'No Name'})
                 </h3>
                 {/* Hidden file input, triggered by the modal action */}
                 <input
@@ -141,16 +141,18 @@ function ImageManager({ room, onUpdate }) {
                         href={`https://vacprop.com/viewer/index.html?id=${room.id}`}
                         target="_blank"
                         rel="noreferrer"
+                        className="secondary-button"
                         style={{
-                            padding: '8px 15px',
-                            backgroundColor: '#28a745',
-                            color: 'white',
                             textDecoration: 'none',
-                            borderRadius: '4px',
-                            fontSize: '14px',
-                            fontWeight: 'bold',
                             display: 'flex',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            fontWeight: '700',
+                            fontSize: '1rem',
+                            padding: '0.6em 1.2em',
+                            borderRadius: '8px',
+                            border: '1px solid var(--glass-border)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            color: 'white'
                         }}
                     >
                         View Property
@@ -162,14 +164,14 @@ function ImageManager({ room, onUpdate }) {
             </div>
 
             {/* Display Error or Success Messages */}
-            {error && <p style={{ color: 'red', backgroundColor: '#fee', padding: '5px', borderRadius: '3px' }}>{error}</p>}
-            {successMessage && <p style={{ color: 'green', backgroundColor: '#efe', padding: '5px', borderRadius: '3px' }}>{successMessage}</p>}
+            {error && <p className="error-text">{error}</p>}
+            {successMessage && <p className="success-text">{successMessage}</p>}
 
             {/* Handle case where there are no images */}
-            {images.length === 0 && <p>No images found for this room. Use "Upload New Image" to add some.</p>}
+            {images.length === 0 && <p className="status-text">No images found for this room. Use "Upload New Image" to add some.</p>}
 
             {/* Container for the image thumbnails */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '10px' }}>
+            <div className="image-thumbnails-grid">
                 {images.map((img, index) => (
                     <ImageThumbnail
                         key={`${img.url || 'img'}-${index}`} // Guaranteed unique key
@@ -187,54 +189,46 @@ function ImageManager({ room, onUpdate }) {
 
             {/* --- UPLOAD SETTINGS MODAL --- */}
             {showSettingsModal && (
-                <div style={{
-                    position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-                    backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000,
-                    color: '#333'
-                }}>
-                    <div style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', width: '400px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textAlign: 'left' }}>
-                        <h3 style={{ marginTop: 0, color: 'black' }}>Upload Configuration</h3>
-                        <p style={{ fontSize: '0.9em', color: '#666' }}>The following actions will be performed automatically:</p>
+                <div className="glass-modal-overlay">
+                    <div className="glass-modal-content">
+                        <h3 style={{ marginTop: 0, color: 'white', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>Upload Configuration</h3>
+                        <p style={{ fontSize: '0.9em', color: 'rgba(255,255,255,0.6)' }}>The following actions will be performed automatically:</p>
 
-                        <div style={{ marginBottom: '20px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px', color: '#888' }}>
-                                <input type="checkbox" checked disabled style={{ marginRight: '10px' }} />
+                        <div className="modal-actions-list">
+                            <div className="modal-action-item completed">
+                                <input type="checkbox" checked disabled />
                                 <span>Upload to GCS (Processing...)</span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px', color: '#888' }}>
-                                <input type="checkbox" checked disabled style={{ marginRight: '10px' }} />
+                            <div className="modal-action-item completed">
+                                <input type="checkbox" checked disabled />
                                 <span>Link to Room in Firestore</span>
                             </div>
                             <div
-                                style={{
-                                    display: 'flex', alignItems: 'center', marginBottom: '8px', padding: '8px',
-                                    cursor: 'pointer', backgroundColor: '#e6f7ff', borderRadius: '4px', border: '1px solid #1890ff'
-                                }}
+                                className={`modal-action-item toggle ${generateLabels ? 'active' : ''}`}
                                 onClick={() => setGenerateLabels(!generateLabels)}
                             >
                                 <input
                                     type="checkbox"
                                     checked={generateLabels}
                                     readOnly
-                                    style={{ marginRight: '10px', cursor: 'pointer', transform: 'scale(1.2)' }}
                                 />
-                                <span style={{ fontWeight: 'bold', color: 'black' }}>Create Labels (AI Auto-Gen)</span>
+                                <span className="label-text">Create Labels (AI Auto-Gen)</span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                                <input type="checkbox" checked disabled style={{ marginRight: '10px' }} />
-                                <span><strong>Resize Image</strong> (Max 1600px width)</span>
+                            <div className="modal-action-item completed">
+                                <input type="checkbox" checked disabled />
+                                <span><strong>Resize Image</strong> (Max 1600px)</span>
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                            <button onClick={() => setShowSettingsModal(false)} style={{ backgroundColor: '#e0e0e0', color: '#333', border: '1px solid #ccc', padding: '10px 15px', borderRadius: '4px', cursor: 'pointer' }}>
+                        <div className="modal-footer">
+                            <button className="secondary-button" onClick={() => setShowSettingsModal(false)}>
                                 Cancel
                             </button>
                             <button
+                                className="primary-button"
                                 onClick={() => fileInputRef.current?.click()}
-                                style={{ backgroundColor: '#007bff', color: 'white', border: 'none', padding: '10px 15px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
                             >
-                                Select Files & Upload
+                                Select & Upload
                             </button>
                         </div>
                     </div>

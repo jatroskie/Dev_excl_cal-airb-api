@@ -58,7 +58,7 @@ function Dashboard() {
     }, []);
 
     return (
-        <div className="app-container">
+        <div className="dashboard-content">
             <h1 className="app-title">Property Image Manager</h1>
             <div className="main-content-area">
                 <div className="left-panel">

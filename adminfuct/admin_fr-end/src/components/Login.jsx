@@ -16,67 +16,29 @@ function Login() {
     };
 
     return (
-        <div className="login-container" style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh',
-            backgroundColor: '#f5f5f5'
-        }}>
-            <div className="login-box" style={{
-                padding: '2.5rem',
-                backgroundColor: 'white',
-                borderRadius: '12px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                width: '100%',
-                maxWidth: '400px',
-                textAlign: 'center'
-            }}>
-                <h2 style={{ marginBottom: '0.5rem', color: '#333' }}>Host Admin Portal</h2>
-                <p style={{ marginBottom: '2rem', color: '#666' }}>Please sign in to manage your properties</p>
+        <div className="login-page-wrapper">
+            <div className="glass-modal-content login-box">
+                <div className="login-header">
+                    <h2>Host Admin Portal</h2>
+                    <p>Please sign in to manage your properties</p>
+                </div>
 
                 <button
                     type="button"
                     onClick={handleGoogleLogin}
-                    className="google-btn"
-                    style={{
-                        padding: '0.85rem 1.5rem',
-                        backgroundColor: '#fff',
-                        color: '#3c4043',
-                        border: '1px solid #dadce0',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontWeight: '500',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '0.75rem',
-                        width: '100%',
-                        fontSize: '16px',
-                        transition: 'background-color 0.2s'
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f8f9fa'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#fff'}
+                    className="google-login-btn"
                 >
                     <img
                         src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
                         alt="Google"
-                        style={{ width: '20px', height: '20px' }}
                     />
-                    Sign in with Google
+                    <span>Sign in with Google</span>
                 </button>
 
                 {error && (
-                    <p className="error" style={{
-                        color: '#d93025',
-                        fontSize: '14px',
-                        marginTop: '1.5rem',
-                        backgroundColor: '#fce8e6',
-                        padding: '0.75rem',
-                        borderRadius: '4px'
-                    }}>
+                    <div className="error-text">
                         {error}
-                    </p>
+                    </div>
                 )}
             </div>
         </div>

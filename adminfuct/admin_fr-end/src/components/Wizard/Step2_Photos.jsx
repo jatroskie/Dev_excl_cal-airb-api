@@ -90,58 +90,67 @@ const Step2_Photos = ({ data, updateData, next, back }) => {
             {/* Dropzone */}
             <div
                 {...getRootProps()}
-                className={`flex flex-col items-center justify-center p-10 border-2 border-dashed rounded-lg transition-colors cursor-pointer ${isDragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'
-                    }`}
+                className={`dropzone-container ${isDragActive ? 'active' : ''}`}
                 style={{
                     padding: '3rem',
                     textAlign: 'center',
-                    border: '2px dashed #d1d5db',
-                    borderRadius: '0.75rem',
-                    backgroundColor: isDragActive ? '#eff6ff' : '#f9fafb',
-                    cursor: 'pointer'
+                    border: '2px dashed var(--glass-border)',
+                    borderRadius: '1rem',
+                    background: isDragActive ? 'rgba(59, 130, 246, 0.1)' : 'rgba(255, 255, 255, 0.03)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    boxShadow: isDragActive ? '0 0 20px rgba(59, 130, 246, 0.2)' : 'none'
                 }}
             >
                 <input {...getInputProps()} />
                 {loading ? (
-                    <p>Processing images... please wait.</p>
+                    <p style={{ color: 'white' }}>Processing images... please wait.</p>
                 ) : isDragActive ? (
-                    <p className="text-blue-500 font-medium">Drop the files here ...</p>
+                    <p style={{ color: 'var(--primary-accent)', fontWeight: '600' }}>Drop the files here ...</p>
                 ) : (
                     <div>
-                        <p className="text-gray-700 font-medium text-lg">Drag & drop photos here, or click to select files</p>
-                        <p className="text-gray-500 text-sm mt-2">Supports JPG, PNG, WEBP (Min width 800px)</p>
+                        <p style={{ color: 'white', fontWeight: '600', fontSize: '1.25rem' }}>Drag & drop photos here, or click to select files</p>
+                        <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.85rem', marginTop: '0.5rem' }}>Supports JPG, PNG, WEBP (Min width 800px)</p>
                     </div>
                 )}
             </div>
 
-            {error && <p className="text-red-500 mt-2">{error}</p>}
+            {error && <p style={{ color: '#ef4444', marginTop: '1rem' }}>{error}</p>}
 
             {/* Gallery Grid */}
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4"
+            <div className="gallery-grid"
                 style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-                    gap: '1rem',
-                    marginTop: '2rem'
+                    gap: '1.25rem',
+                    marginTop: '2.5rem'
                 }}
             >
                 {photos.map((photo, index) => (
-                    <div key={photo.id} className="relative group border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
-                        <div className="relative aspect-video bg-gray-100">
+                    <div key={photo.id} className="photo-card" 
+                        style={{
+                            position: 'relative',
+                            background: 'rgba(255, 255, 255, 0.03)',
+                            border: '1px solid var(--glass-border)',
+                            borderRadius: '12px',
+                            overflow: 'hidden',
+                            transition: 'all 0.3s ease'
+                        }}
+                    >
+                        <div style={{ position: 'relative', aspectRatio: '16/9', background: 'rgba(0,0,0,0.2)' }}>
                             <img
                                 src={photo.url}
                                 alt="Preview"
-                                style={{ width: '100%', height: '150px', objectFit: 'cover' }}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                             {/* Remove Button */}
                             <button
                                 onClick={(e) => { e.stopPropagation(); removePhoto(photo.id); }}
-                                className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs opacity-70 hover:opacity-100"
                                 style={{
-                                    position: 'absolute', top: '5px', right: '5px',
+                                    position: 'absolute', top: '8px', right: '8px',
                                     background: 'rgba(239, 68, 68, 0.9)', color: 'white',
                                     border: 'none', borderRadius: '50%', width: '24px', height: '24px',
-                                    cursor: 'pointer'
+                                    cursor: 'pointer', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center'
                                 }}
                             >
                                 ×
@@ -149,25 +158,25 @@ const Step2_Photos = ({ data, updateData, next, back }) => {
 
                             {/* Cover Label */}
                             {photo.isCover && (
-                                <span className="absolute top-1 left-1 bg-yellow-400 text-black text-xs px-2 py-0.5 rounded font-bold"
-                                    style={{
-                                        position: 'absolute', top: '5px', left: '5px',
-                                        background: '#fbbf24', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px'
-                                    }}
-                                >
+                                <span style={{
+                                    position: 'absolute', top: '8px', left: '8px',
+                                    background: '#fbbf24', color: 'black', fontSize: '0.7rem', 
+                                    padding: '2px 8px', borderRadius: '4px', fontWeight: '800',
+                                    boxShadow: '0 4px 12px rgba(251, 191, 36, 0.4)'
+                                }}>
                                     COVER
                                 </span>
                             )}
                         </div>
 
-                        <div className="p-3">
-                            <div className="mb-2">
-                                <label className="block text-xs text-gray-500 mb-1">Room Type</label>
+                        <div style={{ padding: '12px' }}>
+                            <div style={{ marginBottom: '12px' }}>
+                                <label style={{ display: 'block', fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', fontWeight: '700', textTransform: 'uppercase', marginBottom: '4px' }}>Room Type</label>
                                 <select
-                                    className="w-full text-sm border p-1 rounded"
+                                    className="form-select"
                                     value={photo.category}
                                     onChange={(e) => updateCategory(photo.id, e.target.value)}
-                                    style={{ width: '100%', padding: '4px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                    style={{ width: '100%', padding: '6px 10px', fontSize: '0.85rem' }}
                                 >
                                     {ROOM_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
@@ -176,8 +185,12 @@ const Step2_Photos = ({ data, updateData, next, back }) => {
                             {!photo.isCover && (
                                 <button
                                     onClick={() => setCover(photo.id)}
-                                    className="text-xs text-blue-600 hover:text-blue-800 underline w-full text-center block"
-                                    style={{ background: 'none', border: 'none', color: '#2563eb', cursor: 'pointer', textAlign: 'center', width: '100%' }}
+                                    style={{ 
+                                        background: 'transparent', border: 'none', 
+                                        color: 'var(--primary-accent)', cursor: 'pointer', 
+                                        fontSize: '0.8rem', fontWeight: '600',
+                                        textAlign: 'center', width: '100%', textDecoration: 'underline' 
+                                    }}
                                 >
                                     Set as Cover
                                 </button>
