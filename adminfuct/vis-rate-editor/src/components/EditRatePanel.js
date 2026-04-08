@@ -17,8 +17,9 @@ function EditRatePanel({ season, onSave, onClose, onSplit, onDelete }) {
   }, [season]);
 
   const handleChange = (e) => {
-    const { name, value, type } = e.target;
-    const val = type === 'number' ? Number(value) : value;
+    const { name, value, type, checked } = e.target;
+    // Handle both number and checkbox inputs correctly
+    const val = type === 'number' ? Number(value) : (type === 'checkbox' ? checked : value);
     setFormData(prev => ({ ...prev, [name]: val }));
   };
 
@@ -32,7 +33,11 @@ function EditRatePanel({ season, onSave, onClose, onSplit, onDelete }) {
         seasonName: formData.seasonName,
         weekdayRateAgent: formData.weekdayRateAgent,
         weekendRateAgent: formData.weekendRateAgent,
-        minStayNights: formData.minStayNights
+        minStayNights: formData.minStayNights,
+        minStay: formData.minStayNights, // sync new alias if needed
+        maxStay: formData.maxStay || 30,
+        closedToArrival: !!formData.closedToArrival,
+        closedToDeparture: !!formData.closedToDeparture
       };
       await updateDoc(seasonRef, dataToUpdate);
       onSave();
@@ -75,9 +80,25 @@ function EditRatePanel({ season, onSave, onClose, onSplit, onDelete }) {
             <label>Weekend Rate ({season.currency})</label>
             <input type="number" name="weekendRateAgent" value={formData.weekendRateAgent || 0} onChange={handleChange} />
           </div>
-          <div className="form-group">
-            <label>Min Stay (Nights)</label>
-            <input type="number" name="minStayNights" value={formData.minStayNights || 1} onChange={handleChange} />
+          <div className="form-group date-range-group">
+            <div>
+              <label>Min Stay (Nights)</label>
+              <input type="number" name="minStayNights" value={formData.minStayNights || 1} onChange={handleChange} />
+            </div>
+            <div>
+              <label>Max Stay (Nights)</label>
+              <input type="number" name="maxStay" value={formData.maxStay || 30} onChange={handleChange} />
+            </div>
+          </div>
+          <div className="form-group date-range-group">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+              <input type="checkbox" name="closedToArrival" checked={!!formData.closedToArrival} onChange={handleChange} id="ctaEdit" />
+              <label htmlFor="ctaEdit" style={{ margin: 0 }}>Closed to Arrival</label>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+              <input type="checkbox" name="closedToDeparture" checked={!!formData.closedToDeparture} onChange={handleChange} id="ctdEdit" />
+              <label htmlFor="ctdEdit" style={{ margin: 0 }}>Closed to Departure</label>
+            </div>
           </div>
           
           {/* --- NEW Button Group Layout --- */}

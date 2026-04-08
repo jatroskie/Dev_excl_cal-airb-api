@@ -23,6 +23,7 @@ import EditOverridePanel from './EditOverridePanel';
 import AddSeasonPanel from './AddSeasonPanel';
 import BulkEditPanel from './BulkEditPanel';
 import TimelineSkeleton from './TimelineSkeleton';
+import ChannelSettingsModal from './ChannelSettingsModal';
 
 const getUnitTypeForRoom = (roomData) => {
   const { hotelCode, propRate, actType } = roomData;
@@ -79,6 +80,7 @@ function RateEditor() {
   const [pastingConfig, setPastingConfig] = useState(null);
   const [editingOverride, setEditingOverride] = useState(null);
   const [selectedSeasons, setSelectedSeasons] = useState(new Set());
+  const [isChannelSettingsOpen, setIsChannelSettingsOpen] = useState(false);
 
   // --- This initial fetch for static data remains the same ---
   useEffect(() => {
@@ -390,6 +392,7 @@ function RateEditor() {
         <label>Hotel: <select value={selectedHotel} onChange={e => setSelectedHotel(e.target.value)}>{allHotelCodes.map(code => <option key={code} value={code}>{code}</option>)}</select></label>
         <label>Start Month: <select value={getMonth(startDisplayDate)} onChange={handleMonthChange}>{months.map((month, index) => <option key={month} value={index}>{month}</option>)}</select></label>
         <label>Year: <select value={getYear(startDisplayDate)} onChange={handleYearChange}>{[2024, 2025, 2026, 2027].map(year => <option key={year} value={year}>{year}</option>)}</select></label>
+        <button className="add-override-button" style={{ backgroundColor: '#2c3e50', marginRight: '10px' }} onClick={() => setIsChannelSettingsOpen(true)}>⚙️ OTA Markups</button>
         <button className="add-override-button" onClick={() => setIsAddingOverride(true)}>+ Add Rate Override</button>
       </div>
 
@@ -430,6 +433,7 @@ function RateEditor() {
       {addingSeasonFor && <AddSeasonPanel unitType={addingSeasonFor} onSave={handleNewSeasonSave} onClose={() => setAddingSeasonFor(null)} />}
       {pastingConfig && <PasteConfigPanel clipboard={pastingConfig.clipboard} targetUnitType={pastingConfig.targetUnitType} allRates={rates} onConfirm={handleExecutePaste} onClose={() => setPastingConfig(null)} />}
       {editingOverride && <EditOverridePanel override={editingOverride} onSave={handleOverrideUpdate} onClose={() => setEditingOverride(null)} />}
+      {isChannelSettingsOpen && <ChannelSettingsModal onClose={() => setIsChannelSettingsOpen(false)} />}
     </div>
   );
 }

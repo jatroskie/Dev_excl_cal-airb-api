@@ -15,6 +15,12 @@ function AddOverridePanel({ unitTypesForForm, onSave, onClose }) {
   const [adjustmentValue, setAdjustmentValue] = useState(0);
   const [label, setLabel] = useState('');
   
+  const [overridesRestrictions, setOverridesRestrictions] = useState(false);
+  const [minStay, setMinStay] = useState(1);
+  const [maxStay, setMaxStay] = useState(30);
+  const [cta, setCta] = useState(false);
+  const [ctd, setCtd] = useState(false);
+  
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState('');
 
@@ -47,6 +53,11 @@ function AddOverridePanel({ unitTypesForForm, onSave, onClose }) {
         adjustmentType,
         adjustmentValue: Number(adjustmentValue),
         label,
+        overridesRestrictions,
+        minStay: overridesRestrictions ? Number(minStay) : null,
+        maxStay: overridesRestrictions ? Number(maxStay) : null,
+        closedToArrival: overridesRestrictions ? cta : false,
+        closedToDeparture: overridesRestrictions ? ctd : false,
         createdAt: Timestamp.now()
       });
       onSave();
@@ -97,6 +108,38 @@ function AddOverridePanel({ unitTypesForForm, onSave, onClose }) {
             <label>Adjustment Value</label>
             <input type="number" step="any" placeholder="e.g., -15 for 15% off" value={adjustmentValue} onChange={(e) => setAdjustmentValue(e.target.value)} />
           </div>
+
+          <div className="form-group" style={{ marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '15px', marginBottom: '15px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <input type="checkbox" checked={overridesRestrictions} onChange={(e) => setOverridesRestrictions(e.target.checked)} id="overrideRestr" />
+              <label htmlFor="overrideRestr" style={{ margin: 0, fontWeight: 'bold' }}>Override Yield Restrictions?</label>
+            </div>
+          </div>
+
+          {overridesRestrictions && (
+            <>
+              <div className="form-group date-range-group">
+                <div>
+                  <label>Min Stay (Nights)</label>
+                  <input type="number" value={minStay} onChange={(e) => setMinStay(e.target.value)} />
+                </div>
+                <div>
+                  <label>Max Stay (Nights)</label>
+                  <input type="number" value={maxStay} onChange={(e) => setMaxStay(e.target.value)} />
+                </div>
+              </div>
+              <div className="form-group date-range-group">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+                  <input type="checkbox" checked={cta} onChange={(e) => setCta(e.target.checked)} id="ctaAddOverride" />
+                  <label htmlFor="ctaAddOverride" style={{ margin: 0 }}>Closed to Arrival</label>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+                  <input type="checkbox" checked={ctd} onChange={(e) => setCtd(e.target.checked)} id="ctdAddOverride" />
+                  <label htmlFor="ctdAddOverride" style={{ margin: 0 }}>Closed to Departure</label>
+                </div>
+              </div>
+            </>
+          )}
 
           <button type="submit" className="save-button" disabled={isSaving}>
             {isSaving ? 'Saving...' : 'Save Override'}

@@ -9,6 +9,7 @@ import Login from './components/Login';
 import WelcomeModal from './components/WelcomeModal';
 import Dashboard from './pages/Dashboard';
 import HostOnboarding from './pages/HostOnboarding';
+import AdminSync from './pages/AdminSync';
 import './App.css';
 
 function App() {
@@ -79,7 +80,8 @@ function App() {
                 {showWelcome && <WelcomeModal onClose={closeWelcomeModal} />}
                 <div className="glass-nav">
                     <nav>
-                        <Link to="/" className="nav-link active">Image Admin</Link>
+                        <Link to="/" className="nav-link">Image Admin</Link>
+                        <Link to="/sync" className="nav-link">Listings & Sync</Link>
                         <Link to="/list-property" className="nav-link">List New Property</Link>
                     </nav>
 
@@ -101,6 +103,7 @@ function App() {
                 </div>
                 <Routes>
                     <Route path="/" element={<Dashboard />} />
+                    <Route path="/sync" element={<AdminSync />} />
                     <Route path="/list-property" element={<HostOnboarding />} />
                 </Routes>
             </div>

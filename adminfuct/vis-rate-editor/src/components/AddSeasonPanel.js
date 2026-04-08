@@ -11,6 +11,9 @@ function AddSeasonPanel({ unitType, onSave, onClose }) {
   const [weekdayRate, setWeekdayRate] = useState(0);
   const [weekendRate, setWeekendRate] = useState(0);
   const [minStay, setMinStay] = useState(1);
+  const [maxStay, setMaxStay] = useState(30);
+  const [cta, setCta] = useState(false);
+  const [ctd, setCtd] = useState(false);
   
   // FIX: Removed the unused 'setCurrency' function
   const [currency] = useState('ZAR'); 
@@ -44,6 +47,10 @@ function AddSeasonPanel({ unitType, onSave, onClose }) {
         weekdayRateAgent: Number(weekdayRate),
         weekendRateAgent: Number(weekendRate),
         minStayNights: Number(minStay),
+        minStay: Number(minStay),
+        maxStay: Number(maxStay),
+        closedToArrival: cta,
+        closedToDeparture: ctd,
         currency,
         lastUpdatedAt: Timestamp.now()
         // Add any other required default fields here
@@ -88,9 +95,25 @@ function AddSeasonPanel({ unitType, onSave, onClose }) {
                 <input type="number" value={weekendRate} onChange={(e) => setWeekendRate(e.target.value)} />
             </div>
           </div>
-          <div className="form-group">
-            <label>Min Stay (Nights)</label>
-            <input type="number" value={minStay} onChange={(e) => setMinStay(e.target.value)} />
+          <div className="form-group date-range-group">
+            <div>
+              <label>Min Stay (Nights)</label>
+              <input type="number" value={minStay} onChange={(e) => setMinStay(e.target.value)} />
+            </div>
+            <div>
+              <label>Max Stay (Nights)</label>
+              <input type="number" value={maxStay} onChange={(e) => setMaxStay(e.target.value)} />
+            </div>
+          </div>
+          <div className="form-group date-range-group">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+              <input type="checkbox" checked={cta} onChange={(e) => setCta(e.target.checked)} id="ctaCheck" />
+              <label htmlFor="ctaCheck" style={{ margin: 0 }}>Closed to Arrival</label>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+              <input type="checkbox" checked={ctd} onChange={(e) => setCtd(e.target.checked)} id="ctdCheck" />
+              <label htmlFor="ctdCheck" style={{ margin: 0 }}>Closed to Departure</label>
+            </div>
           </div>
 
           <button type="submit" className="save-button" disabled={isSaving}>

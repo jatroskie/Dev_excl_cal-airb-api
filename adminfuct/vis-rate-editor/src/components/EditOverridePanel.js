@@ -16,8 +16,9 @@ function EditOverridePanel({ override, onSave, onClose }) {
   }, [override]);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = e.target;
+    const val = type === 'number' ? Number(value) : (type === 'checkbox' ? checked : value);
+    setFormData(prev => ({ ...prev, [name]: val }));
   };
 
   const handleSave = async (e) => {
@@ -35,7 +36,12 @@ function EditOverridePanel({ override, onSave, onClose }) {
         startDate: startTimestamp,
         endDate: endTimestamp,
         adjustmentType: formData.adjustmentType,
-        adjustmentValue: Number(formData.adjustmentValue)
+        adjustmentValue: Number(formData.adjustmentValue),
+        overridesRestrictions: !!formData.overridesRestrictions,
+        minStay: formData.overridesRestrictions ? Number(formData.minStay || 1) : null,
+        maxStay: formData.overridesRestrictions ? Number(formData.maxStay || 30) : null,
+        closedToArrival: formData.overridesRestrictions ? !!formData.closedToArrival : false,
+        closedToDeparture: formData.overridesRestrictions ? !!formData.closedToDeparture : false
       });
       onSave();
     } catch (err) {
@@ -94,6 +100,38 @@ function EditOverridePanel({ override, onSave, onClose }) {
             <label>Adjustment Value</label>
             <input type="number" name="adjustmentValue" step="any" value={formData.adjustmentValue} onChange={handleChange} />
           </div>
+
+          <div className="form-group" style={{ marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '15px', marginBottom: '15px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <input type="checkbox" name="overridesRestrictions" checked={!!formData.overridesRestrictions} onChange={handleChange} id="overrideRestrEdit" />
+              <label htmlFor="overrideRestrEdit" style={{ margin: 0, fontWeight: 'bold' }}>Override Yield Restrictions?</label>
+            </div>
+          </div>
+
+          {formData.overridesRestrictions && (
+            <>
+              <div className="form-group date-range-group">
+                <div>
+                  <label>Min Stay (Nights)</label>
+                  <input type="number" name="minStay" value={formData.minStay || 1} onChange={handleChange} />
+                </div>
+                <div>
+                  <label>Max Stay (Nights)</label>
+                  <input type="number" name="maxStay" value={formData.maxStay || 30} onChange={handleChange} />
+                </div>
+              </div>
+              <div className="form-group date-range-group">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+                  <input type="checkbox" name="closedToArrival" checked={!!formData.closedToArrival} onChange={handleChange} id="ctaEditOverride" />
+                  <label htmlFor="ctaEditOverride" style={{ margin: 0 }}>Closed to Arrival</label>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '15px' }}>
+                  <input type="checkbox" name="closedToDeparture" checked={!!formData.closedToDeparture} onChange={handleChange} id="ctdEditOverride" />
+                  <label htmlFor="ctdEditOverride" style={{ margin: 0 }}>Closed to Departure</label>
+                </div>
+              </div>
+            </>
+          )}
 
           <div className="button-group">
              <button type="button" className="delete-button" onClick={handleDelete}>Delete Override</button>
