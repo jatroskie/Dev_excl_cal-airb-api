@@ -4,7 +4,7 @@ import ollama
 client = ollama.Client()
 
 # Define the model and the input prompt
-model = "l.venv\Scripts\activate.venv\Scripts\activatelama3.3"  # Replace with your model name
+model = "deepseek-coder:6.7b"  # Replace with your model name
 prompt = "What is the pre-market information and important market news for this week that can influence a movement in SOFI's stock price?"
 
 # Send the query to the model
