@@ -25,7 +25,10 @@ const AdminSync = () => {
         amenities: [],
         imageUrls: [],
         imageCategories: [],
-        coverImageUrl: ''
+        coverImageUrl: '',
+        ssid: '',
+        password: '',
+        houseRules: ''
     });
 
     useEffect(() => {
@@ -66,7 +69,10 @@ const AdminSync = () => {
             amenities: room.amenities || [],
             imageUrls: room.imageUrls || [],
             imageCategories: room.imageCategories || [],
-            coverImageUrl: room.coverImageUrl || ''
+            coverImageUrl: room.coverImageUrl || '',
+            ssid: room.ssid || '',
+            password: room.password || '',
+            houseRules: room.houseRules || ''
         });
         setShowGallery(false);
         setIsEditModalOpen(true);
@@ -99,7 +105,10 @@ const AdminSync = () => {
                 amenities: editForm.amenities,
                 imageUrls: editForm.imageUrls,
                 imageCategories: editForm.imageCategories,
-                coverImageUrl: editForm.coverImageUrl
+                coverImageUrl: editForm.coverImageUrl,
+                ssid: editForm.ssid || null,
+                password: editForm.password || null,
+                houseRules: editForm.houseRules || null
             });
             setIsEditModalOpen(false);
             alert('Property updated successfully!');
@@ -236,6 +245,40 @@ const AdminSync = () => {
                                     onChange={(e) => setEditForm({...editForm, address: {...editForm.address, city: e.target.value}})}
                                 />
                             </div>
+                        </div>
+
+                        {/* WiFi & Automation Logic */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-3">
+                                <label className="text-xs font-bold text-blue-400/80 uppercase tracking-widest pl-1">WiFi SSID (Network Name)</label>
+                                <input 
+                                    type="text"
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500/50 focus:bg-white/[0.08] transition-all text-white placeholder-white/20"
+                                    placeholder="e.g. Guest_WiFi"
+                                    value={editForm.ssid}
+                                    onChange={(e) => setEditForm({...editForm, ssid: e.target.value})}
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <label className="text-xs font-bold text-blue-400/80 uppercase tracking-widest pl-1">WiFi Password</label>
+                                <input 
+                                    type="text"
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500/50 focus:bg-white/[0.08] transition-all text-white placeholder-white/20"
+                                    placeholder="Enter password..."
+                                    value={editForm.password}
+                                    onChange={(e) => setEditForm({...editForm, password: e.target.value})}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="space-y-3">
+                            <label className="text-xs font-bold text-blue-400/80 uppercase tracking-widest pl-1">House Rules & Notes</label>
+                            <textarea 
+                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500/50 focus:bg-white/[0.08] transition-all text-white placeholder-white/20 min-h-[120px] resize-none"
+                                placeholder="Enter specific house rules or guest notes for this property..."
+                                value={editForm.houseRules}
+                                onChange={(e) => setEditForm({...editForm, houseRules: e.target.value})}
+                            />
                         </div>
 
                         {/* Images Folder View */}
