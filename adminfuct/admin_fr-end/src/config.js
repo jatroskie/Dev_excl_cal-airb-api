@@ -21,8 +21,10 @@ const GENERATE_LISTING_CONTENT_URL = `${FUNCTIONS_BASE_URL}/generateListingConte
 const ROTATE_IMAGE_FUNCTION_URL = `${FUNCTIONS_BASE_URL}/rotateImage`;
 const UPDATE_PROPERTY_DETAILS_URL = `${FUNCTIONS_BASE_URL}/updatePropertyDetails`;
 
-// 3. Operational API (Cloud Run or similar) - kept as is/configured separately if needed
-const API_BASE_URL = 'https://api-yzrm33bhsq-uc.a.run.app';
+// 3. Operational API
+const API_BASE_URL = window.location.hostname === 'localhost'
+    ? `http://127.0.0.1:5001/${PROJECT_ID}/${REGION}`
+    : '/api';
 
 export {
     API_BASE_URL,

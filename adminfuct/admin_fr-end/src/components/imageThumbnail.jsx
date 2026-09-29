@@ -88,7 +88,7 @@ function ImageThumbnail({
             if (response.data?.status === 'success') {
                 logActivity('SET_COVER_IMAGE', { roomId: roomId, imageUrl: imageUrl });
                 if (onSetCoverSuccess) {
-                    onSetCoverSuccess(roomId, imageUrl);
+                    onSetCoverSuccess(roomId, response.data); // Pass full data object
                 }
             } else {
                 throw new Error(response.data?.message || 'Unknown server error');

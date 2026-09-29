@@ -32,23 +32,29 @@ function Dashboard() {
         setSelectedRoom(room);
     }, [selectedDestination]);
 
-    const handleRoomUpdate = useCallback(async (roomId) => {
+    const handleRoomUpdate = useCallback(async (roomId, updatedData = null) => {
         console.log(`Room ${roomId} was updated. Refreshing data...`);
         setRefreshTrigger(prev => prev + 1); // Trigger RoomList refresh
 
-        // Also refresh the currently selected room immediately to update ImageManager
-        try {
-            // Note: Efficiently we should have a getRoom endpoint. For now we re-fetch list or implement a find.
-            // Since we don't have a single-room endpoint confirmed, and RoomList fetches all, let's try to fetch all here too or rely on RoomList updating selectedRoom?
-            // RoomList receives onRoomSelect... but it won't trigger it automatically on refresh.
-            // So we MUST fetch here to be fast and correct.
+        // If we have updatedData from the response (optimistic/instant update)
+        if (updatedData && updatedData.imageUrls) {
+            console.log("Updating selectedRoom instantly with provided data.");
+            setSelectedRoom(prev => {
+                if (prev && prev.id === roomId) {
+                    return { ...prev, ...updatedData };
+                }
+                return prev;
+            });
+            return; // Skip fetch
+        }
 
+        // Otherwise fallback to full fetch (for rotations/deletes where data might not be readily returned yet)
+        try {
             const response = await axios.get(`${API_BASE_URL}/admin/rooms`);
-            // In a real app we would filter by destination here if the endpoint supports it to reduce payload
             const rooms = response.data;
             const updatedRoom = rooms.find(r => r.id === roomId);
             if (updatedRoom) {
-                console.log("Updated selectedRoom with fresh data:", updatedRoom);
+                console.log("Updated selectedRoom with fresh data from fetch:", updatedRoom);
                 setSelectedRoom(updatedRoom);
             }
         } catch (e) {

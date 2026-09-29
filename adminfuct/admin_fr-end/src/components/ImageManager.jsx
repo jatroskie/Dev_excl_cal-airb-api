@@ -29,11 +29,14 @@ function ImageManager({ room, onUpdate }) {
     }
 
     // Generic success handler for operations from ImageThumbnail or this component
-    const handleOperationSuccess = (updatedRoomId, message = 'Operation successful.') => {
+    const handleOperationSuccess = (updatedRoomId, dataOrMessage = 'Operation successful.') => {
+        const message = typeof dataOrMessage === 'string' ? dataOrMessage : 'Cover image updated.';
+        const updatedData = typeof dataOrMessage === 'object' ? dataOrMessage : null;
+
         setSuccessMessage(`${message} Room: ${updatedRoomId}. Refreshing data...`);
         setError('');
         if (onUpdate) {
-            onUpdate(updatedRoomId); // Trigger parent to refresh room data
+            onUpdate(updatedRoomId, updatedData); // Pass updated data up if available
         }
         setTimeout(() => setSuccessMessage(''), 7000); // Clear success message after a delay
     };
@@ -178,7 +181,7 @@ function ImageManager({ room, onUpdate }) {
                         image={img}
                         roomId={room.id}
                         isCover={img.isCover === true}
-                        onSetCoverSuccess={(updatedRoomId) => handleOperationSuccess(updatedRoomId, "Cover image updated.")}
+                        onSetCoverSuccess={(updatedRoomId, data) => handleOperationSuccess(updatedRoomId, data)}
                         onDeleteSuccess={(updatedRoomId) => handleOperationSuccess(updatedRoomId, "Image deleted.")}
                         onRotateSuccess={(updatedRoomId) => handleOperationSuccess(updatedRoomId, "Image rotated.")}
                         onError={handleOperationError}

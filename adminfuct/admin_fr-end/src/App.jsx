@@ -75,7 +75,7 @@ function App() {
     }
 
     return (
-        <Router basename="/host">
+        <Router basename="/admin">
             <div className="root-layout">
                 {showWelcome && <WelcomeModal onClose={closeWelcomeModal} />}
                 <div className="glass-nav">
